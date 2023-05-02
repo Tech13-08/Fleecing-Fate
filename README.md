@@ -6,15 +6,6 @@
  
  > Authors: [Falak Tulsi](https://github.com/Tech13-08),[Yat Chun Wong](https://github.com/ywong042),[Andy Jarean](https://github.com/ajarean),[Tingxuan Wu](https://github.com/twu148)
 
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
-
- > ## Expectations
- > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * **Each member of the group must actively participate in the Github Project board, writing unit tests, and reviewing commited code.**
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
-
 ## Project Description
 > The reason we chose to make a Text-Based RPG is because the idea allows more room for creativity relative to other ideas for this project. From the characters to the story line, we look forward to making them flow together. Naturally, an RPG is very open-ended which allows us to write virtually any story we would like to. Additionally, taking the concept of an RPG and limiting it to the terminal environment also piques our interest as developers. 
 > At this beginning stage of the project, we plan to develop the game using the C++ language in the Visual Studio Code IDE. For our version control, we plan to use git and maintain the project through Github. 
