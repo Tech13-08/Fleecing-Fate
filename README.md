@@ -37,6 +37,7 @@
 
 ### Navigation Diagram
 > Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
+> Our navigation diagram [here](images/NavDiagram.png) represents how each screen of the game transitions to the next, as well as the overall flow of the game. The player begins at the main menu, at which they can decide to read a brief tutorial to learn about the game world and how to play it, or begin the game. From there, the player may progress from the village to the field and end at the dungeon. In each zone, players may interact with objects in the world (i.e. open doors, inspect the environment, etc). The player wins the game when they reach they defeat the final boss and reach the end of the dungeon. 
 
 ### Screen Layouts
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
