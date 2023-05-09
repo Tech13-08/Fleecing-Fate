@@ -30,15 +30,17 @@
  > We created three Epics that go over the main features and core aspects of our Text-Based Adventure Game. The first Epic goes over the how the Battle System should look like and the second Epic goes over the Character System. The last Epic goes over Locations of the game. 
  > The three Epics were split into six user stories so that we can work on them over the next several weeks and assign to team members during the scrum meeting.
 ## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
 ### Navigation Diagram
+![Navigation Diagram](images/NavDiagram.png)
 > Our navigation diagram [here](images/NavDiagram.png) represents how each screen of the game transitions to the next, as well as the overall flow of the game. The player begins at the main menu, at which they can decide to read a brief tutorial to learn about the game world and how to play it, or begin the game. From there, the player may progress from the village to the field and end at the dungeon. In each zone, players may interact with objects in the world (i.e. open doors, inspect the environment, etc). The player wins the game when they reach they defeat the final boss and reach the end of the dungeon. 
 
 ### Screen Layouts
+![ScreenDesigns](images/ScreenDesigns.pdf)
 > Our screen layouts [here](images/ScreenDesigns.pdf) illustrate our in-program screens and buttons. When the player starts the game, the very first screen is the Menu screen, which gives the player options to start and to quit. The player receives prompts and selects numerical options using the keyboard input to progress through the game. The combat screens all share the same layout, but have different enemies depending on the location the combat starts in.
 
 ## Class Diagram
+![UMLClassDiagram](images/UML_Class_Diagram.png)
 > Our UML class diagram [here](images/UML_Class_Diagram.png) represents the various classes we will implement in our project and how they will fit together. The diagram highlights the relationships between the classes and gives an overall idea of how the game will function. The player and enemies, for example, will both originate from the parent Character class. The Location class divides into the Dungeon, Village, Store, and Dungeon Room classes, which together become the map for the game. The Dungeon Room will have either enemies or items: both of which are classes with their own parameters and functions. The Game class is how we will manage all of these relationships at once to provide smooth game functionality.
  
  > ## Phase III
