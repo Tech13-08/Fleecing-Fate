@@ -15,8 +15,8 @@ class TopLocation : public Location{
             map.resize(this->getSize(), vector<Location*>(this->getSize(), nullptr));
         }
 
-        const Location* getLocation(int* pos){
-            const Location* loc = this->map.at(pos[0]).at(pos[1]);
+        Location* getLocation(int row, int col){
+            Location* loc = this->map.at(row).at(col);
             if(loc){return loc;}
             return nullptr;
         }

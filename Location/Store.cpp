@@ -15,7 +15,7 @@ Store::Store(const string name, const string description) : Location(name, descr
 const vector<Item*> Store::getItems(){
     return this->items;
 }
-const Item* Store::buyItem(int index){
+Item* Store::buyItem(int index){
     if(index < this->getSize()){
         Item* item = this->items[index];
         if(item && item->getItem() > 0){
