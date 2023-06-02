@@ -8,7 +8,7 @@
 using namespace std; 
 
 int main() { 
-    Village* vil1 = new Village("Village A", "The first village ever");
+    Village* vil1 = new Village("Village A", "The first village ever", 1);
     cout << "Location: " + vil1->getName() + " | " + vil1->getDescription() << endl;
 
     cout << "Looking for store at (0,1) in " + vil1->getName() + ".."<< endl;
@@ -27,7 +27,7 @@ int main() {
         cout << "Store not found!" << endl;
     }
 
-    Dungeon* dun1 = new Dungeon("Dungeon A", "The first dungeon ever");
+    Dungeon* dun1 = new Dungeon("Dungeon A", "The first dungeon ever", 1);
     cout << "Location: " + dun1->getName() + " | " + dun1->getDescription() << endl;
 
     cout << "Looking for dungeon room at (0,2) in " + dun1->getName() + ".."<< endl;
