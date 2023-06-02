@@ -5,7 +5,8 @@
 #include <vector>
 using std::string;
 using std::vector;
-DungeonRoom::DungeonRoom(const string name, const string description) : Location(name, description, "DungeonRoom", 3){
+DungeonRoom::DungeonRoom(const string name, const string description) : Location(name, description, "DungeonRoom"){
+    this->setSize(3);
     enemies.resize(this->getSize(), nullptr);
     for (int i = 0; i < this->getSize(); ++i) {
         enemies[i] = new Enemy(i);

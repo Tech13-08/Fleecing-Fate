@@ -12,7 +12,7 @@ class Location{
         int size;
 
     public:
-        Location(const string name, const string description, const string type, const int size) : name(name), description(description), type(type), size(size){}
+        Location(const string name, const string description, const string type) : name(name), description(description), type(type){}
 
         const string getName(){return name;}
 
@@ -21,6 +21,8 @@ class Location{
         const string getDescription(){return description;}
 
         const int getSize(){return size;}
+
+        void setSize(int size){this->size = size;}
 
 };
 

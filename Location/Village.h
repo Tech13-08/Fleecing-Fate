@@ -1,13 +1,12 @@
 #ifndef __VILLAGE_H__
 #define __VILLAGE_H__
 #include <string>
-#include "TopLocation.h"
-#include "Store.h"
+#include "MapManager.h"
 using std::string;
 
-class Village : public TopLocation{
+class Village : public MapManager{
     public:
-        Village(const string name, const string description);
+        Village(const string name, const string description, const int sizeScale);
 
 };
 

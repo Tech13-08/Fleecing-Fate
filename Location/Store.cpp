@@ -5,7 +5,8 @@
 #include <vector>
 using std::string;
 using std::vector;
-Store::Store(const string name, const string description) : Location(name, description, "Store", 3){
+Store::Store(const string name, const string description) : Location(name, description, "Store"){
+    this->setSize(3);
     items.resize(this->getSize(), nullptr);
     for (int i = 0; i < this->getSize(); ++i) {
         items[i] = new Item(i);

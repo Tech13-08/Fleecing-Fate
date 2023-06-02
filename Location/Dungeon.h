@@ -1,13 +1,12 @@
 #ifndef __DUNGEON_H__
 #define __DUNGEON_H__
 #include <string>
-#include "TopLocation.h"
-#include "DungeonRoom.h"
+#include "MapManager.h"
 using std::string;
 
-class Dungeon : public TopLocation{
+class Dungeon : public MapManager{
     public:
-        Dungeon(const string name, const string description);
+        Dungeon(const string name, const string description, const int sizeScale);
 
 };
 
