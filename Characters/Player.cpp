@@ -11,6 +11,10 @@ int Player::getMaxStat() const {
 }
 
 //Berserker
+Berserker::Berserker(const string& name, double maxHealth, double strength) :
+                Player(name, maxHealth, strength)
+                {};
+
 int Berserker::getStat() const {
     return getRage();
 }
@@ -24,8 +28,8 @@ void Berserker::setRage(int newRage) {
 }
 
 void Berserker::specialAttack(Character* target) {
-    int damage = (1.5 + rage/100.0)*(this->getStrength());
-    target.takeDamage(damage);
+    int damage = (1.5 + rage/10.0)*(this->getStrength());
+    target->takeDamage(damage);
     if (rage >= 10)
         setRage(rage-=10);
     else setRage(0);
@@ -44,6 +48,10 @@ void Berserker::takeDamage(double damage) {
 }
 
 //Rogue
+Rogue::Rogue(const string& name, double maxHealth, double strength) :
+                Player(name, maxHealth, strength)
+                {};
+
 int Rogue::getStat() const {
     return getLuck();
 }
@@ -61,17 +69,17 @@ void Rogue::reset() {
 }
 
 void Rogue::specialAttack(Character* target) {
-    critChance = rand() % 100;
+    double critChance = rand() % 100;
     if (critChance >= 99){
-        target.takeDamage(10000);
+        target->takeDamage(10000);
         luck = BASELUCK;
     }
     else if (luck > critChance) {
-        target.takeDamage(3*this->getStrength());
+        target->takeDamage(3*this->getStrength());
         luck = BASELUCK;
     }
     else {
-        target.takeDamage(this->getStrength());
+        target->takeDamage(this->getStrength());
         luck += 10;
     }
 }
