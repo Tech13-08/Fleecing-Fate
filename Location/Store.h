@@ -15,7 +15,7 @@ class Store : public Location{
         Store(const string name, const string description);
 
         const vector<Item*> getItems();
-        Item* buyItem(int index);
+        Item* buyItem(int index, int& money);
 
 };
 
