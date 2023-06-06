@@ -1,20 +1,20 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
+#include "../header/player.h"
+#include "../header/enemy.h"
 using namespace std;
 
 #ifndef BATTLE_H
 #define BATTLE_H
 class Battle{
     private:
-        int playerHP = 100;
-        int playerATK = 25;
-        int enemyHP = 100;
-        int enemyATK = 15;
+        Player* player;
+        Enemy* enemy;
         int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
         int playerAP = 0;
     public:
-        Battle();
+        Battle(Player* player, Enemy* enemy);
         void displayStatus();
         int calcDamage(int baseDamage);
         int calcDamageWithCrit(int baseDamage, int critChance);
@@ -23,7 +23,6 @@ class Battle{
         void doNothing();
         void menu();
         void playerTurn();
-        void playerTakeDamage(int damage); //stub
         void enemyTurn();
         void enemyTakeDamage(int damage); //stub
         bool doBattle(); //returns false for loss, true for win

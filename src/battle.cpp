@@ -2,21 +2,21 @@
 #include <stdlib.h>
 #include <string>
 #include "../header/battle.h"
+#include "../header/player.h"
+#include "../header/enemy.h"
 using namespace std;
-Battle::Battle(){
-    int playerHP = 100;
-    int playerATK = 25;
-    int enemyHP = 100;
-    int enemyATK = 15;
+Battle::Battle(Player* player, Enemy* e){
+    this->player=player;
+    this->enemy=e;
     int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
     int playerAP = 0;
 }
 void Battle::displayStatus(){
     cout << "-----------" << endl;
-    cout << "Your HP: " << playerHP << endl;
+    cout << "Your HP: " << player->getHP() << endl;
     cout << "Your AP: " << playerAP << endl;
     cout << endl;
-    cout << "Enemy HP: " << enemyHP << endl;
+    cout << "Enemy HP: " << enemy->getHP() << endl;
     cout << endl;
 }
 
@@ -38,11 +38,11 @@ int Battle::calcDamageWithCrit(int baseDamage, int critChance){
 }
 void Battle::playerAttack(){ //replace these later when we actually get characters
     if(playerAP >= 100){
-        int damageDealt = calcDamage(playerATK);
+        int damageDealt = calcDamage(player->getATK());
         cout << "You spend 100 AP to attack" << endl;
         cout << "Enemy takes " << damageDealt << " damage" << endl;
         playerAP -= 100;
-        enemyTakeDamage(damageDealt);
+        enemy->takeDamage(damageDealt);
     }
     else{
         cout << "Not enough AP!" << endl;
@@ -50,11 +50,11 @@ void Battle::playerAttack(){ //replace these later when we actually get characte
 }
 void Battle::playerStrongAttack(){
     if(playerAP >= 200){
-        int damageDealt = 1.5*calcDamageWithCrit(playerATK,20);
+        int damageDealt = 1.5*calcDamageWithCrit(player->getATK(),20);
         cout << "You spend 200 AP to do a strong attack" << endl;
         cout << "Enemy takes " << damageDealt << " damage" << endl;
         playerAP -= 200;
-        enemyTakeDamage(damageDealt);
+        enemy->takeDamage(damageDealt);
     }
     else{
         cout << "Not enough AP!" << endl;
@@ -98,19 +98,15 @@ void Battle::playerTurn(){
     menu();
 }
 void Battle::enemyTurn(){
-    cout << "Enemy attacks you for " << calcDamage(enemyATK) << " damage" << endl;
-    playerTakeDamage(calcDamage(enemyATK));
+    int dmg = calcDamage(enemy->getATK());
+    cout << "Enemy attacks you for " << dmg << " damage" << endl;
+    player->takeDamage(dmg);
 }
-void Battle::playerTakeDamage(int damage){
-    playerHP -= damage;
-}
-void Battle::enemyTakeDamage(int damage){
-    enemyHP -= damage;
-}
+
 bool Battle::doBattle(){
     while(winloss==0){
         playerTurn();
-        if(enemyHP <= 0 ){
+        if(enemy->getHP() <= 0 ){
             cout << "enemy dead" << endl;
             winloss=1;
         }
