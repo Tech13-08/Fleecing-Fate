@@ -1,11 +1,11 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "battle.h"
+#include "header/battle.h"
 using namespace std;
 
 int main(){
     Battle* b = new Battle();
-
+    b->doBattle();
     return 0;
 }

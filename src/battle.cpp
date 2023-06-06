@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "battle.h"
+#include "../header/battle.h"
 using namespace std;
 Battle::Battle(){
     int playerHP = 100;
@@ -34,6 +34,7 @@ int Battle::calcDamageWithCrit(int baseDamage, int critChance){
     else{
         return baseDamage + variance;
     }
+
 }
 void Battle::playerAttack(){ //replace these later when we actually get characters
     if(playerAP >= 100){
@@ -41,7 +42,7 @@ void Battle::playerAttack(){ //replace these later when we actually get characte
         cout << "You spend 100 AP to attack" << endl;
         cout << "Enemy takes " << damageDealt << " damage" << endl;
         playerAP -= 100;
-        enemyHP -= damageDealt;
+        enemyTakeDamage(damageDealt);
     }
     else{
         cout << "Not enough AP!" << endl;
@@ -53,7 +54,7 @@ void Battle::playerStrongAttack(){
         cout << "You spend 200 AP to do a strong attack" << endl;
         cout << "Enemy takes " << damageDealt << " damage" << endl;
         playerAP -= 200;
-        enemyHP -= damageDealt;
+        enemyTakeDamage(damageDealt);
     }
     else{
         cout << "Not enough AP!" << endl;
@@ -98,8 +99,13 @@ void Battle::playerTurn(){
 }
 void Battle::enemyTurn(){
     cout << "Enemy attacks you for " << calcDamage(enemyATK) << " damage" << endl;
-    playerHP -= calcDamage(enemyATK);
-
+    playerTakeDamage(calcDamage(enemyATK));
+}
+void Battle::playerTakeDamage(int damage){
+    playerHP -= damage;
+}
+void Battle::enemyTakeDamage(int damage){
+    enemyHP -= damage;
 }
 bool Battle::doBattle(){
     while(winloss==0){

@@ -23,7 +23,9 @@ class Battle{
         void doNothing();
         void menu();
         void playerTurn();
+        void playerTakeDamage(int damage); //stub
         void enemyTurn();
+        void enemyTakeDamage(int damage); //stub
         bool doBattle(); //returns false for loss, true for win
 };
 #endif
