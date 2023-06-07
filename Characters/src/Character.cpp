@@ -52,13 +52,4 @@ void Character::attack(Character* target) {
 
 void Character::die() {
     isAlive = false;
-<<<<<<<< HEAD:Characters/src/Character.cpp
 }
-========
-}
-
-// // Enemy class
-
-// Enemy::Enemy(const string& name, double maxHealth, double strength) :
-//             Character(name, maxHealth, strength) {};
->>>>>>>> 882d91d6d5eb50afef84ec2c4aa01f59e4d94e36:src/Characters/Character.cpp

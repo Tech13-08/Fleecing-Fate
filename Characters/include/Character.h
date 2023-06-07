@@ -24,17 +24,6 @@ public:
     void heal(double healed);
     void die();
     // combat
-<<<<<<<< HEAD:Characters/include/Character.h
     virtual void attack(Character* target);
 };
-========
-    void attack(Character* target);
-};
-
-// class Enemy : public Character {
-// public:
-//     Enemy(const string&, double, double);
-// };
->>>>>>>> 882d91d6d5eb50afef84ec2c4aa01f59e4d94e36:src/Characters/Character.h
-
 #endif
