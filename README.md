@@ -44,25 +44,15 @@
 > Our UML class diagram [here](images/UML_Class_Diagram.png) represents the various classes we will implement in our project and how they will fit together. The diagram highlights the relationships between the classes and gives an overall idea of how the game will function. The player and enemies, for example, will both originate from the parent Character class. The Location class divides into the Dungeon, Village, Store, and Dungeon Room classes, which together become the map for the game. The Dungeon Room will have either enemies or items: both of which are classes with their own parameters and functions. The Game class is how we will manage all of these relationships at once to provide smooth game functionality.
  
  > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
+> We applied Integration Segregation principle to the Exp variable in the Character class since the subclasses Enemy and Boss do not need to inherit Exp from the character. We applied the principle by removing the Exp variable and the Exp methods in the class and also in its following subclasses in Enemy and Boss Enemy. This change removes unnecessary methods in the sub-classes and also reduces the possibility of those bugs.
 
+> We applied Single Responsibility Principle in the Game class since it originally violated the principle by having the Battle System in the same class. We applied the principle by creating a new class to have the Battle System and removed the function in the Game class. This change gives the class only one responsibilities and separates bugs from Battle Systems if it does occurs.
+
+> We used Listov Subistution in the Enemy and Boss subclasses. This works by having the subclasses have all the functionalities of the parent class Character. By doing so, we create a consistency so that we can use child and the parent the same way without creating an error.
+
+> We used Single Responsibility Principle in the Enemy and Boss subclasses. The two subclasses do different jobs and are distinct enough from each other so we separated them into two child classes of Character. By doing so, we separate behaviors that don't have anything to do with each other, making it easier to debug if an issue arises in those areas of code.
+
+> We have also used Single Responsibility Principle in the Location class and its subclasses. Every class there has one job only and do not contain behaviors from other classes. This makes it easier to develop Locations since each class does exactly as it is named and does not have any strange behaviors combined with it.
  
  > ## Final deliverable
  > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
