@@ -1,5 +1,4 @@
-#include "Character.h"
-#include "Player.h"
+#include "./include/AllCharacters.h"
 #include <string>
 #include <iostream>
 using namespace std;

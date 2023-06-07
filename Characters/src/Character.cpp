@@ -1,4 +1,4 @@
-#include "Character.h"
+#include "../include/Character.h"
 #include <string>
 using std::string;
 
@@ -47,14 +47,9 @@ void Character::heal(double healed) {
 }
 
 void Character::attack(Character* target) {
-    target->takeDamage(target, strength);
+    dealDamage(target, strength);
 }
 
 void Character::die() {
     isAlive = false;
 }
-
-// Enemy class
-
-Enemy::Enemy(const string& name, double maxHealth, double strength) :
-            Character(name, maxHealth, strength) {};
