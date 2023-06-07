@@ -112,11 +112,18 @@ bool Battle::doBattle(){
         }
         else{
             enemyTurn();
+            if(player->getHP() <= 0){
+                winloss=2;
+            }
         }
     }
-    if(winloss=1){
+    if(winloss==1){
         cout << "yay you win" << endl;
         return true;
     }
-    return false;
+    else{
+        cout << "wow you suck" << endl;
+        return false;
+    }
+
 }
