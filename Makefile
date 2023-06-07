@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_SOURCE_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -290,113 +290,113 @@ src/Battle/Battle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Battle/Battle.cpp.s
 .PHONY : src/Battle/Battle.cpp.s
 
-src/Characters/Character.o: src/Characters/Character.cpp.o
-.PHONY : src/Characters/Character.o
+src/Character/Character.o: src/Character/Character.cpp.o
+.PHONY : src/Character/Character.o
 
 # target to build an object file
-src/Characters/Character.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Character.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Character.cpp.o
-.PHONY : src/Characters/Character.cpp.o
+src/Character/Character.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Character.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Character.cpp.o
+.PHONY : src/Character/Character.cpp.o
 
-src/Characters/Character.i: src/Characters/Character.cpp.i
-.PHONY : src/Characters/Character.i
+src/Character/Character.i: src/Character/Character.cpp.i
+.PHONY : src/Character/Character.i
 
 # target to preprocess a source file
-src/Characters/Character.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Character.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Character.cpp.i
-.PHONY : src/Characters/Character.cpp.i
+src/Character/Character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Character.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Character.cpp.i
+.PHONY : src/Character/Character.cpp.i
 
-src/Characters/Character.s: src/Characters/Character.cpp.s
-.PHONY : src/Characters/Character.s
+src/Character/Character.s: src/Character/Character.cpp.s
+.PHONY : src/Character/Character.s
 
 # target to generate assembly for a file
-src/Characters/Character.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Character.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Character.cpp.s
-.PHONY : src/Characters/Character.cpp.s
+src/Character/Character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Character.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Character.cpp.s
+.PHONY : src/Character/Character.cpp.s
 
-src/Characters/CharacterSelector.o: src/Characters/CharacterSelector.cpp.o
-.PHONY : src/Characters/CharacterSelector.o
+src/Character/CharacterSelector.o: src/Character/CharacterSelector.cpp.o
+.PHONY : src/Character/CharacterSelector.o
 
 # target to build an object file
-src/Characters/CharacterSelector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/CharacterSelector.cpp.o
-.PHONY : src/Characters/CharacterSelector.cpp.o
+src/Character/CharacterSelector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/CharacterSelector.cpp.o
+.PHONY : src/Character/CharacterSelector.cpp.o
 
-src/Characters/CharacterSelector.i: src/Characters/CharacterSelector.cpp.i
-.PHONY : src/Characters/CharacterSelector.i
+src/Character/CharacterSelector.i: src/Character/CharacterSelector.cpp.i
+.PHONY : src/Character/CharacterSelector.i
 
 # target to preprocess a source file
-src/Characters/CharacterSelector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/CharacterSelector.cpp.i
-.PHONY : src/Characters/CharacterSelector.cpp.i
+src/Character/CharacterSelector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/CharacterSelector.cpp.i
+.PHONY : src/Character/CharacterSelector.cpp.i
 
-src/Characters/CharacterSelector.s: src/Characters/CharacterSelector.cpp.s
-.PHONY : src/Characters/CharacterSelector.s
+src/Character/CharacterSelector.s: src/Character/CharacterSelector.cpp.s
+.PHONY : src/Character/CharacterSelector.s
 
 # target to generate assembly for a file
-src/Characters/CharacterSelector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/CharacterSelector.cpp.s
-.PHONY : src/Characters/CharacterSelector.cpp.s
+src/Character/CharacterSelector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/CharacterSelector.cpp.s
+.PHONY : src/Character/CharacterSelector.cpp.s
 
-src/Characters/Enemy.o: src/Characters/Enemy.cpp.o
-.PHONY : src/Characters/Enemy.o
+src/Character/Enemy.o: src/Character/Enemy.cpp.o
+.PHONY : src/Character/Enemy.o
 
 # target to build an object file
-src/Characters/Enemy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Enemy.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Enemy.cpp.o
-.PHONY : src/Characters/Enemy.cpp.o
+src/Character/Enemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Enemy.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Enemy.cpp.o
+.PHONY : src/Character/Enemy.cpp.o
 
-src/Characters/Enemy.i: src/Characters/Enemy.cpp.i
-.PHONY : src/Characters/Enemy.i
+src/Character/Enemy.i: src/Character/Enemy.cpp.i
+.PHONY : src/Character/Enemy.i
 
 # target to preprocess a source file
-src/Characters/Enemy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Enemy.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Enemy.cpp.i
-.PHONY : src/Characters/Enemy.cpp.i
+src/Character/Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Enemy.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Enemy.cpp.i
+.PHONY : src/Character/Enemy.cpp.i
 
-src/Characters/Enemy.s: src/Characters/Enemy.cpp.s
-.PHONY : src/Characters/Enemy.s
+src/Character/Enemy.s: src/Character/Enemy.cpp.s
+.PHONY : src/Character/Enemy.s
 
 # target to generate assembly for a file
-src/Characters/Enemy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Enemy.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Enemy.cpp.s
-.PHONY : src/Characters/Enemy.cpp.s
+src/Character/Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Enemy.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Enemy.cpp.s
+.PHONY : src/Character/Enemy.cpp.s
 
-src/Characters/Player.o: src/Characters/Player.cpp.o
-.PHONY : src/Characters/Player.o
+src/Character/Player.o: src/Character/Player.cpp.o
+.PHONY : src/Character/Player.o
 
 # target to build an object file
-src/Characters/Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Player.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Player.cpp.o
-.PHONY : src/Characters/Player.cpp.o
+src/Character/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Player.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Player.cpp.o
+.PHONY : src/Character/Player.cpp.o
 
-src/Characters/Player.i: src/Characters/Player.cpp.i
-.PHONY : src/Characters/Player.i
+src/Character/Player.i: src/Character/Player.cpp.i
+.PHONY : src/Character/Player.i
 
 # target to preprocess a source file
-src/Characters/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Player.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Player.cpp.i
-.PHONY : src/Characters/Player.cpp.i
+src/Character/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Player.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Player.cpp.i
+.PHONY : src/Character/Player.cpp.i
 
-src/Characters/Player.s: src/Characters/Player.cpp.s
-.PHONY : src/Characters/Player.s
+src/Character/Player.s: src/Character/Player.cpp.s
+.PHONY : src/Character/Player.s
 
 # target to generate assembly for a file
-src/Characters/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Characters/Player.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Characters/Player.cpp.s
-.PHONY : src/Characters/Player.cpp.s
+src/Character/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Player.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Player.cpp.s
+.PHONY : src/Character/Player.cpp.s
 
 src/Inventory/Inventory.o: src/Inventory/Inventory.cpp.o
 .PHONY : src/Inventory/Inventory.o
@@ -632,18 +632,18 @@ help:
 	@echo "... src/Battle/Battle.o"
 	@echo "... src/Battle/Battle.i"
 	@echo "... src/Battle/Battle.s"
-	@echo "... src/Characters/Character.o"
-	@echo "... src/Characters/Character.i"
-	@echo "... src/Characters/Character.s"
-	@echo "... src/Characters/CharacterSelector.o"
-	@echo "... src/Characters/CharacterSelector.i"
-	@echo "... src/Characters/CharacterSelector.s"
-	@echo "... src/Characters/Enemy.o"
-	@echo "... src/Characters/Enemy.i"
-	@echo "... src/Characters/Enemy.s"
-	@echo "... src/Characters/Player.o"
-	@echo "... src/Characters/Player.i"
-	@echo "... src/Characters/Player.s"
+	@echo "... src/Character/Character.o"
+	@echo "... src/Character/Character.i"
+	@echo "... src/Character/Character.s"
+	@echo "... src/Character/CharacterSelector.o"
+	@echo "... src/Character/CharacterSelector.i"
+	@echo "... src/Character/CharacterSelector.s"
+	@echo "... src/Character/Enemy.o"
+	@echo "... src/Character/Enemy.i"
+	@echo "... src/Character/Enemy.s"
+	@echo "... src/Character/Player.o"
+	@echo "... src/Character/Player.i"
+	@echo "... src/Character/Player.s"
 	@echo "... src/Inventory/Inventory.o"
 	@echo "... src/Inventory/Inventory.i"
 	@echo "... src/Inventory/Inventory.s"

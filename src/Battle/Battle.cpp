@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include "battle.h"
-#include "../Characters/Player.h"
-#include "../Characters/Enemy.h"
+#include "../Character/AllCharacters.h"
 using namespace std;
 Battle::Battle(Player* player, Enemy* e){
     this->player=player;

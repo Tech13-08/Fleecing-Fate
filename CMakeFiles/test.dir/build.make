@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_SOURCE_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.dir/depend.make
@@ -72,184 +72,184 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test/testLocation.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test/testLocation.cpp.o: test/testLocation.cpp
 CMakeFiles/test.dir/test/testLocation.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test/testLocation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/testLocation.cpp.o -MF CMakeFiles/test.dir/test/testLocation.cpp.o.d -o CMakeFiles/test.dir/test/testLocation.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/test/testLocation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test/testLocation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/testLocation.cpp.o -MF CMakeFiles/test.dir/test/testLocation.cpp.o.d -o CMakeFiles/test.dir/test/testLocation.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/test/testLocation.cpp
 
 CMakeFiles/test.dir/test/testLocation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test/testLocation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/test/testLocation.cpp > CMakeFiles/test.dir/test/testLocation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/test/testLocation.cpp > CMakeFiles/test.dir/test/testLocation.cpp.i
 
 CMakeFiles/test.dir/test/testLocation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test/testLocation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/test/testLocation.cpp -o CMakeFiles/test.dir/test/testLocation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/test/testLocation.cpp -o CMakeFiles/test.dir/test/testLocation.cpp.s
 
 CMakeFiles/test.dir/test/battleTest.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test/battleTest.cpp.o: test/battleTest.cpp
 CMakeFiles/test.dir/test/battleTest.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/test/battleTest.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/battleTest.cpp.o -MF CMakeFiles/test.dir/test/battleTest.cpp.o.d -o CMakeFiles/test.dir/test/battleTest.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/test/battleTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/test/battleTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/battleTest.cpp.o -MF CMakeFiles/test.dir/test/battleTest.cpp.o.d -o CMakeFiles/test.dir/test/battleTest.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/test/battleTest.cpp
 
 CMakeFiles/test.dir/test/battleTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test/battleTest.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/test/battleTest.cpp > CMakeFiles/test.dir/test/battleTest.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/test/battleTest.cpp > CMakeFiles/test.dir/test/battleTest.cpp.i
 
 CMakeFiles/test.dir/test/battleTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test/battleTest.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/test/battleTest.cpp -o CMakeFiles/test.dir/test/battleTest.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/test/battleTest.cpp -o CMakeFiles/test.dir/test/battleTest.cpp.s
 
 CMakeFiles/test.dir/src/Location/Dungeon.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Location/Dungeon.cpp.o: src/Location/Dungeon.cpp
 CMakeFiles/test.dir/src/Location/Dungeon.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/Location/Dungeon.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/Dungeon.cpp.o -MF CMakeFiles/test.dir/src/Location/Dungeon.cpp.o.d -o CMakeFiles/test.dir/src/Location/Dungeon.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Dungeon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/Location/Dungeon.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/Dungeon.cpp.o -MF CMakeFiles/test.dir/src/Location/Dungeon.cpp.o.d -o CMakeFiles/test.dir/src/Location/Dungeon.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Dungeon.cpp
 
 CMakeFiles/test.dir/src/Location/Dungeon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Location/Dungeon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Dungeon.cpp > CMakeFiles/test.dir/src/Location/Dungeon.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Dungeon.cpp > CMakeFiles/test.dir/src/Location/Dungeon.cpp.i
 
 CMakeFiles/test.dir/src/Location/Dungeon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Location/Dungeon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Dungeon.cpp -o CMakeFiles/test.dir/src/Location/Dungeon.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Dungeon.cpp -o CMakeFiles/test.dir/src/Location/Dungeon.cpp.s
 
 CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o: src/Location/DungeonRoom.cpp
 CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o -MF CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o.d -o CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/DungeonRoom.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o -MF CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o.d -o CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/DungeonRoom.cpp
 
 CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/DungeonRoom.cpp > CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/DungeonRoom.cpp > CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.i
 
 CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/DungeonRoom.cpp -o CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/DungeonRoom.cpp -o CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.s
 
 CMakeFiles/test.dir/src/Location/Store.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Location/Store.cpp.o: src/Location/Store.cpp
 CMakeFiles/test.dir/src/Location/Store.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/Location/Store.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/Store.cpp.o -MF CMakeFiles/test.dir/src/Location/Store.cpp.o.d -o CMakeFiles/test.dir/src/Location/Store.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Store.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/Location/Store.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/Store.cpp.o -MF CMakeFiles/test.dir/src/Location/Store.cpp.o.d -o CMakeFiles/test.dir/src/Location/Store.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Store.cpp
 
 CMakeFiles/test.dir/src/Location/Store.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Location/Store.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Store.cpp > CMakeFiles/test.dir/src/Location/Store.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Store.cpp > CMakeFiles/test.dir/src/Location/Store.cpp.i
 
 CMakeFiles/test.dir/src/Location/Store.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Location/Store.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Store.cpp -o CMakeFiles/test.dir/src/Location/Store.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Store.cpp -o CMakeFiles/test.dir/src/Location/Store.cpp.s
 
 CMakeFiles/test.dir/src/Location/Village.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Location/Village.cpp.o: src/Location/Village.cpp
 CMakeFiles/test.dir/src/Location/Village.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/Location/Village.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/Village.cpp.o -MF CMakeFiles/test.dir/src/Location/Village.cpp.o.d -o CMakeFiles/test.dir/src/Location/Village.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Village.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/Location/Village.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Location/Village.cpp.o -MF CMakeFiles/test.dir/src/Location/Village.cpp.o.d -o CMakeFiles/test.dir/src/Location/Village.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Village.cpp
 
 CMakeFiles/test.dir/src/Location/Village.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Location/Village.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Village.cpp > CMakeFiles/test.dir/src/Location/Village.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Village.cpp > CMakeFiles/test.dir/src/Location/Village.cpp.i
 
 CMakeFiles/test.dir/src/Location/Village.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Location/Village.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Village.cpp -o CMakeFiles/test.dir/src/Location/Village.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Location/Village.cpp -o CMakeFiles/test.dir/src/Location/Village.cpp.s
 
 CMakeFiles/test.dir/src/Battle/Battle.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Battle/Battle.cpp.o: src/Battle/Battle.cpp
 CMakeFiles/test.dir/src/Battle/Battle.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/Battle/Battle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Battle/Battle.cpp.o -MF CMakeFiles/test.dir/src/Battle/Battle.cpp.o.d -o CMakeFiles/test.dir/src/Battle/Battle.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Battle/Battle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/Battle/Battle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Battle/Battle.cpp.o -MF CMakeFiles/test.dir/src/Battle/Battle.cpp.o.d -o CMakeFiles/test.dir/src/Battle/Battle.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Battle/Battle.cpp
 
 CMakeFiles/test.dir/src/Battle/Battle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Battle/Battle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Battle/Battle.cpp > CMakeFiles/test.dir/src/Battle/Battle.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Battle/Battle.cpp > CMakeFiles/test.dir/src/Battle/Battle.cpp.i
 
 CMakeFiles/test.dir/src/Battle/Battle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Battle/Battle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Battle/Battle.cpp -o CMakeFiles/test.dir/src/Battle/Battle.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Battle/Battle.cpp -o CMakeFiles/test.dir/src/Battle/Battle.cpp.s
 
 CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o: src/Inventory/Inventory.cpp
 CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o -MF CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o.d -o CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Inventory/Inventory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o -MF CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o.d -o CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Inventory/Inventory.cpp
 
 CMakeFiles/test.dir/src/Inventory/Inventory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Inventory/Inventory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Inventory/Inventory.cpp > CMakeFiles/test.dir/src/Inventory/Inventory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Inventory/Inventory.cpp > CMakeFiles/test.dir/src/Inventory/Inventory.cpp.i
 
 CMakeFiles/test.dir/src/Inventory/Inventory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Inventory/Inventory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Inventory/Inventory.cpp -o CMakeFiles/test.dir/src/Inventory/Inventory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Inventory/Inventory.cpp -o CMakeFiles/test.dir/src/Inventory/Inventory.cpp.s
 
 CMakeFiles/test.dir/src/Items/Item.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Items/Item.cpp.o: src/Items/Item.cpp
 CMakeFiles/test.dir/src/Items/Item.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/src/Items/Item.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Items/Item.cpp.o -MF CMakeFiles/test.dir/src/Items/Item.cpp.o.d -o CMakeFiles/test.dir/src/Items/Item.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Items/Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/src/Items/Item.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Items/Item.cpp.o -MF CMakeFiles/test.dir/src/Items/Item.cpp.o.d -o CMakeFiles/test.dir/src/Items/Item.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Items/Item.cpp
 
 CMakeFiles/test.dir/src/Items/Item.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Items/Item.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Items/Item.cpp > CMakeFiles/test.dir/src/Items/Item.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Items/Item.cpp > CMakeFiles/test.dir/src/Items/Item.cpp.i
 
 CMakeFiles/test.dir/src/Items/Item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Items/Item.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Items/Item.cpp -o CMakeFiles/test.dir/src/Items/Item.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Items/Item.cpp -o CMakeFiles/test.dir/src/Items/Item.cpp.s
 
-CMakeFiles/test.dir/src/Characters/Character.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/src/Characters/Character.cpp.o: src/Characters/Character.cpp
-CMakeFiles/test.dir/src/Characters/Character.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/src/Characters/Character.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Characters/Character.cpp.o -MF CMakeFiles/test.dir/src/Characters/Character.cpp.o.d -o CMakeFiles/test.dir/src/Characters/Character.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Character.cpp
+CMakeFiles/test.dir/src/Character/Character.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/Character/Character.cpp.o: src/Character/Character.cpp
+CMakeFiles/test.dir/src/Character/Character.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/src/Character/Character.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Character/Character.cpp.o -MF CMakeFiles/test.dir/src/Character/Character.cpp.o.d -o CMakeFiles/test.dir/src/Character/Character.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Character.cpp
 
-CMakeFiles/test.dir/src/Characters/Character.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Characters/Character.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Character.cpp > CMakeFiles/test.dir/src/Characters/Character.cpp.i
+CMakeFiles/test.dir/src/Character/Character.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Character/Character.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Character.cpp > CMakeFiles/test.dir/src/Character/Character.cpp.i
 
-CMakeFiles/test.dir/src/Characters/Character.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Characters/Character.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Character.cpp -o CMakeFiles/test.dir/src/Characters/Character.cpp.s
+CMakeFiles/test.dir/src/Character/Character.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Character/Character.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Character.cpp -o CMakeFiles/test.dir/src/Character/Character.cpp.s
 
-CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o: src/Characters/CharacterSelector.cpp
-CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o -MF CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o.d -o CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/CharacterSelector.cpp
+CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o: src/Character/CharacterSelector.cpp
+CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o -MF CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o.d -o CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/CharacterSelector.cpp
 
-CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/CharacterSelector.cpp > CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.i
+CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/CharacterSelector.cpp > CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.i
 
-CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/CharacterSelector.cpp -o CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.s
+CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/CharacterSelector.cpp -o CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.s
 
-CMakeFiles/test.dir/src/Characters/Player.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/src/Characters/Player.cpp.o: src/Characters/Player.cpp
-CMakeFiles/test.dir/src/Characters/Player.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.dir/src/Characters/Player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Characters/Player.cpp.o -MF CMakeFiles/test.dir/src/Characters/Player.cpp.o.d -o CMakeFiles/test.dir/src/Characters/Player.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Player.cpp
+CMakeFiles/test.dir/src/Character/Player.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/Character/Player.cpp.o: src/Character/Player.cpp
+CMakeFiles/test.dir/src/Character/Player.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.dir/src/Character/Player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Character/Player.cpp.o -MF CMakeFiles/test.dir/src/Character/Player.cpp.o.d -o CMakeFiles/test.dir/src/Character/Player.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Player.cpp
 
-CMakeFiles/test.dir/src/Characters/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Characters/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Player.cpp > CMakeFiles/test.dir/src/Characters/Player.cpp.i
+CMakeFiles/test.dir/src/Character/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Character/Player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Player.cpp > CMakeFiles/test.dir/src/Character/Player.cpp.i
 
-CMakeFiles/test.dir/src/Characters/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Characters/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Player.cpp -o CMakeFiles/test.dir/src/Characters/Player.cpp.s
+CMakeFiles/test.dir/src/Character/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Character/Player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Player.cpp -o CMakeFiles/test.dir/src/Character/Player.cpp.s
 
-CMakeFiles/test.dir/src/Characters/Enemy.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/src/Characters/Enemy.cpp.o: src/Characters/Enemy.cpp
-CMakeFiles/test.dir/src/Characters/Enemy.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test.dir/src/Characters/Enemy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Characters/Enemy.cpp.o -MF CMakeFiles/test.dir/src/Characters/Enemy.cpp.o.d -o CMakeFiles/test.dir/src/Characters/Enemy.cpp.o -c /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Enemy.cpp
+CMakeFiles/test.dir/src/Character/Enemy.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/Character/Enemy.cpp.o: src/Character/Enemy.cpp
+CMakeFiles/test.dir/src/Character/Enemy.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test.dir/src/Character/Enemy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Character/Enemy.cpp.o -MF CMakeFiles/test.dir/src/Character/Enemy.cpp.o.d -o CMakeFiles/test.dir/src/Character/Enemy.cpp.o -c /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Enemy.cpp
 
-CMakeFiles/test.dir/src/Characters/Enemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Characters/Enemy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Enemy.cpp > CMakeFiles/test.dir/src/Characters/Enemy.cpp.i
+CMakeFiles/test.dir/src/Character/Enemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Character/Enemy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Enemy.cpp > CMakeFiles/test.dir/src/Character/Enemy.cpp.i
 
-CMakeFiles/test.dir/src/Characters/Enemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Characters/Enemy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/src/Characters/Enemy.cpp -o CMakeFiles/test.dir/src/Characters/Enemy.cpp.s
+CMakeFiles/test.dir/src/Character/Enemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Character/Enemy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/src/Character/Enemy.cpp -o CMakeFiles/test.dir/src/Character/Enemy.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
@@ -262,10 +262,10 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/src/Battle/Battle.cpp.o" \
 "CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o" \
 "CMakeFiles/test.dir/src/Items/Item.cpp.o" \
-"CMakeFiles/test.dir/src/Characters/Character.cpp.o" \
-"CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o" \
-"CMakeFiles/test.dir/src/Characters/Player.cpp.o" \
-"CMakeFiles/test.dir/src/Characters/Enemy.cpp.o"
+"CMakeFiles/test.dir/src/Character/Character.cpp.o" \
+"CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o" \
+"CMakeFiles/test.dir/src/Character/Player.cpp.o" \
+"CMakeFiles/test.dir/src/Character/Enemy.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
@@ -279,16 +279,16 @@ bin/test: CMakeFiles/test.dir/src/Location/Village.cpp.o
 bin/test: CMakeFiles/test.dir/src/Battle/Battle.cpp.o
 bin/test: CMakeFiles/test.dir/src/Inventory/Inventory.cpp.o
 bin/test: CMakeFiles/test.dir/src/Items/Item.cpp.o
-bin/test: CMakeFiles/test.dir/src/Characters/Character.cpp.o
-bin/test: CMakeFiles/test.dir/src/Characters/CharacterSelector.cpp.o
-bin/test: CMakeFiles/test.dir/src/Characters/Player.cpp.o
-bin/test: CMakeFiles/test.dir/src/Characters/Enemy.cpp.o
+bin/test: CMakeFiles/test.dir/src/Character/Character.cpp.o
+bin/test: CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o
+bin/test: CMakeFiles/test.dir/src/Character/Player.cpp.o
+bin/test: CMakeFiles/test.dir/src/Character/Enemy.cpp.o
 bin/test: CMakeFiles/test.dir/build.make
 bin/test: lib/libgtest.a
 bin/test: lib/libgtest_main.a
 bin/test: lib/libgtest.a
 bin/test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable bin/test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable bin/test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -300,6 +300,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148 /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148 /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148 /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148 /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148 /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148 /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148 /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148 /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 

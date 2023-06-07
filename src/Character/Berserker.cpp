@@ -1,4 +1,4 @@
-#include "../include/Berserker.h"
+#include "Berserker.h"
 #include <string>
 using namespace std;
 

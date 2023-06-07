@@ -1,7 +1,7 @@
 #ifndef __DUNGEONROOM_H__
 #define __DUNGEONROOM_H__
 
-#include "../Characters/Enemy.h"
+#include "../Character/AllCharacters.h"
 #include <string>
 #include "Location.h"
 #include <vector>

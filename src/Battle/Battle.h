@@ -1,8 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "../Characters/Player.h"
-#include "../Characters/Enemy.h"
+#include "../Character/AllCharacters.h"
 using namespace std;
 
 #ifndef BATTLE_H
