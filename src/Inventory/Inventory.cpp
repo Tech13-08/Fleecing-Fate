@@ -1,3 +1,4 @@
+#include <iostream>
 
 #include <vector>
 #include <string>
@@ -10,21 +11,29 @@ using namespace std;
     }
 
     void Inventory::add_item(Item* cpy){
-      inv.push_back(cpy);
+      for(int i = 0; i < inv.size(); i++){
+        if(cpy->getName() == inv.at(i)->getName()){
+          inv.at(i)->addAmount(1);
+          return;
+        }
+      }
+      Item* cpyitem = cpy;
+      cpyitem->addAmount(1);
+      inv.push_back(cpyitem);
     }
 
     Item* Inventory::use_item(int index){
-      Item cpyitem = new 
-      if (index < 0 || index > inv.size() -1){
+        
+      if(index < 0 || index > inv.size() -1){
         return nullptr;
       }
       if(inv.at(index)->getAmount() == 1){
         inv.at(index)->addAmount(-1);
-        return new Item(inv.at(index)->name, inv.at(index)->cost, inv.at(index)->Itemtype, inv.at(index)->power);
+        return new Item(inv.at(index)->getName(), inv.at(index)->getCost(), inv.at(index)->getType(), inv.at(index)->getPower());
         inv.erase(inv.begin(), index);
       }else{
         inv.at(index)->addAmount(-1);
-        return new Item(inv.at(index)->name, inv.at(index)->cost, inv.at(index)->Itemtype, inv.at(index)->power);
+        return new Item(inv.at(index)->getName(), inv.at(index)->getCost(), inv.at(index)->getType(), inv.at(index)->getPower());
       }
     }
 
@@ -42,4 +51,13 @@ using namespace std;
 
     vector<Item*> Inventory::get_inventory(){
       return inv;
+    }
+
+    void Inventory::displayInventory() const{
+      cout "Inventory: ";
+      for(int i = 0; i < inv.size()-1; i++){
+        cout << inv.at(i)->getName();
+        cout << ", "
+      }
+      cout << inv.at(inv.size()-1)->getName();
     }

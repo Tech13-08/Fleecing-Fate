@@ -24,7 +24,7 @@ class Item {
     int getCost() const;
     int getPower() const;
     int getAmount() const;
-    void addAmount() const;
+    void addAmount(int ) const;
 };
 
 #endif

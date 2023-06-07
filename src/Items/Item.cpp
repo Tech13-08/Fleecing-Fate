@@ -42,3 +42,7 @@ int Item::getPower() const{
 int Item::getAmount() const{
     return amount;
 }
+
+void Item::addAmount(int input) const{
+    amount = amount + input;
+}
