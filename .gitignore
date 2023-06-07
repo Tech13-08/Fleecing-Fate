@@ -4,3 +4,7 @@ googletest-download/
 googletest-src/
 lib/
 bin/
+CMakeCache.txt
+CMakeLists.txt.in
+CMakeFiles/
+a.out

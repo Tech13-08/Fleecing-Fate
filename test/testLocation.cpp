@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../Location/AllLocations.h"
+#include "../src/Location/AllLocations.h"
 #include <string>
 using std::string;
 
