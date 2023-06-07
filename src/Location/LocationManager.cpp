@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 #include <string>
 #include "AllLocations.h"
@@ -62,7 +63,8 @@ using namespace std;
       cout << ": ";
       cout << maps.at(currentMap)->getName();
       cout << ". "
-      cout << maps.at(currentMap)->getDescription();      
+      cout << maps.at(currentMap)->getDescription();
+      coutt << "."
       cout << endl;
     }
 

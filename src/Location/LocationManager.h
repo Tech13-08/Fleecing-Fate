@@ -1,6 +1,6 @@
 #ifndef LOCATIONMANAGER_H
 #define LOCATIONMANAGER_H
-
+#include <iostream>
 #include <string>
 #include <vector>
 #include "AllLocations.h"
