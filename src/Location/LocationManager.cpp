@@ -14,33 +14,35 @@ using namespace std;
       maps.push_back(DungeonLocation);
     }
 
-    bool LocationManager::move(string direction){
+    bool LocationManager::move(int direction){
         int size = maps.at(currentMap)->getSize();
         bool moveable = false;
 
-        if(direction == "north"){
+        switch(direction){
+          case 1:
             moveable = y - 1 >= 0;
             y = moveable ? (y - 1) : y;
-        }
-        if(direction == "south"){
+            break;
+          case 2:
             moveable = y + 1 < size;
             y = moveable ? (y + 1) : y;
-        }
-        if(direction == "east"){
+            break;
+          case 3:
             moveable = x - 1 >= 0;
             x = moveable ? (x - 1) : x;
             if(!moveable && currentMap > 0){
               setLocation(currentMap - 1);
               return true;
             }
-        }
-        if(direction == "west"){
+            break;
+          case 4: 
             moveable = x + 1 >= 0;
             x = moveable ? (x + 1) : x;
             if(!moveable && currentMap > 0){
               setLocation(currentMap + 1);
               return true;
             }
+            break;
         }
         return moveable;
     }
@@ -62,9 +64,7 @@ using namespace std;
       cout << maps.at(currentMap)->getType();
       cout << ": ";
       cout << maps.at(currentMap)->getName();
-      cout << ". "
-      cout << maps.at(currentMap)->getDescription();
-      coutt << "."
-      cout << endl;
+      cout << "! "
+      cout << maps.at(currentMap)->getDescription();      
+      cout << "." << endl;
     }
-
