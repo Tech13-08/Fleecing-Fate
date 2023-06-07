@@ -1,8 +1,5 @@
 #include "gtest/gtest.h"
-#include "../Location/Village.h"
-#include "../Location/Store.h"
-#include "../Location/Dungeon.h"
-#include "../Location/DungeonRoom.h"
+#include "../Location/AllLocations.h"
 #include <string>
 using std::string;
 
