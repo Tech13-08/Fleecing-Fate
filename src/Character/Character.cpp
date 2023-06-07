@@ -36,8 +36,9 @@ void Character::takeDamage(double damage) {
     }
 }
 
-void Character::dealDamage(Character* target, double damage) {
+int Character::dealDamage(Character* target, double damage) {
     target->takeDamage(damage);
+    return damage;
 }
 
 void Character::heal(double healed) {
@@ -46,8 +47,8 @@ void Character::heal(double healed) {
         currHealth = maxHealth;
 }
 
-void Character::attack(Character* target) {
-    dealDamage(target, strength);
+int Character::attack(Character* target) {
+    return dealDamage(target, strength);
 }
 
 void Character::die() {

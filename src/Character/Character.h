@@ -19,11 +19,11 @@ public:
     double getCurrHealth() const;
     double getStrength() const;
     bool getAlive() const;
-    void dealDamage(Character* target, double damage);
+    int dealDamage(Character* target, double damage);
     virtual void takeDamage(double damage);
     void heal(double healed);
     void die();
     // combat
-    virtual void attack(Character* target);
+    virtual int attack(Character* target);
 };
 #endif

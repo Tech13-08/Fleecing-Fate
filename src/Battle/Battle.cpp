@@ -12,53 +12,53 @@ Battle::Battle(Player* player, Enemy* e){
 }
 void Battle::displayStatus(){
     cout << "-----------" << endl;
-    cout << "Your HP: " << player->getHP() << endl;
+    cout << "Your HP: " << player->getCurrHealth() << endl;
     cout << "Your AP: " << playerAP << endl;
     cout << endl;
-    cout << "Enemy HP: " << enemy->getHP() << endl;
+    cout << "Enemy HP: " << enemy->getCurrHealth() << endl;
     cout << endl;
 }
 
-int Battle::calcDamage(int baseDamage){
-    int variance = rand()%10 - 5; //-5 to 5
-    return baseDamage + variance;
-}
-int Battle::calcDamageWithCrit(int baseDamage, int critChance){
-    int variance = rand()%10 - 5; //-5 to 5
-    int critRoll = rand()%100 + 1; //1 to 100
-    if(critChance >= critRoll){
-        cout << "Critical hit!" << endl;
-        return 2*(baseDamage + variance);
-    }
-    else{
-        return baseDamage + variance;
-    }
+// int Battle::calcDamage(int baseDamage){
+//     int variance = rand()%10 - 5; //-5 to 5
+//     return baseDamage + variance;
+// }
+// int Battle::calcDamageWithCrit(int baseDamage, int critChance){
+//     int variance = rand()%10 - 5; //-5 to 5
+//     int critRoll = rand()%100 + 1; //1 to 100
+//     if(critChance >= critRoll){
+//         cout << "Critical hit!" << endl;
+//         return 2*(baseDamage + variance);
+//     }
+//     else{
+//         return baseDamage + variance;
+//     }
 
-}
-void Battle::playerAttack(){ //replace these later when we actually get characters
-    if(playerAP >= 100){
-        int damageDealt = calcDamage(player->getATK());
-        cout << "You spend 100 AP to attack" << endl;
-        cout << "Enemy takes " << damageDealt << " damage" << endl;
-        playerAP -= 100;
-        enemy->takeDamage(damageDealt);
-    }
-    else{
-        cout << "Not enough AP!" << endl;
-    }
-}
-void Battle::playerStrongAttack(){
-    if(playerAP >= 200){
-        int damageDealt = 1.5*calcDamageWithCrit(player->getATK(),20);
-        cout << "You spend 200 AP to do a strong attack" << endl;
-        cout << "Enemy takes " << damageDealt << " damage" << endl;
-        playerAP -= 200;
-        enemy->takeDamage(damageDealt);
-    }
-    else{
-        cout << "Not enough AP!" << endl;
-    }
-}
+// }
+// void Battle::playerAttack(){ //replace these later when we actually get characters
+//     if(playerAP >= 100){
+//         int damageDealt = calcDamage(player->getATK());
+//         cout << "You spend 100 AP to attack" << endl;
+//         cout << "Enemy takes " << damageDealt << " damage" << endl;
+//         playerAP -= 100;
+//         enemy->takeDamage(damageDealt);
+//     }
+//     else{
+//         cout << "Not enough AP!" << endl;
+//     }
+// }
+// void Battle::playerStrongAttack(){
+//     if(playerAP >= 200){
+//         int damageDealt = 1.5*calcDamageWithCrit(player->getATK(),20);
+//         cout << "You spend 200 AP to do a strong attack" << endl;
+//         cout << "Enemy takes " << damageDealt << " damage" << endl;
+//         playerAP -= 200;
+//         enemy->takeDamage(damageDealt);
+//     }
+//     else{
+//         cout << "Not enough AP!" << endl;
+//     }
+// }
 void Battle::doNothing(){
     cout << "Did nothing" << endl;
 }
@@ -72,10 +72,10 @@ void Battle::menu(){
     cin >> choice;
     switch(choice){
         case '1':
-            playerAttack();
+            player->attack(enemy);
         break;
         case '2':
-            playerStrongAttack();
+            player->specialAttack(enemy);
         break;
         case '3':
             doNothing();
@@ -97,7 +97,7 @@ void Battle::playerTurn(){
     menu();
 }
 void Battle::enemyTurn(){
-    int dmg = calcDamage(enemy->getATK());
+    int damage = enemy->dealDamage(player);
     cout << "Enemy attacks you for " << dmg << " damage" << endl;
     player->takeDamage(dmg);
 }

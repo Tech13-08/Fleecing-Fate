@@ -22,18 +22,18 @@ void Rogue::reset() {
     luck = BASELUCK;
 }
 
-void Rogue::specialAttack(Character* target) {
+int Rogue::specialAttack(Character* target) {
     double critChance = rand() % 100;
     if (critChance >= 99){
-        target->takeDamage(10000);
         luck = BASELUCK;
+        return dealDamage(target, 10000);
     }
     else if (luck > critChance) {
-        target->takeDamage(3*this->getStrength());
         luck = BASELUCK;
+        return dealDamage(target, 3*this->getStrength());
     }
     else {
-        target->takeDamage(this->getStrength());
         luck += 10;
+        return dealDamage(target, this->getStrength());
     }
 }
