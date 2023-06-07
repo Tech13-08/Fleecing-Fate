@@ -9,13 +9,13 @@ using namespace std;
       money = 100;
     }
 
-    Inventory::add_item(Item* cpy){
+    void Inventory::add_item(Item* cpy){
       inv.push_back(cpy);
     }
 
     Item* Inventory::use_item(int index){
       Item cpyitem = new 
-      if(index < 0 || index > inv.size() -1){
+      if (index < 0 || index > inv.size() -1){
         return nullptr;
       }
       if(inv.at(index)->getAmount() == 1){

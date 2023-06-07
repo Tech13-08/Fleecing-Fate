@@ -4,9 +4,9 @@
 #include "Battle.h"
 #include "../Character/AllCharacters.h"
 using namespace std;
-Battle::Battle(Player* player, Enemy* e){
+Battle::Battle(Player* player, Enemy* enemy){
     this->player=player;
-    this->enemy=e;
+    this->enemy=enemy;
     int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
     int playerAP = 0;
 }
@@ -70,10 +70,10 @@ void Battle::menu(){
     cin >> choice;
     switch(choice){
         case '1':
-            playerAttack(enemy);
+            playerAttack();
         break;
         case '2':
-            playerStrongAttack(enemy);
+            playerStrongAttack();
         break;
         case '3':
             doNothing();
@@ -96,7 +96,7 @@ void Battle::playerTurn(){
 }
 void Battle::enemyTurn(){
     int damage = enemy->attack(player);
-    cout << "Enemy attacks you for " << dmg << " damage" << endl;
+    cout << "Enemy attacks you for " << damage << " damage" << endl;
 }
 
 bool Battle::doBattle(){
