@@ -14,7 +14,7 @@ public:
     int getStat() const override;
     int getRage() const;
     void setRage(int newRage);
-    void specialAttack(Character* target) override;
+    int specialAttack(Character* target) override;
     void reset() override;
     void takeDamage(double damage) override; // rage increases when damage is taken
 };

@@ -6,3 +6,4 @@ lib/
 bin/
 CMakeCache.txt
 CMakeLists.txt.in
+CMakeFiles/

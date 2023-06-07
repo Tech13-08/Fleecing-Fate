@@ -15,7 +15,7 @@ public:
     int getLuck() const;
     void setLuck(int newLuck);
     void reset() override;
-    void specialAttack(Character* target) override;
+    int specialAttack(Character* target) override;
 };
 
 #endif

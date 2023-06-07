@@ -18,12 +18,12 @@ void Berserker::setRage(int newRage) {
     rage = newRage;
 }
 
-void Berserker::specialAttack(Character* target) {
+int Berserker::specialAttack(Character* target) {
     int damage = (1.5 + rage/10.0)*(this->getStrength());
-    target->takeDamage(damage);
     if (rage >= 10)
         setRage(rage-=10);
     else setRage(0);
+    return dealDamage(target, damage);
 }
 
 void Berserker::reset() {
