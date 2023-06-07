@@ -1,4 +1,4 @@
-#include "../include/Rogue.h"
+#include "Rogue.h"
 #include <string>
 using namespace std;
 

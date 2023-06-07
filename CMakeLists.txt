@@ -44,7 +44,7 @@ set(LOCATION_SOURCE_FILES src/Location/Dungeon.cpp src/Location/DungeonRoom.cpp 
 set(BATTLE_SOURCE_FILES src/Battle/Battle.cpp)
 set(INVENTORY_SOURCE_FILES src/Inventory/Inventory.cpp)
 set(ITEMS_SOURCE_FILES src/Items/Item.cpp)
-set(CHARACTER_SOURCE_FILES src/Characters/Character.cpp src/Characters/CharacterSelector.cpp src/Characters/Player.cpp src/Characters/Enemy.cpp)
+set(CHARACTER_SOURCE_FILES src/Character/Character.cpp src/Character/CharacterSelector.cpp src/Character/Player.cpp src/Character/Enemy.cpp)
 add_executable(main main.cpp ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})
 
 set(TEST_FILES test/testLocation.cpp test/battleTest.cpp)
