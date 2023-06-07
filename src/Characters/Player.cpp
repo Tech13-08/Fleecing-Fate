@@ -11,6 +11,8 @@ int Player::getMaxStat() const {
 }
 
 //Berserker
+Berseker::Berserker(const string& name, double maxHealth, double strength) : Player(name, maxHealth, strength){};
+
 int Berserker::getStat() const {
     return getRage();
 }
@@ -44,6 +46,8 @@ void Berserker::takeDamage(double damage) {
 }
 
 //Rogue
+Rogue::Rogue(const string& name, double maxHealth, double strength) : Player(name, maxHealth, strength){};
+
 int Rogue::getStat() const {
     return getLuck();
 }
