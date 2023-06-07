@@ -1,7 +1,7 @@
 #include "Character.h"
 #include "Player.h"
 #include <iostream>
-#include <stream>
+#include <string>
 
 void CharacterSelector() {
     int choice;
