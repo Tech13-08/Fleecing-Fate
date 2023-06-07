@@ -18,6 +18,7 @@ class LocationManager {
     bool move(string);
     Location* getLocation() const;
     void setLocation(int);
+    void displayLocation();
 
 };
 

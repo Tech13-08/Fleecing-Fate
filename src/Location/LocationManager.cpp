@@ -55,4 +55,14 @@ using namespace std;
         currentMap = mapIndex;
       }
     }
+    
+    void LocationManager::displayLocation(){
+      cout << "You are in the ";
+      cout << maps.at(currentMap)->getType();
+      cout << ": ";
+      cout << maps.at(currentMap)->getName();
+      cout << ". "
+      cout << maps.at(currentMap)->getDescription();      
+      cout << endl;
+    }
 
