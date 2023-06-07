@@ -1,15 +1,16 @@
-#include <iostream>
-#include <stdlib.h>
-#include <string>
-#include "header/battle.h"
-#include "header/player.h"
-#include "header/enemy.h"
-using namespace std;
+#include <iostream> 
+#include <cstring> 
+#include "Location/AllLocations.h"
 
-int main(){
-    Player* p = new Player();
-    Enemy* e = new Enemy();
-    Battle* b = new Battle(p,e);
-    b->doBattle();
-    return 0;
+using namespace std; 
+
+int main() { 
+    LocationManager* lm = new LocationManager();
+    Inventory* inv = new Inventory();
+    Character* player = new Character();
+
+    string choice 
+    cout << "welcome...what character do u want" << endl;
+
+
 }
