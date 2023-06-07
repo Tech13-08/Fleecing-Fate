@@ -3,8 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "Location/MapManager.h"
-#include "Location/Location.h"
+#include "AllLocations.h"
 using namespace std;
 
 class LocationManager {

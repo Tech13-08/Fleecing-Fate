@@ -3,22 +3,23 @@
 
 #include <string>
 #include <vector>
-#include "Item.h"
+#include "../Items/Item.h"
 using namespace std;
 
 class Inventory {
  private:
-  vector<Items*> inv;
+  vector<Item*> inv;
   int money;
   
  public:
     Inventory();
-    add_item(Item*);
-    Item* use_item(string name);
+    void add_item(Item*);
+    Item* use_item(int index);
     int get_money() const;
     void set_money(int );
     void add_money(int );
-    vector<Items*> get_inventory();
+    vector<Item*> get_inventory();
+    void displayInventory() const;
 
 };
 

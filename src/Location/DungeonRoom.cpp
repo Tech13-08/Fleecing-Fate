@@ -1,6 +1,6 @@
 
 #include "DungeonRoom.h"
-#include "../Enemy.h"
+#include "../Character/AllCharacters.h"
 #include <string>
 #include <vector>
 using std::string;
@@ -9,7 +9,7 @@ DungeonRoom::DungeonRoom(const string name, const string description) : Location
     this->setSize(3);
     enemies.resize(this->getSize(), nullptr);
     for (int i = 0; i < this->getSize(); ++i) {
-        enemies[i] = new Enemy(i);
+        enemies[i] = new Enemy();
     }
 }
 

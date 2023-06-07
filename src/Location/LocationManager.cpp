@@ -1,10 +1,6 @@
-#include "c.h"
 #include <vector>
 #include <string>
-#include "Location/Dungeon.h"
-#include "Location/Village.h"
-#include "Location/MapManager.h"
-#include "Location/Location.h"
+#include "AllLocations.h"
 using namespace std;
     
     LocationManager::LocationManager(){

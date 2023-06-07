@@ -1,9 +1,11 @@
 #include "gtest/gtest.h"
-#include "../header/battle.h"
-
+#include "../src/Character/AllCharacters.h"
+#include "../src/Battle/Battle.h"
 using namespace std;
 TEST(BattleTests,Constructor){
-    Battle* battle = new Battle();
+    Berserker* p1 = new Berserker("Player One", 1000, 200);
+    Enemy* e1 = new Enemy();
+    Battle* battle = new Battle(p1, e1);
     EXPECT_NE(battle,nullptr);
 }
 // TEST(BattleTests, TestCalcDamage){

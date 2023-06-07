@@ -1,7 +1,7 @@
 #ifndef __STORE_H__
 #define __STORE_H__
 
-#include "../Item.h"
+#include "../Items/Item.h"
 #include <string>
 #include "Location.h"
 #include <vector>

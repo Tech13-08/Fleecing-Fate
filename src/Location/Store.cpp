@@ -1,6 +1,6 @@
 
 #include "Store.h"
-#include "../Item.h"
+#include "../Items/Item.h"
 #include <string>
 #include <vector>
 using std::string;
