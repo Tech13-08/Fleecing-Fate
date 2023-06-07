@@ -30,7 +30,7 @@ using namespace std;
       if(inv.at(index)->getAmount() == 1){
         inv.at(index)->addAmount(-1);
         return new Item(inv.at(index)->getName(), inv.at(index)->getCost(), inv.at(index)->getType(), inv.at(index)->getPower());
-        inv.erase(inv.begin(), index);
+        inv.erase(inv.begin() + index);
       }else{
         inv.at(index)->addAmount(-1);
         return new Item(inv.at(index)->getName(), inv.at(index)->getCost(), inv.at(index)->getType(), inv.at(index)->getPower());
@@ -54,10 +54,10 @@ using namespace std;
     }
 
     void Inventory::displayInventory() const{
-      cout "Inventory: ";
+      cout << "Inventory: ";
       for(int i = 0; i < inv.size()-1; i++){
         cout << inv.at(i)->getName();
-        cout << ", "
+        cout << ", ";
       }
       cout << inv.at(inv.size()-1)->getName();
     }

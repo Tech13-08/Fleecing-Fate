@@ -8,8 +8,8 @@ using namespace std;
 Item::Item(){
     name = "NoName";
     cost = 0;
-    thattype = "NoType";
-    thatpower = 0;
+    Itemtype = "NoType";
+    power = 0;
     amount = 0;
 }
 
@@ -21,8 +21,8 @@ Item::Item(string thatname, int thatcost, string thattype, int thatpower){
     amount = 0;
 }
 
-Item& Item::operator=(const Item& cpy){
-    return new Item(cpy->name, cpy->cost, cpy->Itemtype, cpy->power);
+const Item& Item::operator=(const Item& cpy){
+    return *new Item(cpy.getName(), cpy.getCost(), cpy.getType(), cpy.getPower());
 }
 
 string Item::getName() const{
@@ -43,6 +43,6 @@ int Item::getAmount() const{
     return amount;
 }
 
-void Item::addAmount(int input) const{
+void Item::addAmount(int input){
     amount = amount + input;
 }
