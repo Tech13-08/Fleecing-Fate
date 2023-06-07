@@ -17,7 +17,7 @@ class Item {
   
  public:
     Item();
-    Item(string, int, string); 
+    Item(string, int, string, int); 
     Item & operator=(const Item &cpy);
     string getName() const;
     string getType() const;

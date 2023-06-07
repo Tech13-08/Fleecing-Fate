@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "battle.h"
+#include "Battle.h"
 #include "../Character/AllCharacters.h"
 using namespace std;
 Battle::Battle(Player* player, Enemy* e){
