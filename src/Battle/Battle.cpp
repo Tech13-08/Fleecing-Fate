@@ -35,30 +35,28 @@ void Battle::displayStatus(){
 //     }
 
 // }
-// void Battle::playerAttack(){ //replace these later when we actually get characters
-//     if(playerAP >= 100){
-//         int damageDealt = calcDamage(player->getATK());
-//         cout << "You spend 100 AP to attack" << endl;
-//         cout << "Enemy takes " << damageDealt << " damage" << endl;
-//         playerAP -= 100;
-//         enemy->takeDamage(damageDealt);
-//     }
-//     else{
-//         cout << "Not enough AP!" << endl;
-//     }
-// }
-// void Battle::playerStrongAttack(){
-//     if(playerAP >= 200){
-//         int damageDealt = 1.5*calcDamageWithCrit(player->getATK(),20);
-//         cout << "You spend 200 AP to do a strong attack" << endl;
-//         cout << "Enemy takes " << damageDealt << " damage" << endl;
-//         playerAP -= 200;
-//         enemy->takeDamage(damageDealt);
-//     }
-//     else{
-//         cout << "Not enough AP!" << endl;
-//     }
-// }
+void Battle::playerAttack(){ //replace these later when we actually get characters
+    if(playerAP >= 100){
+        int damageDealt = player->attack(enemy);
+        cout << "You spend 100 AP to attack" << endl;
+        cout << "Enemy takes " << damageDealt << " damage" << endl;
+        playerAP -= 100;
+    }
+    else{
+        cout << "Not enough AP!" << endl;
+    }
+}
+void Battle::playerStrongAttack(){
+    if(playerAP >= 200){
+        int damageDealt = player->specialAttack(enemy);
+        cout << "You spend 200 AP to do a strong attack" << endl;
+        cout << "Enemy takes " << damageDealt << " damage" << endl;
+        playerAP -= 200;
+    }
+    else{
+        cout << "Not enough AP!" << endl;
+    }
+}
 void Battle::doNothing(){
     cout << "Did nothing" << endl;
 }
@@ -72,10 +70,10 @@ void Battle::menu(){
     cin >> choice;
     switch(choice){
         case '1':
-            player->attack(enemy);
+            playerAttack(enemy);
         break;
         case '2':
-            player->specialAttack(enemy);
+            playerStrongAttack(enemy);
         break;
         case '3':
             doNothing();
@@ -97,15 +95,14 @@ void Battle::playerTurn(){
     menu();
 }
 void Battle::enemyTurn(){
-    int damage = enemy->dealDamage(player);
+    int damage = enemy->attack(player);
     cout << "Enemy attacks you for " << dmg << " damage" << endl;
-    player->takeDamage(dmg);
 }
 
 bool Battle::doBattle(){
     while(winloss==0){
         playerTurn();
-        if(enemy->getHP() <= 0 ){
+        if(!enemy->getAlive()){
             cout << "enemy dead" << endl;
             winloss=1;
         }
