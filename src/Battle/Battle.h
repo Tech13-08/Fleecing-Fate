@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include "../Character/AllCharacters.h"
+#include "BattleMenu.h"
 using namespace std;
 
 #ifndef BATTLE_H
@@ -10,20 +11,22 @@ class Battle{
     private:
         Player* player;
         Enemy* enemy;
+        BattleMenu* battleMenu;
         int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
         int playerAP = 0;
     public:
         Battle(Player* player, Enemy* enemy);
-        void displayStatus();
+        // int getAP();
+        //void displayStatus();
         int calcDamage(int baseDamage);
         int calcDamageWithCrit(int baseDamage, int critChance);
         void playerAttack();
         void playerStrongAttack();
-        void doNothing();
+        //void doNothing();
         void menu();
         void playerTurn();
         void enemyTurn();
-        void enemyTakeDamage(int damage); //stub
+        //void enemyTakeDamage(int damage); //stub
         bool doBattle(); //returns false for loss, true for win
 };
 #endif
