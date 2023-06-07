@@ -1,18 +1,30 @@
-#ifndef __ITEM_H__
-#define __ITEM_H__
+#ifndef ITEM_H
+#define ITEM_H
 
+#include <iostream>
 #include <string>
-using std::string;
-class Item{
-    private:
-        string name;
-        int cost;
-        string type;
-        int power;
-    public:
-        Item(string name, int cost, string type, int power) : name(name), cost(cost), type(type), power(power) {}
-        int getCost(){return this->cost;}
+#include <vector>
+using namespace std;
+//Item2
+class Item {
+ private:
+    string name;
+    int cost;
+    string Itemtype;
+    int power;
+    int amount;
 
+  
+ public:
+    Item();
+    Item(string, int, string); 
+    Item & operator=(const Item &cpy);
+    string getName() const;
+    string getType() const;
+    int getCost() const;
+    int getPower() const;
+    int getAmount() const;
+    void addAmount() const;
 };
 
-#endif // __PERSON_H__
+#endif
