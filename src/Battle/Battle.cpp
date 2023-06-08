@@ -37,13 +37,9 @@ Battle::Battle(Player* player, Enemy* enemy, Inventory* inv){
 void Battle::playerAttack(){ //replace these later when we actually get characters
     if(playerAP >= 100){
         int damageDealt = player->attack(enemy);
-        cout << "Attacked" << endl;
         battleMenu->showAPSpent(100);
-        cout << "Ap spent" << endl;
         battleMenu->showOutgoingAttack(damageDealt);
-        cout << "Out attack" << endl;
         playerAP -= 100;
-        cout << "Minus AP" << endl;
     }
     else{
         cout << "Not enough AP!" << endl;
@@ -78,17 +74,22 @@ void Battle::menu(){
         case 2:
             playerStrongAttack();
         break;
-        case 3:
-            inv->displayInventory();
-            if(inv->selectItem()->getType()=="heal"){
-                player->takeDamage(0-(inv->selectItem()->getPower())); 
+        case 3:{
+            Item* currItem = inv->selectItem();
+            if(currItem){
+            if(currItem->getType()=="heal"){
+                player->takeDamage(0-(currItem->getPower())); 
+                cout << "Healed " << currItem->getPower() << endl;
                 //take negative damage = heal
                 //todo: display this            
             }
-            else if(inv->selectItem()->getType()=="damage"){
-                enemy->takeDamage(inv->selectItem()->getPower());
+            else if(currItem->getType()=="damage"){
+                enemy->takeDamage(currItem->getPower());
+                cout << "Damaged " << currItem->getPower() << endl;
                 //todo: display this
             }
+            delete currItem;
+            }}
         break;
         case 4:
             battleMenu->doNothing();
@@ -136,6 +137,7 @@ bool Battle::doBattle(){
         return true;
     }
     else{
+        player->die();
         cout << "wow you suck" << endl;
         return false;
     }

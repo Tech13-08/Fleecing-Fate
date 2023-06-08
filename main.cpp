@@ -18,7 +18,6 @@ int main() {
     CharacterSelector* charselect = new CharacterSelector(input);
     Player* p = charselect->getPlayer();
 
-    
     int numinput = 0;
     while(p->getAlive()){
         cout << "What would you like to do?" << endl;

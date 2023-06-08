@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_SOURCE_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -289,6 +289,33 @@ src/Battle/Battle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Battle/Battle.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Battle/Battle.cpp.s
 .PHONY : src/Battle/Battle.cpp.s
+
+src/Battle/BattleMenu.o: src/Battle/BattleMenu.cpp.o
+.PHONY : src/Battle/BattleMenu.o
+
+# target to build an object file
+src/Battle/BattleMenu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Battle/BattleMenu.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Battle/BattleMenu.cpp.o
+.PHONY : src/Battle/BattleMenu.cpp.o
+
+src/Battle/BattleMenu.i: src/Battle/BattleMenu.cpp.i
+.PHONY : src/Battle/BattleMenu.i
+
+# target to preprocess a source file
+src/Battle/BattleMenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Battle/BattleMenu.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Battle/BattleMenu.cpp.i
+.PHONY : src/Battle/BattleMenu.cpp.i
+
+src/Battle/BattleMenu.s: src/Battle/BattleMenu.cpp.s
+.PHONY : src/Battle/BattleMenu.s
+
+# target to generate assembly for a file
+src/Battle/BattleMenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Battle/BattleMenu.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Battle/BattleMenu.cpp.s
+.PHONY : src/Battle/BattleMenu.cpp.s
 
 src/Character/Berserker.o: src/Character/Berserker.cpp.o
 .PHONY : src/Character/Berserker.o
@@ -692,6 +719,30 @@ test/battleTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/battleTest.cpp.s
 .PHONY : test/battleTest.cpp.s
 
+test/characterTest.o: test/characterTest.cpp.o
+.PHONY : test/characterTest.o
+
+# target to build an object file
+test/characterTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/characterTest.cpp.o
+.PHONY : test/characterTest.cpp.o
+
+test/characterTest.i: test/characterTest.cpp.i
+.PHONY : test/characterTest.i
+
+# target to preprocess a source file
+test/characterTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/characterTest.cpp.i
+.PHONY : test/characterTest.cpp.i
+
+test/characterTest.s: test/characterTest.cpp.s
+.PHONY : test/characterTest.s
+
+# target to generate assembly for a file
+test/characterTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/characterTest.cpp.s
+.PHONY : test/characterTest.cpp.s
+
 test/testLocation.o: test/testLocation.cpp.o
 .PHONY : test/testLocation.o
 
@@ -740,6 +791,9 @@ help:
 	@echo "... src/Battle/Battle.o"
 	@echo "... src/Battle/Battle.i"
 	@echo "... src/Battle/Battle.s"
+	@echo "... src/Battle/BattleMenu.o"
+	@echo "... src/Battle/BattleMenu.i"
+	@echo "... src/Battle/BattleMenu.s"
 	@echo "... src/Character/Berserker.o"
 	@echo "... src/Character/Berserker.i"
 	@echo "... src/Character/Berserker.s"
@@ -785,6 +839,9 @@ help:
 	@echo "... test/battleTest.o"
 	@echo "... test/battleTest.i"
 	@echo "... test/battleTest.s"
+	@echo "... test/characterTest.o"
+	@echo "... test/characterTest.i"
+	@echo "... test/characterTest.s"
 	@echo "... test/testLocation.o"
 	@echo "... test/testLocation.i"
 	@echo "... test/testLocation.s"
