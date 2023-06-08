@@ -19,8 +19,8 @@ using namespace std;
         cout << "What direction do you want to travel in? (Enter 0 to quit travelling)" << endl;
         cout << "1. North" << endl;
         cout << "2. South" << endl;
-        cout << "3. East" << endl;
-        cout << "4. West" << endl;
+        cout << "3. West" << endl;
+        cout << "4. East" << endl;
         cin >> choice;
         if(!cin){
           cout << "Try entering a number for direction" << endl;
@@ -39,7 +39,8 @@ using namespace std;
           moveMenu(p, inv);
           return;
         }     
-          cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << lm->maps.at(lm->currentMap)->getSize() << endl;
+        int size = lm->maps.at(lm->currentMap)->getSize();
+          cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << size << " by " << size << endl;
           locationEvent(p, inv);
           moveMenu(p, inv);
         
@@ -56,8 +57,6 @@ using namespace std;
           }
           if(loc->getType()=="DungeonRoom"){
             ((DungeonRoom*) loc)->battleEnemies(p, inv);
-
-
           }
         
       }

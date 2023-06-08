@@ -20,12 +20,12 @@ using namespace std;
 
         switch(direction){
           case 1:
-            moveable = y - 1 >= 0;
-            y = moveable ? (y - 1) : y;
-            break;
-          case 2:
             moveable = y + 1 < size;
             y = moveable ? (y + 1) : y;
+            break;
+          case 2:
+            moveable = y - 1 >= 0;
+            y = moveable ? (y - 1) : y;
             break;
           case 3:
             moveable = x - 1 >= 0;
@@ -40,6 +40,13 @@ using namespace std;
             x = moveable ? (x + 1) : x;
             if(!moveable && currentMap < maps.size()-1){
               setLocation(currentMap + 1);
+              return true;
+            }
+            break;
+            moveable = x - 1 >= 0;
+            x = moveable ? (x - 1) : x;
+            if(!moveable && currentMap > 0){
+              setLocation(currentMap - 1);
               return true;
             }
             break;
