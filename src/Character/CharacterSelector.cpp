@@ -24,7 +24,7 @@ CharacterSelector::CharacterSelector(const string& name) {
         case '1':
             playerChar = exampleBerserker;
             delete exampleRogue;
-        case '1':
+        case '2':
             playerChar = exampleRogue;
             delete exampleBerserker;
     }

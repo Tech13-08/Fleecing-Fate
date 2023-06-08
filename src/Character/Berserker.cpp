@@ -20,8 +20,8 @@ void Berserker::setStat(int newRage) {
 
 int Berserker::specialAttack(Character* target) {
     int damage = (1.5 + rage/10.0)*(this->getStrength());
-    if (rage >= 10)
-        setStat(rage-=10);
+    if (rage >= 20)
+        setStat(rage-=20);
     else setStat(0);
     return dealDamage(target, damage);
 }
@@ -33,7 +33,7 @@ void Berserker::reset() {
 void Berserker::takeDamage(double damageTaken) {
     this->Character::takeDamage(damageTaken);
     if (rage < MAXRAGE) 
-        rage += damage;
+        rage += damageTaken;
     if (rage > MAXRAGE)
         rage = MAXRAGE;
 }
