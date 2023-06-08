@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "LocationManager.h"
+#include "../Character/AllCharacters.h"
 using namespace std;
 
 class MoveSelector {
@@ -12,7 +13,7 @@ class MoveSelector {
  public:
     MoveSelector();
     void moveMenu();
-    void locationEvent();
+    void locationEvent(Player* p);
 
 };
 
