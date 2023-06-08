@@ -26,6 +26,11 @@ int main() {
         cout << "2. View Inventory" << endl;
         cout << "3. Rest" << endl;
         cin >> numinput;
+        if(!cin){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            continue;
+        }
         switch(numinput){
           case 1:
             ms->moveMenu(p, inv);
