@@ -3,6 +3,7 @@
 #include "LocationManager.h"
 #include "MoveSelector.h"
 #include "../Character/AllCharacters.h"
+#include "../Inventory/Inventory.h"
 using namespace std;
     
     MoveSelector::MoveSelector(){
@@ -25,14 +26,13 @@ using namespace std;
           cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << lm->maps.at(lm->currentMap)->getSize() << endl;
         }
     }
-
-    void MoveSelector::locationEvent(Player* p){
+    void MoveSelector::locationEvent(Player* p, Inventory* inv){
       Location* loc = lm->getLocation();
       if(loc){
         string input = "";
         while(input != "q"){
           if(loc->getType()=="Store"){
-            ((Store*) loc)->storeMenu(p);
+            ((Store*) loc)->storeMenu(inv);
             cout << "Would you like to continue shopping or quit? (any key/q)" << endl;
             cin >> input;
           }
