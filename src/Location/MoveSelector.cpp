@@ -55,7 +55,7 @@ using namespace std;
 
           }
           if(loc->getType()=="DungeonRoom"){
-            ((DungeonRoom*) loc)->battleEnemies(p);
+            ((DungeonRoom*) loc)->battleEnemies(p, inv);
 
           }
         

@@ -6,9 +6,10 @@
 #include "../Inventory/Inventory.h"
 #include "../Items/Item.h"
 using namespace std;
-Battle::Battle(Player* player, Enemy* enemy){
+Battle::Battle(Player* player, Enemy* enemy, Inventory* inv){
     this->player=player;
     this->enemy=enemy;
+    this->inv = inv;
     this->battleMenu = new BattleMenu(); //make destructor
     int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
     int playerAP = 0;
@@ -36,9 +37,13 @@ Battle::Battle(Player* player, Enemy* enemy){
 void Battle::playerAttack(){ //replace these later when we actually get characters
     if(playerAP >= 100){
         int damageDealt = player->attack(enemy);
+        cout << "Attacked" << endl;
         battleMenu->showAPSpent(100);
+        cout << "Ap spent" << endl;
         battleMenu->showOutgoingAttack(damageDealt);
+        cout << "Out attack" << endl;
         playerAP -= 100;
+        cout << "Minus AP" << endl;
     }
     else{
         cout << "Not enough AP!" << endl;
@@ -56,18 +61,24 @@ void Battle::playerStrongAttack(){
     }
 }
 
-void Battle::menu(Inventory* inv){
+void Battle::menu(){
     battleMenu->showMenu();
-    char choice;
+    int choice;
     cin >> choice;
+    while(!cin){
+        cout << "> ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin >> choice;
+    }
     switch(choice){
-        case '1':
+        case 1:
             playerAttack();
         break;
-        case '2':
+        case 2:
             playerStrongAttack();
         break;
-        case '3':
+        case 3:
             inv->displayInventory();
             if(inv->selectItem()->getType()=="heal"){
                 player->takeDamage(0-(inv->selectItem()->getPower())); 
@@ -79,12 +90,12 @@ void Battle::menu(Inventory* inv){
                 //todo: display this
             }
         break;
-        case '4':
+        case 4:
             battleMenu->doNothing();
             return;
         break;
     }
-    if(!(choice=='1'||choice=='2'||choice=='3'||choice=='4')){
+    if(!(choice==1||choice==2||choice==3||choice==4)){
         cout << "Invalid choice." << endl;
         menu();
     }
@@ -104,6 +115,7 @@ void Battle::enemyTurn(){
 }
 
 bool Battle::doBattle(){
+    cout << "FIGHT START!" << endl;
     while(winloss==0){
         playerTurn();
         if(!enemy->getAlive()){
@@ -118,7 +130,9 @@ bool Battle::doBattle(){
         }
     }
     if(winloss==1){
-        cout << "yay you win" << endl;
+        int reward = enemy->getStrength();
+        cout << "yay you win, here's " << reward << " coins" << endl;
+        inv->add_money(reward);
         return true;
     }
     else{

@@ -1,11 +1,13 @@
 #include "gtest/gtest.h"
 #include "../src/Character/AllCharacters.h"
+#include "../src/Inventory/Inventory.h"
 #include "../src/Battle/Battle.h"
 using namespace std;
 TEST(BattleTests,Constructor){
     Berserker* p1 = new Berserker("Player One", 100, 25);
     Enemy* e1 = new Enemy();
-    Battle* battle = new Battle(p1, e1);
+    Inventory* inv1 = new Inventory();
+    Battle* battle = new Battle(p1, e1, inv1);
     EXPECT_NE(battle,nullptr);
 }
 // TEST(BattleTests, TestCalcDamage){
@@ -27,14 +29,16 @@ TEST(BattleTests,Constructor){
 TEST(BattleTests, WinCondition){
     Berserker* p1 = new Berserker("Player One", 100, 25);
     Enemy* e = new Enemy();
-    Battle* battle = new Battle(p1,e);
+    Inventory* inv1 = new Inventory();
+    Battle* battle = new Battle(p1,e, inv1);
     bool win = battle->doBattle();
     EXPECT_EQ(win,true);
 }
 TEST(BattleTests, LoseCondition){
     Berserker* p1 = new Berserker("Player One", 100, 25);
     Enemy* e = new Enemy();
-    Battle* battle = new Battle(p1,e);
+    Inventory* inv1 = new Inventory();
+    Battle* battle = new Battle(p1,e, inv1);
     bool win = battle->doBattle();
     EXPECT_NE(win,true);
 }

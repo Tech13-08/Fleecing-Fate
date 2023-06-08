@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include "../Character/AllCharacters.h"
+#include "../Inventory/Inventory.h"
 #include "BattleMenu.h"
 using namespace std;
 
@@ -11,11 +12,12 @@ class Battle{
     private:
         Player* player;
         Enemy* enemy;
+        Inventory* inv;
         BattleMenu* battleMenu;
         int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
         int playerAP = 0;
     public:
-        Battle(Player* player, Enemy* enemy);
+        Battle(Player* player, Enemy* enemy, Inventory* inv);
         // int getAP();
         //void displayStatus();
         int calcDamage(int baseDamage);
@@ -23,7 +25,7 @@ class Battle{
         void playerAttack();
         void playerStrongAttack();
         //void doNothing();
-        void menu(Inventory* inv);
+        void menu();
         void playerTurn();
         void enemyTurn();
         //void enemyTakeDamage(int damage); //stub

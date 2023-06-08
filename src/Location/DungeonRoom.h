@@ -2,6 +2,7 @@
 #define __DUNGEONROOM_H__
 
 #include "../Character/AllCharacters.h"
+#include "../Inventory/Inventory.h"
 #include <string>
 #include "Location.h"
 #include <vector>
@@ -14,7 +15,7 @@ class DungeonRoom : public Location{
     public:
         DungeonRoom(const string name, const string description);
 
-        void battleEnemies(Player*);
+        void battleEnemies(Player*, Inventory*);
 
 };
 
