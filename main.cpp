@@ -24,6 +24,7 @@ int main() {
         cout << "1. Move" << endl;
         cout << "2. View Inventory" << endl;
         cout << "3. Rest" << endl;
+        cout << "4. Stats" << endl;
         cin >> numinput;
         if(!cin){
             cin.clear();
@@ -39,10 +40,10 @@ int main() {
             inv->displayInventory();
             break;
           case 3:
-            //rest(); //ask ting to create a function to heal player to maxhp
+            p->rest(); //ask ting to create a function to heal player to maxhp
             break;
           case 4: 
-            
+            cout << p->getInfo();
             break;
         }
 
@@ -51,6 +52,6 @@ int main() {
 
         //ms->locationEvent(p, inv);
     }
-    cout << "You are dead. You don't feel like moving anymore. ";
+    cout << "You are dead. You don't feel like moving anymore. "<<endl;
     return 0;
 }

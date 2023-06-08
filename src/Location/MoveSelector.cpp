@@ -11,7 +11,9 @@ using namespace std;
     }
 
     void MoveSelector::moveMenu(Player* p, Inventory* inv){
-
+        if(!p->getAlive()){
+          return;
+        }
         int choice = 0;
         lm->displayArea();
         cout << "What direction do you want to travel in? (Enter 0 to quit travelling)" << endl;
@@ -36,9 +38,7 @@ using namespace std;
           cin.ignore(numeric_limits<streamsize>::max(), '\n');
           moveMenu(p, inv);
           return;
-        }
-        
-        
+        }     
           cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << lm->maps.at(lm->currentMap)->getSize() << endl;
           locationEvent(p, inv);
           moveMenu(p, inv);
@@ -56,6 +56,7 @@ using namespace std;
           }
           if(loc->getType()=="DungeonRoom"){
             ((DungeonRoom*) loc)->battleEnemies(p, inv);
+
 
           }
         

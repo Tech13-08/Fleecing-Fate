@@ -36,3 +36,7 @@ int Rogue::specialAttack(Character* target) {
         return dealDamage(target, this->getStrength());
     }
 }
+
+string Rogue::getInfo(){
+    return "Your HP: " + to_string((int)getCurrHealth()) + "\n" + "Your Rage: " + to_string((int)getStat()) + "\n";
+}

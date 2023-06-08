@@ -85,13 +85,13 @@ using namespace std;
         cout << "What item do you want to use?" << endl;
         displayInventory();
         cin >> choice;
-        if(choice <= 0 || choice > inv.size() - 1){
+        choice = choice - 1;
+        if (inv.empty() || choice < 0 || choice >= inv.size()) {
           cout << "Selected out of bounds, cancelling use item." << endl;
           return nullptr;
         }
         cout << "Selected ";
-        cout << inv.at(choice-1)->getName();
+        cout << inv.at(choice)->getName();
         cout << endl;
-        choice = choice - 1;
         return use_item(choice);
     }

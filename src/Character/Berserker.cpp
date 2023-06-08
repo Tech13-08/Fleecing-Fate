@@ -37,3 +37,7 @@ void Berserker::takeDamage(double damageTaken) {
     if (rage > MAXRAGE)
         rage = MAXRAGE;
 }
+
+string Berserker::getInfo(){
+    return "Your HP: " + to_string((int)getCurrHealth()) + "\n" + "Your Rage: " + to_string((int)getStat()) + "\n";
+}
