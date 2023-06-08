@@ -7,4 +7,5 @@ bin/
 CMakeCache.txt
 CMakeLists.txt.in
 CMakeFiles/
+Makefile
 a.out

@@ -26,7 +26,6 @@ using namespace std;
           cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << lm->maps.at(lm->currentMap)->getSize() << endl;
         }
     }
-
     void MoveSelector::locationEvent(Player* p, Inventory* inv){
       Location* loc = lm->getLocation();
       if(loc){

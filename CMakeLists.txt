@@ -40,6 +40,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
     include_directories("${gtest_SOURCE_DIR}/include")
 endif ()
 
+
 set(LOCATION_SOURCE_FILES src/Location/Dungeon.cpp src/Location/DungeonRoom.cpp src/Location/Store.cpp src/Location/Village.cpp src/Location/LocationManager.cpp src/Location/MoveSelector.cpp)
 set(BATTLE_SOURCE_FILES src/Battle/Battle.cpp)
 set(INVENTORY_SOURCE_FILES src/Inventory/Inventory.cpp)
@@ -49,5 +50,6 @@ add_executable(main main.cpp ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${I
 
 set(TEST_FILES test/testLocation.cpp test/battleTest.cpp)
 add_executable(test ${TEST_FILES} ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})
+
 
 target_link_libraries(test gtest gtest_main)
