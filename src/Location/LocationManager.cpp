@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include <string>
 #include "AllLocations.h"
@@ -48,7 +47,20 @@ using namespace std;
     }
 
     Location* LocationManager::getLocation() const{
-      return maps.at(currentMap)->getLocation(x, y);
+      try
+      {
+          if(maps.at(currentMap)->getLocation(x, y)){
+            return maps.at(currentMap)->getLocation(x, y);
+          }else{
+            cout << "You have landed no where! Try looking around to find places here." << endl;
+          }
+      }
+      catch(string e)
+      {
+          cout << "You have tried going out of map bounds! Try a different direction!" << endl;
+      }
+      return nullptr;
+      
     }
 
     void LocationManager::setLocation(int mapIndex){
@@ -59,12 +71,7 @@ using namespace std;
       }
     }
     
-    void LocationManager::displayLocation(){
-      cout << "You are in the ";
-      cout << maps.at(currentMap)->getType();
-      cout << ": ";
-      cout << maps.at(currentMap)->getName();
-      cout << "! "
-      cout << maps.at(currentMap)->getDescription();      
-      cout << "." << endl;
+    void LocationManager::displayArea(){
+      maps.at(currentMap)->displayLocation();
     }
+

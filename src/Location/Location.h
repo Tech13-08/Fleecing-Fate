@@ -24,6 +24,17 @@ class Location{
 
         void setSize(int size){this->size = size;}
 
+        void displayLocation(){
+            cout << "You are in the ";
+            cout << getType();
+            cout << ": ";
+            cout << getName();
+            cout << "! "
+            cout << getDescription();      
+            cout << "." << endl;
+        }
+        
+
 };
 
 #endif // __PERSON_H__
