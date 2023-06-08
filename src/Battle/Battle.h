@@ -23,7 +23,7 @@ class Battle{
         void playerAttack();
         void playerStrongAttack();
         //void doNothing();
-        void menu();
+        void menu(Inventory* inv);
         void playerTurn();
         void enemyTurn();
         //void enemyTakeDamage(int damage); //stub
