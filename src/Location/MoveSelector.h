@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 #include "LocationManager.h"
+#include "MoveSelector.h"
+#include "../Character/AllCharacters.h"
+#include "../Inventory/Inventory.h"
 using namespace std;
 
 class MoveSelector {
@@ -12,7 +15,7 @@ class MoveSelector {
  public:
     MoveSelector();
     void moveMenu();
-    void locationEvent();
+    void locationEvent(Player*, Inventory*);
 
 };
 

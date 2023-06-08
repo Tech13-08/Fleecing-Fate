@@ -2,6 +2,8 @@
 #include <string>
 #include "LocationManager.h"
 #include "MoveSelector.h"
+#include "../Character/AllCharacters.h"
+#include "../Inventory/Inventory.h"
 using namespace std;
     
     MoveSelector::MoveSelector(){
@@ -25,13 +27,18 @@ using namespace std;
         }
     }
 
-    void MoveSelector::locationEvent(){
+    void MoveSelector::locationEvent(Player* p, Inventory* inv){
       Location* loc = lm->getLocation();
       if(loc){
         string input = "";
         while(input != "q"){
           if(loc->getType()=="Store"){
-            ((Store*) loc)->storeMenu();
+            ((Store*) loc)->storeMenu(inv);
+            cout << "Would you like to continue shopping or quit? (any key/q)" << endl;
+            cin >> input;
+          }
+          if(loc->getType()=="DungeonRoom"){
+            ((DungeonRoom*) loc)->battleEnemies(p);
             cout << "Would you like to continue shopping or quit? (any key/q)" << endl;
             cin >> input;
           }

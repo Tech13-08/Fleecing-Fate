@@ -4,7 +4,7 @@
 #include "../Items/Item.h"
 #include <string>
 #include "Location.h"
-#include "../Character/AllCharacters.h"
+#include "../Inventory/Inventory.h"
 #include <vector>
 using std::string;
 using std::vector;
@@ -17,7 +17,7 @@ class Store : public Location{
 
         const vector<Item*> getItems();
         Item* buyItem(int, int& );
-        void storeMenu(Player*);
+        void storeMenu(Inventory*);
 
 };
 
