@@ -1,13 +1,14 @@
 #include <vector>
 #include <string>
 #include "AllLocations.h"
+#include "LocationManager.h"
 using namespace std;
     
     LocationManager::LocationManager(){
       currentMap = 0;
       x = 0;
       y = 0;
-      MapManager* DungeonLocation = new Dungeon("Cave of Danger", "This is the Dungeon.", 1);
+      MapManager* DungeonLocation = new Dungeon("Cave of Danger", "This is the Dungeon.", 2);
       MapManager* VillageLocation = new Village("Town", "const string description", 1);
       maps.push_back(VillageLocation);
       maps.push_back(DungeonLocation);
@@ -35,9 +36,9 @@ using namespace std;
             }
             break;
           case 4: 
-            moveable = x + 1 >= 0;
+            moveable = x + 1 < size;
             x = moveable ? (x + 1) : x;
-            if(!moveable && currentMap > 0){
+            if(!moveable && currentMap < maps.size()-1){
               setLocation(currentMap + 1);
               return true;
             }
@@ -57,7 +58,7 @@ using namespace std;
       }
       catch(string e)
       {
-          cout << "You have tried going out of map bounds! Try a different direction!" << endl;
+          cout << "You are somehow out of map bounds! Try a different direction!" << endl;
       }
       return nullptr;
       
@@ -74,4 +75,3 @@ using namespace std;
     void LocationManager::displayArea(){
       maps.at(currentMap)->displayLocation();
     }
-

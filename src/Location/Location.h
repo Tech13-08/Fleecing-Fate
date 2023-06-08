@@ -1,8 +1,9 @@
 #ifndef __LOCATION_H__
 #define __LOCATION_H__
 #include <string>
+#include <iostream> 
 
-using std::string;
+using namespace std;
 
 class Location{
     private:
@@ -29,7 +30,7 @@ class Location{
             cout << getType();
             cout << ": ";
             cout << getName();
-            cout << "! "
+            cout << "! ";
             cout << getDescription();      
             cout << "." << endl;
         }
