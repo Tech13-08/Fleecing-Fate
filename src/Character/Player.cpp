@@ -3,8 +3,7 @@
 using std::string;
 
 Player::Player(const string& name, double maxHealth, double strength) :
-                Character(name, maxHealth, strength)
-                {};
+                Character(name, maxHealth, strength){};
 
 int Player::getMaxStat() const {
     return 100;
@@ -22,16 +21,16 @@ string Player::getPlayerType() const {
     return playerType;
 }
 
-void setStatType(string& statType) {
-    statType = statType;
+void Player::setStatType(const string& sType) {
+    statType = sType;
 }
 
-void setDescription(string& description) {
-    description = description;
+void Player::setDescription(const string& desc) {
+    description = desc;
 }
 
-void setPlayerType(string& playerType) {
-    playerType = playerType;
+void Player::setPlayerType(const string& pType) {
+    playerType = pType;
 }
 
 void Player::rest() {

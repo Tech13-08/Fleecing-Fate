@@ -7,9 +7,9 @@ using namespace std;
 
 class Player : public Character {
 private:
-    string statType = "";
-    string description = "";
-    string playerType = "";
+    string statType;
+    string description;
+    string playerType;
 public:
     Player(const string&, double, double);
     int getMaxStat() const;
@@ -18,9 +18,9 @@ public:
     virtual string getStatType() const;
     virtual string getDescription() const;
     virtual string getPlayerType() const;
-    void setStatType(string&);
-    void setDescription(string&);
-    void setPlayerType(string&);
+    void setStatType(const string&);
+    void setDescription(const string&);
+    void setPlayerType(const string&);
     virtual int specialAttack(Character*) = 0;
     void rest();
     virtual void reset() = 0;
