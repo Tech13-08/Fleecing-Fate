@@ -25,6 +25,7 @@ class Item {
     int getPower() const;
     int getAmount() const;
     void addAmount(int );
+    void displayItem() const{
 };
 
 #endif
