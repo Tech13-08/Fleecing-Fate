@@ -19,11 +19,13 @@ public:
     double getCurrHealth() const;
     double getStrength() const;
     bool getAlive() const;
-    int dealDamage(Character* target, double damage);
-    virtual void takeDamage(double damage);
-    void heal(double healed);
+    int dealDamage(Character*, double);
+    virtual void takeDamage(double);
+    double getVariance(double);
+    void heal(double);
     void die();
     // combat
     virtual int attack(Character* target);
 };
+
 #endif

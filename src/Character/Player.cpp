@@ -21,3 +21,20 @@ string Player::getDescription() const {
 string Player::getPlayerType() const {
     return playerType;
 }
+
+void setStatType(string& statType) {
+    statType = statType;
+}
+
+void setDescription(string& description) {
+    description = description;
+}
+
+void setPlayerType(string& playerType) {
+    playerType = playerType;
+}
+
+void Player::rest() {
+    heal(1000);
+    reset();
+}
