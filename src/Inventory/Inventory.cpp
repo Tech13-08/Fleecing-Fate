@@ -33,7 +33,7 @@ using namespace std;
         return tempitem;
       }else{
         inv.at(index)->addAmount(-1);
-        Item* tempitem new Item(inv.at(index)->getName(), inv.at(index)->getCost(), inv.at(index)->getType(), inv.at(index)->getPower());
+        Item* tempitem = new Item(inv.at(index)->getName(), inv.at(index)->getCost(), inv.at(index)->getType(), inv.at(index)->getPower());
         return tempitem;
       }
     }
@@ -58,7 +58,7 @@ using namespace std;
       cout << "Inventory: ";
       for(int i = 0; i < inv.size()-1; i++){
         cout << i + 1;
-        cout << ". "
+        cout << ". ";
         cout << inv.at(i)->getName();
         cout << ", ";
       }
@@ -72,12 +72,12 @@ using namespace std;
         cout << "What item do you want to use?" << endl;
         displayInventory();
         cin >> choice;
-        if(index <= 0 || index > inv.size() - 1){
-          cout << "Selected out of bounds, cancelling use item."
+        if(choice <= 0 || choice > inv.size() - 1){
+          cout << "Selected out of bounds, cancelling use item." << endl;
           return nullptr;
         }
         cout << "Selected ";
-        cout << inv.at(choice-1).getName();
+        cout << inv.at(choice-1)->getName();
         cout << endl;
         choice = choice - 1;
         return use_item(choice);
