@@ -4,6 +4,7 @@
 #include "Battle.h"
 #include "../Character/AllCharacters.h"
 #include "../Inventory/Inventory.h"
+#include "../Items/Item.h"
 using namespace std;
 Battle::Battle(Player* player, Enemy* enemy){
     this->player=player;
@@ -68,7 +69,15 @@ void Battle::menu(Inventory* inv){
         break;
         case '3':
             inv->displayInventory();
-            inv->selectItem();
+            if(inv->selectItem()->getType()=="heal"){
+                player->takeDamage(0-(inv->selectItem()->getPower())); 
+                //take negative damage = heal
+                //todo: display this            
+            }
+            else if(inv->selectItem()->getType()=="damage"){
+                enemy->takeDamage(inv->selectItem()->getPower());
+                //todo: display this
+            }
         break;
         case '4':
             battleMenu->doNothing();
