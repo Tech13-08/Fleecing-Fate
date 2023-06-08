@@ -5,14 +5,31 @@
 using namespace std;
 
 TEST(BerserkerTests, rageTest) {
-    Berseker* burger = new Berseker("Burger", 100.0, 200.0);
+    Berserker* burger = new Berserker("Burger", 100.0, 200.0);
     burger->takeDamage(10);
-    EXPECT_TRUE(burger.getRage() > 0);
+    EXPECT_TRUE(burger->getStat() > 0);
+}
+
+TEST(BerserkerTests, rageLostTest) {
+    Berserker* burger = new Berserker("Burger", 100.0, 200.0);
+    Enemy* testEnemy = new Enemy();
+    burger->setStat(10.0);
+    burger->specialAttack(testEnemy);
+    EXPECT_LT(burger->getStat(), 10);
+}
+
+TEST(BerserkerTests, statCapTest) {
+    Berserker* burger = new Berserker("Burger", 100.0, 200.0);
+    Enemy* testEnemy = new Enemy();
+    burger->setStat(99.0);
+    testEnemy->attack(burger);
+    EXPECT_EQ(burger->getStat(), 100.0);
 }
 
 TEST(EnemyTests, diesProperly) {
-    Enemy* jose = new Enemy("Jose", 0.0, 0.0);
-    EXPECT_FALSE(jose.getAlive());
+    Enemy* jose = new Enemy("Jose", 1.0, 0.0);
+    jose->takeDamage(10);
+    EXPECT_FALSE(jose->getAlive());
 }
 
 // int main() {

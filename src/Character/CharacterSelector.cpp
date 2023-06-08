@@ -21,10 +21,10 @@ CharacterSelector::CharacterSelector(const string& name) {
     cin >> choice;
 
     switch (choice) {
-        case 1:
+        case '1':
             playerChar = exampleBerserker;
             delete exampleRogue;
-        case 2:
+        case '1':
             playerChar = exampleRogue;
             delete exampleBerserker;
     }

@@ -3,8 +3,11 @@
 using namespace std;
 
 Rogue::Rogue(const string& name, double maxHealth, double strength) :
-                Player(name, maxHealth, strength)
-                {};
+                Player(name, maxHealth, strength){
+    setStatType("LUCK");
+    setDescription("A gambler gone rogue after losing all of their savings on gamba.\nAttacks have a chance to crit. Failing this chance increases the crit chance of the next attack.");
+    setPlayerType("Rogue");
+};
 
 int Rogue::getStat() const {
     return luck;
