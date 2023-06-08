@@ -10,40 +10,55 @@ using namespace std;
       lm = new LocationManager();
     }
 
-    void MoveSelector::moveMenu(){
+    void MoveSelector::moveMenu(Player* p, Inventory* inv){
+
         int choice = 0;
         lm->displayArea();
-        cout << "What direction do you want to travel in?" << endl;
+        cout << "What direction do you want to travel in? (Enter 0 to quit travelling)" << endl;
         cout << "1. North" << endl;
         cout << "2. South" << endl;
         cout << "3. East" << endl;
         cout << "4. West" << endl;
         cin >> choice;
-        if(!lm->move(choice)){
-          cout << "You cannot move in that direction, try again" << endl;
-          moveMenu();
-        }else{
-          cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << lm->maps.at(lm->currentMap)->getSize() << endl;
+        if(!cin){
+          cin.clear();
+          cin.ignore();
+          cout << "Try entering a number for direction" << endl;
+          moveMenu(p, inv);
+          return;
         }
+        if(choice == 0){
+          return;
+        }
+        if(!lm->move(choice)){
+          cin.clear();
+          cin.ignore();
+          cout << "You cannot move in that direction, try again" << endl;
+          moveMenu(p, inv);
+          return;
+        }
+        
+        
+          cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << lm->maps.at(lm->currentMap)->getSize() << endl;
+          locationEvent(p, inv);
+          moveMenu(p, inv);
+        
     }
+
     void MoveSelector::locationEvent(Player* p, Inventory* inv){
       Location* loc = lm->getLocation();
       if(loc){
         string input = "";
-        while(input != "q"){
+       
           if(loc->getType()=="Store"){
             ((Store*) loc)->storeMenu(inv);
-            cout << "Would you like to continue shopping or quit? (any key/q)" << endl;
-            cin >> input;
+
           }
           if(loc->getType()=="DungeonRoom"){
             ((DungeonRoom*) loc)->battleEnemies(p);
-            cout << "Would you like to continue shopping or quit? (any key/q)" << endl;
-            cin >> input;
+
           }
-        }
+        
       }
       return;
     }
-
-   

@@ -55,16 +55,29 @@ using namespace std;
     }
 
     void Inventory::displayInventory() const{
+      cout << "Money: ";
+      cout << money;
+      cout << endl;
       cout << "Inventory: ";
-      for(int i = 0; i < inv.size()-1; i++){
+      if(inv.size() == 0){
+        cout << "Empty..." << endl;
+        return;
+      }
+      cout << endl;
+      for(int i = 0; i < inv.size(); i++){
         cout << i + 1;
         cout << ". ";
         cout << inv.at(i)->getName();
-        cout << ", ";
+        cout << " (";
+        cout << inv.at(i)->getAmount();
+        cout << ")" << endl;
       }
+      /*
       cout << inv.size();
       cout << ". ";
-      cout << inv.at(inv.size()-1)->getName();
+      cout << inv.at(inv.size()-1)->getName();*/
+      
+      
     }
 
     Item* Inventory::selectItem(){
