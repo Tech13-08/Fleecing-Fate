@@ -7,14 +7,10 @@ Rogue::Rogue(const string& name, double maxHealth, double strength) :
                 {};
 
 int Rogue::getStat() const {
-    return getLuck();
-}
-
-int Rogue::getLuck() const {
     return luck;
 }
 
-void Rogue::setLuck(int newLuck) {
+void Rogue::setStat(int newLuck) {
     luck = newLuck;
 }
 
