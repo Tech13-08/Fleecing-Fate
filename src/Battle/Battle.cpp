@@ -3,6 +3,7 @@
 #include <string>
 #include "Battle.h"
 #include "../Character/AllCharacters.h"
+#include "../Inventory/Inventory.h"
 using namespace std;
 Battle::Battle(Player* player, Enemy* enemy){
     this->player=player;
@@ -54,7 +55,7 @@ void Battle::playerStrongAttack(){
     }
 }
 
-void Battle::menu(){
+void Battle::menu(Inventory* inv){
     battleMenu->showMenu();
     char choice;
     cin >> choice;
@@ -66,11 +67,15 @@ void Battle::menu(){
             playerStrongAttack();
         break;
         case '3':
+            inv->displayInventory();
+            inv->selectItem();
+        break;
+        case '4':
             battleMenu->doNothing();
             return;
         break;
     }
-    if(!(choice=='1'||choice=='2'||choice=='3')){
+    if(!(choice=='1'||choice=='2'||choice=='3'||choice=='4')){
         cout << "Invalid choice." << endl;
         menu();
     }

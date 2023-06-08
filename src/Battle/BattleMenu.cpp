@@ -28,6 +28,7 @@ void BattleMenu::showMenu(){
     cout << "What do you want to do?" << endl;
     cout << "1. Attack (100 AP)" << endl;
     cout << "2. Strong attack (200 AP)" << endl;
-    cout << "3. Do nothing (end turn)" << endl;
+    cout << "3. Item"
+    cout << "4. Do nothing (end turn)" << endl;
     cout << "> ";
 }
