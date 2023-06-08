@@ -1,11 +1,10 @@
 
 #include "Store.h"
 #include "../Items/Item.h"
+#include "../Character/AllCharacters.h"
 #include <string>
 #include <vector>
 #include <iostream>
-using std::string;
-using std::vector;
 using namespace std;
 Store::Store(const string name, const string description) : Location(name, description, "Store"){
     this->setSize(4);
@@ -26,7 +25,7 @@ Item* Store::buyItem(int index, int& money){
     return nullptr;
 }
 
-void Store::storeMenu(){
+void Store::storeMenu(Player* p){
     displayLocation();
     int choice = 0;
     cout << "Which item would you like?" << endl;
@@ -35,10 +34,9 @@ void Store::storeMenu(){
         items.at(i)->displayItem();
     }
     cin >> choice;    
-    int money = 100;
-    Item* i = buyItem(choice-1, money);
+    Item* i = buyItem(choice-1, p->getInventory()->getMoney());
     if(i){
-        cout << "You have bought " << i->getName() << " and now have " << money << " coins!" << endl;
+        cout << "You have bought " << i->getName() << " and now have " << p->getInventory()->getMoney() << " coins!" << endl;
     }else{
         cout << "That is not a valid item, try again or leave" << endl;
     }
