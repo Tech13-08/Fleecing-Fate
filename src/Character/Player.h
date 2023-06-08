@@ -24,6 +24,7 @@ public:
     virtual int specialAttack(Character*) = 0;
     void rest();
     virtual void reset() = 0;
+    virtual string getInfo() = 0;
 };
 
 #endif

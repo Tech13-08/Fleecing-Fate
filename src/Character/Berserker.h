@@ -15,6 +15,7 @@ public:
     void setStat(int) override;
     int specialAttack(Character* target) override;
     void reset() override;
+    string getInfo() override;
     void takeDamage(double damage) override; // rage increases when damage is taken
 };
 

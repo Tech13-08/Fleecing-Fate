@@ -6,7 +6,7 @@ BattleMenu::BattleMenu(){
 }
 void BattleMenu::showStatus(Player* player, Enemy* enemy, int ap){
     cout << "-----------" << endl;
-    cout << "Your HP: " << player->getCurrHealth() << endl;
+    cout << player->getInfo() << endl;
     cout << "Your AP: " << ap << endl;
     cout << endl;
     cout << "Enemy HP: " << enemy->getCurrHealth() << endl;

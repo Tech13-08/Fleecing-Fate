@@ -14,6 +14,7 @@ public:
     int getStat() const override;
     void setStat(int) override;
     void reset() override;
+    string getInfo() override;
     int specialAttack(Character*) override;
 };
 
