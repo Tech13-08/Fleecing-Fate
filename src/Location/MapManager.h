@@ -43,10 +43,10 @@ class MapManager : public Location{
                 i = rand()%(this->getSize()-1);
                 j = rand()%(this->getSize()-1);
                 if(this->getType() == "Village"){
-                    map[i][j] = new Store("Store " + std::to_string(n), "It's literally just a store mate");
+                    map[i][j] = new Store("Store " + std::to_string(n+1), "It's literally just a store mate");
                 }
                 if(this->getType() == "Dungeon"){
-                    map[i][j] = new DungeonRoom("DungeonRoom " + std::to_string(n), "DUNGEON ROOM JUMPSCARE BOO");
+                    map[i][j] = new DungeonRoom("DungeonRoom " + std::to_string(n+1), "DUNGEON ROOM JUMPSCARE BOO");
                 }
             }
         }

@@ -12,6 +12,7 @@ class MoveSelector {
  public:
     MoveSelector();
     void moveMenu();
+    void locationEvent();
 
 };
 

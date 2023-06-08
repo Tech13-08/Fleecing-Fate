@@ -48,5 +48,5 @@ void Item::addAmount(int input){
 }
 
 void Item::displayItem() const{
-    cout << "Name: " + getName() + " Cost: " + getCost() + " Type: " + getType() + " Effect: " + getPower() << endl;
+    cout << "Name: " << getName() << " Cost: " << getCost() << " Type: " << getType() << " Effect: " << getPower() << endl;
 }
