@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_SOURCE_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /data/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -343,6 +343,33 @@ src/Character/Character.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Character.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Character.cpp.s
 .PHONY : src/Character/Character.cpp.s
+
+src/Character/CharacterSelector.o: src/Character/CharacterSelector.cpp.o
+.PHONY : src/Character/CharacterSelector.o
+
+# target to build an object file
+src/Character/CharacterSelector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/CharacterSelector.cpp.o
+.PHONY : src/Character/CharacterSelector.cpp.o
+
+src/Character/CharacterSelector.i: src/Character/CharacterSelector.cpp.i
+.PHONY : src/Character/CharacterSelector.i
+
+# target to preprocess a source file
+src/Character/CharacterSelector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/CharacterSelector.cpp.i
+.PHONY : src/Character/CharacterSelector.cpp.i
+
+src/Character/CharacterSelector.s: src/Character/CharacterSelector.cpp.s
+.PHONY : src/Character/CharacterSelector.s
+
+# target to generate assembly for a file
+src/Character/CharacterSelector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/CharacterSelector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/CharacterSelector.cpp.s
+.PHONY : src/Character/CharacterSelector.cpp.s
 
 src/Character/Enemy.o: src/Character/Enemy.cpp.o
 .PHONY : src/Character/Enemy.o
@@ -719,6 +746,9 @@ help:
 	@echo "... src/Character/Character.o"
 	@echo "... src/Character/Character.i"
 	@echo "... src/Character/Character.s"
+	@echo "... src/Character/CharacterSelector.o"
+	@echo "... src/Character/CharacterSelector.i"
+	@echo "... src/Character/CharacterSelector.s"
 	@echo "... src/Character/Enemy.o"
 	@echo "... src/Character/Enemy.i"
 	@echo "... src/Character/Enemy.s"

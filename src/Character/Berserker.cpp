@@ -6,28 +6,25 @@ Berserker::Berserker(const string& name, double maxHealth, double strength) :
                 Player(name, maxHealth, strength)
                 {};
 
-int Berserker::getStat() const {
-    return getRage();
-}
 
-int Berserker::getRage() const {
+int Berserker::getStat() const {
     return rage;
 }
 
-void Berserker::setRage(int newRage) {
+void Berserker::setStat(int newRage) {
     rage = newRage;
 }
 
 int Berserker::specialAttack(Character* target) {
     int damage = (1.5 + rage/10.0)*(this->getStrength());
     if (rage >= 10)
-        setRage(rage-=10);
-    else setRage(0);
+        setStat(rage-=10);
+    else setStat(0);
     return dealDamage(target, damage);
 }
 
 void Berserker::reset() {
-    setRage(0);
+    setStat(0);
 }
 
 void Berserker::takeDamage(double damage) {

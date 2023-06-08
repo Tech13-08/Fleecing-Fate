@@ -9,3 +9,15 @@ Player::Player(const string& name, double maxHealth, double strength) :
 int Player::getMaxStat() const {
     return 100;
 }
+
+string Player::getStatType() const {
+    return statType;
+}
+
+string Player::getDescription() const {
+    return description;
+}
+
+string Player::getPlayerType() const {
+    return playerType;
+}
