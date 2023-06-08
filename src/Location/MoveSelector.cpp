@@ -21,9 +21,9 @@ using namespace std;
         cout << "4. West" << endl;
         cin >> choice;
         if(!cin){
-          cin.clear();
-          cin.ignore();
           cout << "Try entering a number for direction" << endl;
+          cin.clear();
+          cin.ignore(numeric_limits<streamsize>::max(), '\n');
           moveMenu(p, inv);
           return;
         }
@@ -31,9 +31,9 @@ using namespace std;
           return;
         }
         if(!lm->move(choice)){
-          cin.clear();
-          cin.ignore();
           cout << "You cannot move in that direction, try again" << endl;
+          cin.clear();
+          cin.ignore(numeric_limits<streamsize>::max(), '\n');
           moveMenu(p, inv);
           return;
         }
