@@ -1,18 +1,24 @@
 
 #include "DungeonRoom.h"
 #include "../Character/AllCharacters.h"
+#include "../Battle/Battle.h"
 #include <string>
 #include <vector>
-using std::string;
-using std::vector;
+#include <iostream>
+using namespace std;
 DungeonRoom::DungeonRoom(const string name, const string description) : Location(name, description, "DungeonRoom"){
     this->setSize(3);
-    enemies.resize(this->getSize(), nullptr);
     for (int i = 0; i < this->getSize(); ++i) {
-        enemies[i] = new Enemy();
+        enemies.push_back(new Enemy());
     }
 }
 
-const vector<Enemy*> DungeonRoom::getEnemies(){
-    return this->enemies;
+void DungeonRoom::battleEnemies(Player* p){
+    displayLocation();
+    for(int i = 0; i < getSize(); ++i){
+        Battle* battle = new Battle(p, enemies[i]);
+        if(!battle->doBattle()){
+            return;
+        }
+    }
 }

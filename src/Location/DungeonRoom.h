@@ -14,7 +14,7 @@ class DungeonRoom : public Location{
     public:
         DungeonRoom(const string name, const string description);
 
-        const vector<Enemy*> getEnemies();
+        void battleEnemies(Player*);
 
 };
 

@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -290,6 +290,33 @@ src/Battle/Battle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Battle/Battle.cpp.s
 .PHONY : src/Battle/Battle.cpp.s
 
+src/Character/Berserker.o: src/Character/Berserker.cpp.o
+.PHONY : src/Character/Berserker.o
+
+# target to build an object file
+src/Character/Berserker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Berserker.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Berserker.cpp.o
+.PHONY : src/Character/Berserker.cpp.o
+
+src/Character/Berserker.i: src/Character/Berserker.cpp.i
+.PHONY : src/Character/Berserker.i
+
+# target to preprocess a source file
+src/Character/Berserker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Berserker.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Berserker.cpp.i
+.PHONY : src/Character/Berserker.cpp.i
+
+src/Character/Berserker.s: src/Character/Berserker.cpp.s
+.PHONY : src/Character/Berserker.s
+
+# target to generate assembly for a file
+src/Character/Berserker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Berserker.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Berserker.cpp.s
+.PHONY : src/Character/Berserker.cpp.s
+
 src/Character/Character.o: src/Character/Character.cpp.o
 .PHONY : src/Character/Character.o
 
@@ -398,6 +425,33 @@ src/Character/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Player.cpp.s
 .PHONY : src/Character/Player.cpp.s
 
+src/Character/Rogue.o: src/Character/Rogue.cpp.o
+.PHONY : src/Character/Rogue.o
+
+# target to build an object file
+src/Character/Rogue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Rogue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Rogue.cpp.o
+.PHONY : src/Character/Rogue.cpp.o
+
+src/Character/Rogue.i: src/Character/Rogue.cpp.i
+.PHONY : src/Character/Rogue.i
+
+# target to preprocess a source file
+src/Character/Rogue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Rogue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Rogue.cpp.i
+.PHONY : src/Character/Rogue.cpp.i
+
+src/Character/Rogue.s: src/Character/Rogue.cpp.s
+.PHONY : src/Character/Rogue.s
+
+# target to generate assembly for a file
+src/Character/Rogue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Character/Rogue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Character/Rogue.cpp.s
+.PHONY : src/Character/Rogue.cpp.s
+
 src/Inventory/Inventory.o: src/Inventory/Inventory.cpp.o
 .PHONY : src/Inventory/Inventory.o
 
@@ -505,6 +559,60 @@ src/Location/DungeonRoom.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/DungeonRoom.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/DungeonRoom.cpp.s
 .PHONY : src/Location/DungeonRoom.cpp.s
+
+src/Location/LocationManager.o: src/Location/LocationManager.cpp.o
+.PHONY : src/Location/LocationManager.o
+
+# target to build an object file
+src/Location/LocationManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/LocationManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/LocationManager.cpp.o
+.PHONY : src/Location/LocationManager.cpp.o
+
+src/Location/LocationManager.i: src/Location/LocationManager.cpp.i
+.PHONY : src/Location/LocationManager.i
+
+# target to preprocess a source file
+src/Location/LocationManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/LocationManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/LocationManager.cpp.i
+.PHONY : src/Location/LocationManager.cpp.i
+
+src/Location/LocationManager.s: src/Location/LocationManager.cpp.s
+.PHONY : src/Location/LocationManager.s
+
+# target to generate assembly for a file
+src/Location/LocationManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/LocationManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/LocationManager.cpp.s
+.PHONY : src/Location/LocationManager.cpp.s
+
+src/Location/MoveSelector.o: src/Location/MoveSelector.cpp.o
+.PHONY : src/Location/MoveSelector.o
+
+# target to build an object file
+src/Location/MoveSelector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/MoveSelector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/MoveSelector.cpp.o
+.PHONY : src/Location/MoveSelector.cpp.o
+
+src/Location/MoveSelector.i: src/Location/MoveSelector.cpp.i
+.PHONY : src/Location/MoveSelector.i
+
+# target to preprocess a source file
+src/Location/MoveSelector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/MoveSelector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/MoveSelector.cpp.i
+.PHONY : src/Location/MoveSelector.cpp.i
+
+src/Location/MoveSelector.s: src/Location/MoveSelector.cpp.s
+.PHONY : src/Location/MoveSelector.s
+
+# target to generate assembly for a file
+src/Location/MoveSelector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/MoveSelector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/MoveSelector.cpp.s
+.PHONY : src/Location/MoveSelector.cpp.s
 
 src/Location/Store.o: src/Location/Store.cpp.o
 .PHONY : src/Location/Store.o
@@ -632,6 +740,9 @@ help:
 	@echo "... src/Battle/Battle.o"
 	@echo "... src/Battle/Battle.i"
 	@echo "... src/Battle/Battle.s"
+	@echo "... src/Character/Berserker.o"
+	@echo "... src/Character/Berserker.i"
+	@echo "... src/Character/Berserker.s"
 	@echo "... src/Character/Character.o"
 	@echo "... src/Character/Character.i"
 	@echo "... src/Character/Character.s"
@@ -644,6 +755,9 @@ help:
 	@echo "... src/Character/Player.o"
 	@echo "... src/Character/Player.i"
 	@echo "... src/Character/Player.s"
+	@echo "... src/Character/Rogue.o"
+	@echo "... src/Character/Rogue.i"
+	@echo "... src/Character/Rogue.s"
 	@echo "... src/Inventory/Inventory.o"
 	@echo "... src/Inventory/Inventory.i"
 	@echo "... src/Inventory/Inventory.s"
@@ -656,6 +770,12 @@ help:
 	@echo "... src/Location/DungeonRoom.o"
 	@echo "... src/Location/DungeonRoom.i"
 	@echo "... src/Location/DungeonRoom.s"
+	@echo "... src/Location/LocationManager.o"
+	@echo "... src/Location/LocationManager.i"
+	@echo "... src/Location/LocationManager.s"
+	@echo "... src/Location/MoveSelector.o"
+	@echo "... src/Location/MoveSelector.i"
+	@echo "... src/Location/MoveSelector.s"
 	@echo "... src/Location/Store.o"
 	@echo "... src/Location/Store.i"
 	@echo "... src/Location/Store.s"

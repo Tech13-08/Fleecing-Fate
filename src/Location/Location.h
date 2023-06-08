@@ -1,8 +1,9 @@
 #ifndef __LOCATION_H__
 #define __LOCATION_H__
 #include <string>
+#include <iostream> 
 
-using std::string;
+using namespace std;
 
 class Location{
     private:
@@ -23,6 +24,17 @@ class Location{
         const int getSize(){return size;}
 
         void setSize(int size){this->size = size;}
+
+        void displayLocation(){
+            cout << "You are in the ";
+            cout << getType();
+            cout << ": ";
+            cout << getName();
+            cout << "! ";
+            cout << getDescription();      
+            cout << "." << endl;
+        }
+        
 
 };
 

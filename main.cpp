@@ -1,16 +1,19 @@
-// #include <iostream> 
-// #include <cstring> 
-// //#include "Location/AllLocations.h"
+
+#include <iostream> 
+#include <cstring> 
+#include "src/Location/MoveSelector.h"
 
 // using namespace std; 
 
 int main() { 
-    // LocationManager* lm = new LocationManager();
-    // Inventory* inv = new Inventory();
-    // Character* player = new Character();
-
-    // string choice 
-    // cout << "welcome...what character do u want" << endl;
-
-
+    MoveSelector* ms = new MoveSelector();
+    string input = "";
+    while(input != "q"){
+        cout << endl;
+        ms->moveMenu();
+        ms->locationEvent();
+        cout << "Quit? (q): ";
+        cin >> input;
+    }
+    return 0;
 }

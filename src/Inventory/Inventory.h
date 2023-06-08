@@ -20,6 +20,7 @@ class Inventory {
     void add_money(int );
     vector<Item*> get_inventory();
     void displayInventory() const;
+    Item* selectItem();
 
 };
 
