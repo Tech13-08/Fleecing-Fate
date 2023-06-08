@@ -42,7 +42,7 @@ endif ()
 
 
 set(LOCATION_SOURCE_FILES src/Location/Dungeon.cpp src/Location/DungeonRoom.cpp src/Location/Store.cpp src/Location/Village.cpp src/Location/LocationManager.cpp src/Location/MoveSelector.cpp)
-set(BATTLE_SOURCE_FILES src/Battle/Battle.cpp)
+set(BATTLE_SOURCE_FILES src/Battle/Battle.cpp src/Battle/BattleMenu.cpp)
 set(INVENTORY_SOURCE_FILES src/Inventory/Inventory.cpp)
 set(ITEMS_SOURCE_FILES src/Items/Item.cpp)
 set(CHARACTER_SOURCE_FILES src/Character/Character.cpp src/Character/Player.cpp src/Character/Enemy.cpp src/Character/Berserker.cpp src/Character/Rogue.cpp src/Character/CharacterSelector.cpp)
