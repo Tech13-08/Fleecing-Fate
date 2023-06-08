@@ -7,7 +7,7 @@
 using namespace std;
 
 class LocationManager {
- private:
+ public:
   vector<MapManager*> maps;
   int currentMap;
   int x;
@@ -15,10 +15,11 @@ class LocationManager {
   
  public:
     LocationManager();
-    bool move(string);
+    bool move(int);
     Location* getLocation() const;
     void setLocation(int);
     void displayArea();
+    void printMap();
 
 };
 

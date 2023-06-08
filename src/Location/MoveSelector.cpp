@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include "LocationManager.h"
+#include "MoveSelector.h"
 using namespace std;
     
     MoveSelector::MoveSelector(){
@@ -15,7 +16,12 @@ using namespace std;
         cout << "2. South" << endl;
         cout << "3. East" << endl;
         cout << "4. West" << endl;
-        lm->move(choice);
+        cin >> choice;
+        if(!lm->move(choice)){
+          cout << "You cannot move in that direction, try again" << endl;
+        }else{
+          cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << lm->maps.at(lm->currentMap)->getSize() << endl;
+        }
     }
 
    
