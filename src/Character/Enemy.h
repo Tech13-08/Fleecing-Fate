@@ -7,7 +7,7 @@ using namespace std;
 
 class Enemy : public Character {
 public:
-    Enemy(const string&, double, double);
+    Enemy(const string&, int, int);
     Enemy();
 };
 

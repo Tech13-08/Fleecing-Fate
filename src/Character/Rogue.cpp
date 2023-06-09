@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-Rogue::Rogue(const string& name, double maxHealth, double strength) :
+Rogue::Rogue(const string& name, int maxHealth, int strength) :
                 Player(name, maxHealth, strength){
     setStatType("LUCK");
     setDescription("A gambler gone rogue after losing all of their savings on gamba.\nAttacks have a chance to crit. Failing this chance increases the crit chance of the next attack.");
@@ -23,7 +23,7 @@ void Rogue::reset() {
 }
 
 int Rogue::specialAttack(Character* target) {
-    double critChance = rand() % 100;
+    int critChance = rand() % 100;
     if (critChance >= 99){
         luck = BASELUCK;
         return dealDamage(target, 10000);

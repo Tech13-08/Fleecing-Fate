@@ -11,7 +11,7 @@ private:
     string description;
     string playerType;
 public:
-    Player(const string&, double, double);
+    Player(const string&, int, int);
     int getMaxStat() const;
     virtual int getStat() const = 0;
     virtual void setStat(int) = 0;

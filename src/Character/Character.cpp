@@ -2,7 +2,7 @@
 #include <string>
 using std::string;
 
-Character::Character(const string& name, double maxHealth, double strength) : 
+Character::Character(const string& name, int maxHealth, int strength) : 
                     name(name), maxHealth(maxHealth), strength(strength) {
     currHealth = maxHealth;
     isAlive = true;
@@ -12,15 +12,15 @@ string Character::getName() const {
     return name;
 }
 
-double Character::getMaxHealth() const {
+int Character::getMaxHealth() const {
     return maxHealth;
 }
 
-double Character::getCurrHealth() const {
+int Character::getCurrHealth() const {
     return currHealth;
 }
 
-double Character::getStrength() const {
+int Character::getStrength() const {
     return strength;
 }
 
@@ -28,7 +28,7 @@ bool Character::getAlive() const {
     return isAlive;
 }
 
-void Character::takeDamage(double damageTaken) {
+void Character::takeDamage(int damageTaken) {
     currHealth -= damageTaken;
     if (currHealth <= 0){
         currHealth = 0;
@@ -36,7 +36,7 @@ void Character::takeDamage(double damageTaken) {
     }
 }
 
-int Character::dealDamage(Character* target, double initialDamage) {
+int Character::dealDamage(Character* target, int initialDamage) {
     int damageDealt = (int)(getVariance(initialDamage));
     if (damageDealt <= 1) {
         target->takeDamage(1);
@@ -46,13 +46,13 @@ int Character::dealDamage(Character* target, double initialDamage) {
     return damageDealt;
 }
 
-double Character::getVariance(double initialDamage) {
+int Character::getVariance(int initialDamage) {
     //can deal -20% to +20% damage
-    double variance = (rand()%40 - 20)/100.0;
+    int variance = (rand()%40 - 20)/100;
     return initialDamage*(1 + variance); 
 }
 
-void Character::heal(double healed) {
+void Character::heal(int healed) {
     currHealth += healed;
     if (currHealth > maxHealth)
         currHealth = maxHealth;
