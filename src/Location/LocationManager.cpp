@@ -82,3 +82,13 @@ using namespace std;
     void LocationManager::displayArea(){
       maps.at(currentMap)->displayLocation();
     }
+
+    int LocationManager::getX(){
+      return x;
+    }
+    int LocationManager::getY(){
+      return y;
+    }
+    int LocationManager::getSize(){
+      return maps.at(currentMap)->getSize();
+    }
