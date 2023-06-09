@@ -140,3 +140,6 @@
 [==========] 13 tests from 4 test suites ran. (26774 ms total)
 [  PASSED  ] 13 tests.
 ```
+## Memcheck
+ > We used Valgrind to resolve our memory errors. Specifically we ran `$ valgrind --leak-check=full --track-origins=yes ./bin/main` to fully check our memory leaks and track where they originated. Here is a sample of what our Valgrind output looks like:
+![memcheck](images/memcheck'.png)
