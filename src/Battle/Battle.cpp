@@ -11,29 +11,12 @@ Battle::Battle(Player* player, Enemy* enemy, Inventory* inv){
     this->enemy=enemy;
     this->inv = inv;
     this->battleMenu = new BattleMenu(); //make destructor
-    int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
+    int battleState = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
     int playerAP = 0;
 }
-// int Battle::getAP(){
-//     return playerAP;
-// }
-
-// int Battle::calcDamage(int baseDamage){
-//     int variance = rand()%10 - 5; //-5 to 5
-//     return baseDamage + variance;
-// }
-// int Battle::calcDamageWithCrit(int baseDamage, int critChance){
-//     int variance = rand()%10 - 5; //-5 to 5
-//     int critRoll = rand()%100 + 1; //1 to 100
-//     if(critChance >= critRoll){
-//         cout << "Critical hit!" << endl; 
-//         return 2*(baseDamage + variance);
-//     }
-//     else{
-//         return baseDamage + variance;
-//     }
-
-// }
+Battle::~Battle(){
+    delete this->battleMenu;
+}
 void Battle::playerAttack(){ //replace these later when we actually get characters
     if(playerAP >= 100){
         int damageDealt = player->attack(enemy);
@@ -79,14 +62,12 @@ void Battle::menu(){
             if(currItem){
             if(currItem->getType()=="heal"){
                 player->takeDamage(0-(currItem->getPower())); 
-                cout << "Healed " << currItem->getPower() << endl;
-                //take negative damage = heal
-                //todo: display this            
+                battleMenu->showHeal(currItem->getPower());
+                //take negative damage = heal           
             }
             else if(currItem->getType()=="attack"){
                 enemy->takeDamage(currItem->getPower());
-                cout << "Damaged " << currItem->getPower() << endl;
-                //todo: display this
+                battleMenu->showOutgoingAttack(currItem->getPower());
             }
             delete currItem;
             }}
@@ -99,6 +80,9 @@ void Battle::menu(){
     if(!(choice==1||choice==2||choice==3||choice==4)){
         cout << "Invalid choice." << endl;
         menu();
+    }
+    if(!enemy->getAlive()){
+        return;
     }
     if(playerAP > 0){
         cout << "You still have " << playerAP <<" AP remaining. Take another action?" << endl;
@@ -117,20 +101,20 @@ void Battle::enemyTurn(){
 
 bool Battle::doBattle(){
     cout << "FIGHT START!" << endl;
-    while(winloss==0){
+    while(battleState==0){
         playerTurn();
         if(!enemy->getAlive()){
             cout << "enemy dead" << endl;
-            winloss=1;
+            battleState=1;
         }
         else{
             enemyTurn();
             if(player->getCurrHealth() <= 0){
-                winloss=2;
+                battleState=2;
             }
         }
     }
-    if(winloss==1){
+    if(battleState==1){
         int reward = enemy->getStrength();
         cout << "yay you win, here's " << reward << " coins" << endl;
         inv->add_money(reward);
