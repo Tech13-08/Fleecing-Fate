@@ -1,13 +1,15 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10951446&assignment_repo_type=AssignmentRepo)
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Fleecing Fate: Wooly Retribution
-# A Narrative-Driven Text-Based Role Playing Game 
+## A Narrative-Driven Text-Based Role Playing Game 
  
  > Authors: [Falak Tulsi](https://github.com/Tech13-08),[Yat Chun Wong](https://github.com/ywong042),[Andy Jarean](https://github.com/ajarean),[Tingxuan Wu](https://github.com/twu148)
 
-## Project Description
+## Phase I: Project Description
+> **Game Overview:**
+> This program is a narrative-driven text-based roleplaying game, in which a sheep farmer gets revenge on the wolves that kidnapped all the sheep in their town. At first, the player is prompted with two player options: Berserker and Rogue, who have different attacks and stats. 
+> After the player leaves the village, they must overcome several wolf-infested dungeons while clearing all of the wolves inside. To win the game, the player must avenge the fallen sheep by clearing the very last room at the end. 
+> An important aspect of this game is the item and inventory features, which are crucial to beating the game.
+> **Why we chose this:**
 > The reason we chose to make a Text-Based RPG is because the idea allows more room for creativity relative to other ideas for this project. From the characters to the story line, we look forward to making them flow together. 
 >
 > Naturally, an RPG is very open-ended which allows us to write virtually any story we would like to. Additionally, taking the concept of an RPG and limiting it to the terminal environment also piques our interest as developers. 
@@ -32,7 +34,7 @@
 > The leveling system was cut because the game was too short, and the player would not have adequate time to meaningfully acquire experience.
 > * `Improved Battle System`: Some enemies may have weaknesses which the player can exploit during combat to gain an advantage, such as delaying the enemy's turn or dealing additional damage. This adds an extra tactical layer to combat.
 > This improved battle system was cut because due to the story of the game, we only included one type of enemy, which would have the same weaknesses.
- > ## Phase II
+## Phase II: Design Document
  > We created three Epics that go over the main features and core aspects of our Text-Based Adventure Game. The first Epic goes over the how the Battle System should look like and the second Epic goes over the Character System. The last Epic goes over Locations of the game. 
  > The three Epics were split into six user stories so that we can work on them over the next several weeks and assign to team members during the scrum meeting.
 ## User Interface Specification
@@ -42,14 +44,13 @@
 > Our navigation diagram [here](images/NavDiagram.png) represents how each screen of the game transitions to the next, as well as the overall flow of the game. The player begins at the character selection screen, in which they are prompted to choose between a Berserker or Rogue. From there, the player may traverse through the village and dungeon maps. In the village, the player may buy items from the shops and in the dungeon, the player may encounter enemies to battle. The player wins the game when they defeat the final boss and reach the end of the dungeon. However, the player dies when they fall in combat. 
 
 ### Screen Layouts
-![ScreenDesigns](images/ScreenDesign.pdf)
 > Our screen layouts [here](images/ScreenDesign.pdf) illustrate our in-program screens and buttons. When the player starts the game, the very first screen is the Title screen, which gives the player options to read the tutorial or select a character. The player receives prompts and selects numerical options using the keyboard input to progress through the game. When moving through the world, the player is given a coordinate and four directions they can move in. The combat screens all share the same layout, but may have different enemies depending on the stage of the game you are in.
 
-## Class Diagram
+### Class Diagram
 ![UMLClassDiagram](images/UML_Class_Diagram.png)
 > Our UML class diagram [here](images/UML_Class_Diagram.png) represents the various classes we will implement in our project and how they will fit together. The diagram highlights the relationships between the classes and gives an overall idea of how the game will function. The player and enemy, for example, will both originate from the parent Character class. The Location class divides into the Dungeon, Village, Store, and Dungeon Room classes, which together become the map for the game. The Dungeon Room will have either enemies or items: both of which are classes with their own parameters and functions. The Game class is how we will manage all of these relationships at once to provide smooth game functionality.
  
- > ## Phase III
+## Phase III: Development
 > We applied Integration Segregation principle to the Exp variable in the Character class since the subclasses Enemy and Boss do not need to inherit Exp from the character. We applied the principle by removing the Exp variable and the Exp methods in the class and also in its following subclasses in Enemy and Boss Enemy. This change removes unnecessary methods in the sub-classes and also reduces the possibility of those bugs.
 
 > We applied Single Responsibility Principle in the Game class since it originally violated the principle by having the Battle System in the same class. We applied the principle by creating a new class to have the Battle System and removed the function in the Game class. This change gives the class only one responsibilities and separates bugs from Battle Systems if it does occurs.
@@ -60,14 +61,8 @@
 
 > We have also used Single Responsibility Principle in the Location class and its subclasses. Every class there has one job only and do not contain behaviors from other classes. This makes it easier to develop Locations since each class does exactly as it is named and does not have any strange behaviors combined with it.
  
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
- ## Screenshots
+ ## Phase IV: Final deliverable
+ ### Screenshots
  ![CharacterSelect](images/CharacterSelect.png)
  > The player is greeted by the option to select a character class.
  ![Movement](images/Movement.png)
@@ -76,7 +71,7 @@
  > A sample of the store screen
  ![Battle](images/Battle.png)
  > A sample of the battle screen
- ## Installation/Usage
+ ### Installation/Usage
  > Use git to clone the repository, and ensure that you switch into the repository.
  ```
  git clone https://github.com/cs100/final-project-ftuls001-ywong042-ajare002-twu148.git
@@ -93,7 +88,7 @@
  ```
  > Enjoy! 
 
- ## Testing
+ ### Testing
  > For each main branch of the project (battles, movements, characters, etc.), we used Google Tests to run unit tests in order to ensure that each component worked individually before it could be merged. Here is a sample of some of the Google Tests. For the sake of brevity, some of the output (namely, the Battle code outputs responding to user inputs) has been omitted. 
 ```
 [==========] Running 13 tests from 4 test suites.
@@ -140,3 +135,6 @@
 [==========] 13 tests from 4 test suites ran. (26774 ms total)
 [  PASSED  ] 13 tests.
 ```
+### Memcheck
+ > We used Valgrind to resolve our memory errors. Specifically we ran `$ valgrind --leak-check=full --track-origins=yes ./bin/main` to fully check our memory leaks and track where they originated. Here is a sample of what our Valgrind output looks like:
+![memcheck](images/memcheck'.png)

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_SOURCE_DIR = /data/home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/twu148/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -821,6 +821,30 @@ test/characterTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/characterTest.cpp.s
 .PHONY : test/characterTest.cpp.s
 
+test/inventoryTest.o: test/inventoryTest.cpp.o
+.PHONY : test/inventoryTest.o
+
+# target to build an object file
+test/inventoryTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/inventoryTest.cpp.o
+.PHONY : test/inventoryTest.cpp.o
+
+test/inventoryTest.i: test/inventoryTest.cpp.i
+.PHONY : test/inventoryTest.i
+
+# target to preprocess a source file
+test/inventoryTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/inventoryTest.cpp.i
+.PHONY : test/inventoryTest.cpp.i
+
+test/inventoryTest.s: test/inventoryTest.cpp.s
+.PHONY : test/inventoryTest.s
+
+# target to generate assembly for a file
+test/inventoryTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/inventoryTest.cpp.s
+.PHONY : test/inventoryTest.cpp.s
+
 test/testLocation.o: test/testLocation.cpp.o
 .PHONY : test/testLocation.o
 
@@ -953,6 +977,9 @@ help:
 	@echo "... test/characterTest.o"
 	@echo "... test/characterTest.i"
 	@echo "... test/characterTest.s"
+	@echo "... test/inventoryTest.o"
+	@echo "... test/inventoryTest.i"
+	@echo "... test/inventoryTest.s"
 	@echo "... test/testLocation.o"
 	@echo "... test/testLocation.i"
 	@echo "... test/testLocation.s"

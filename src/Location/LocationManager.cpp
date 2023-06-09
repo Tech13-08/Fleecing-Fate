@@ -17,6 +17,10 @@ using namespace std;
     LocationManager::~LocationManager(){
       for(int i = 0; i < maps.size(); i++){
         delete maps.at(i);
+        BossLocation = nullptr;
+      }
+      if(BossLocation){
+        delete BossLocation;
       }
     }
 
