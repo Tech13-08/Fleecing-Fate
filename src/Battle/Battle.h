@@ -19,8 +19,6 @@ class Battle{
     public:
         Battle(Player* player, Enemy* enemy, Inventory* inv);
         ~Battle();
-        int calcDamage(int baseDamage);
-        int calcDamageWithCrit(int baseDamage, int critChance);
         void playerAttack();
         void playerStrongAttack();
         void menu();
