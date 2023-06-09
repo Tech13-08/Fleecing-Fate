@@ -62,9 +62,75 @@
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ ![CharacterSelect](images/CharacterSelect.png)
+ > The player is greeted by the option to select a character class.
+ ![Movement](images/Movement.png)
+ > A sample of the movement input/output
+ ![Store](images/Store.png)
+ > A sample of the store screen
+ ![Battle](images/Battle.png)
+ > A sample of the battle screen
  ## Installation/Usage
- > Instructions on installing and running your application
+ > Use git to clone the repository, and ensure that you switch into the repository.
+ ```
+ git clone https://github.com/cs100/final-project-ftuls001-ywong042-ajare002-twu148.git
+ cd final-project-ftuls001-ywong042-ajare002-twu148
+ ```
+ > Since the repository does not contain the executable file itself, you will need to compile the code and make the executable using cmake.
+ ```
+ cmake .
+ make
+ ```
+ > Afterwards, the main executable will be in the bin folder.
+ ```
+ bin/main
+ ```
+ > Enjoy! 
+
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+ > For each main branch of the project (battles, movements, characters, etc.), we used Google Tests to run unit tests in order to ensure that each component worked individually before it could be merged. Here is a sample of some of the Google Tests. For the sake of brevity, some of the output (namely, the Battle code outputs responding to user inputs) has been omitted. 
+```
+[==========] Running 13 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 6 tests from MapTests
+[ RUN      ] MapTests.SmallSizeUnderMax
+[       OK ] MapTests.SmallSizeUnderMax (0 ms)
+[ RUN      ] MapTests.SmallSizeOverMin
+[       OK ] MapTests.SmallSizeOverMin (0 ms)
+[ RUN      ] MapTests.BigSizeUnderMax
+[       OK ] MapTests.BigSizeUnderMax (0 ms)
+[ RUN      ] MapTests.BigSizeOverMin
+[       OK ] MapTests.BigSizeOverMin (0 ms)
+[ RUN      ] MapTests.NotInRange
+[       OK ] MapTests.NotInRange (0 ms)
+[ RUN      ] MapTests.InRange
+[       OK ] MapTests.InRange (0 ms)
+[----------] 6 tests from MapTests (0 ms total)
+
+[----------] 3 tests from BattleTests
+[ RUN      ] BattleTests.Constructor
+[       OK ] BattleTests.Constructor (0 ms)
+[ RUN      ] BattleTests.WinCondition
+[       OK ] BattleTests.WinCondition (17847 ms)
+[ RUN      ] BattleTests.LoseCondition
+[       OK ] BattleTests.LoseCondition (8926 ms)
+[----------] 3 tests from BattleTests (26774 ms total)
+
+[----------] 3 tests from BerserkerTests
+[ RUN      ] BerserkerTests.rageTest
+[       OK ] BerserkerTests.rageTest (0 ms)
+[ RUN      ] BerserkerTests.rageLostTest
+[       OK ] BerserkerTests.rageLostTest (0 ms)
+[ RUN      ] BerserkerTests.statCapTest
+[       OK ] BerserkerTests.statCapTest (0 ms)
+[----------] 3 tests from BerserkerTests (0 ms total)
+
+[----------] 1 test from EnemyTests
+[ RUN      ] EnemyTests.diesProperly
+[       OK ] EnemyTests.diesProperly (0 ms)
+[----------] 1 test from EnemyTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 4 test suites ran. (26774 ms total)
+[  PASSED  ] 13 tests.
+```
