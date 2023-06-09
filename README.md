@@ -47,7 +47,6 @@
 > Our navigation diagram [here](images/NavDiagram.png) represents how each screen of the game transitions to the next, as well as the overall flow of the game. The player begins at the character selection screen, in which they are prompted to choose between a Berserker or Rogue. From there, the player may traverse through the village and dungeon maps. In the village, the player may buy items from the shops and in the dungeon, the player may encounter enemies to battle. The player wins the game when they defeat the final boss and reach the end of the dungeon. However, the player dies when they fall in combat. 
 
 ### Screen Layouts
-![ScreenDesigns](images/ScreenDesign.pdf)
 > Our screen layouts [here](images/ScreenDesign.pdf) illustrate our in-program screens and buttons. When the player starts the game, the very first screen is the Title screen, which gives the player options to read the tutorial or select a character. The player receives prompts and selects numerical options using the keyboard input to progress through the game. When moving through the world, the player is given a coordinate and four directions they can move in. The combat screens all share the same layout, but may have different enemies depending on the stage of the game you are in.
 
 ## Class Diagram
