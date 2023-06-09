@@ -18,6 +18,9 @@ using namespace std;
       for(int i = 0; i < maps.size(); i++){
         delete maps.at(i);
       }
+      if(BossLocation){
+        delete BossLocation;
+      }
     }
 
     bool LocationManager::move(int direction){
