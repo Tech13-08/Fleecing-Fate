@@ -63,6 +63,7 @@ using namespace std;
           }
           if(loc->getType()=="Wolves' Den"){
             ((BossRoom*) loc)->battleEnemies(p, inv);
+            p->wonGame();
             return true;
           }
         

@@ -36,6 +36,10 @@ int main() {
             return 0;
           case 1:
             ms->moveMenu(p, inv);
+            if(p->getwonGame()){
+              cout << "Congratulations! You have brought peace to the sheeps! You have beaten the game!" << endl;
+              return 0;
+            }
                 //ms->locationEvent(p, inv);
             break;
           case 2:

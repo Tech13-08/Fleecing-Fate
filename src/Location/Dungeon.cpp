@@ -11,10 +11,7 @@ Dungeon::Dungeon(const string name, const string description, const int sizeScal
 }
 
 bool Dungeon::isCompleted(){
-    cout << "Number of Dungeon Rooms: " << places.size() << endl;
     for(int i = 0; i < places.size(); ++i){
-
-        cout << i+1 << ". " << ((DungeonRoom*)places.at(i))->isDefeated() << endl;
         if(!(((DungeonRoom*)places.at(i))->isDefeated())){
             return false;
         }
