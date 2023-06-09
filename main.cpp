@@ -19,6 +19,6 @@ int main() {
 
     Game* game = new Game(input);
     game->runGame();
-
+    delete game;
     return 0;
 }

@@ -4,6 +4,9 @@
 #include <string>
 using namespace std;
 
+
+
+
 CharacterSelector::CharacterSelector(const string& name) {
     Berserker* exampleBerserker = new Berserker(name, 100.0, 10.0);
     Rogue* exampleRogue = new Rogue(name, 100.0, 10.0);
@@ -29,6 +32,10 @@ CharacterSelector::CharacterSelector(const string& name) {
             delete exampleBerserker;
             break;
     }
+}
+
+CharacterSelector::~CharacterSelector(){
+    delete playerChar;
 }
 
 void CharacterSelector::getInput(int& choice) {

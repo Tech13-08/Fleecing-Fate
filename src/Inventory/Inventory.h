@@ -13,6 +13,7 @@ class Inventory {
   
  public:
     Inventory();
+    ~Inventory();
     void add_item(Item*);
     Item* use_item(int index);
     int get_money() const;

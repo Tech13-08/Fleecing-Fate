@@ -8,10 +8,6 @@ using namespace std;
     
     LocationMove::LocationMove(Player* p, Inventory* inv, LocationManager* lm) : p(p), inv(inv), lm(lm){}
 
-    LocationMove::~LocationMove(){
-      delete lm;
-    }
-
     void LocationMove::moveMenu(){
         if(!p->getAlive()){
           return;
@@ -63,11 +59,13 @@ using namespace std;
             ((DungeonRoom*) loc)->battleEnemies(p, inv);
             lm->completeHandler();
           }
-          if(loc->getType()=="Wolves' Den"){
+          if(loc->getType()=="BossRoom"){
             ((BossRoom*) loc)->battleEnemies(p, inv);
+            loc = nullptr;
             return true;
           }
         
       }
+      loc = nullptr;
       return false;
     }

@@ -14,6 +14,13 @@ Store::Store(const string name, const string description) : Location(name, descr
     items.push_back(new Item("Bandaid", 10, "heal", 8));
 }
 
+Store::~Store(){
+    for(int i = 0; i < items.size(); ++i){
+        delete items.at(i);
+        items.at(i) = nullptr;
+    }
+}
+
 Item* Store::buyItem(int index, Inventory* inv){
     if(index < this->getSize() && index >= 0){
         Item* item = this->items[index];

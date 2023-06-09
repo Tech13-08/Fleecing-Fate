@@ -1,41 +1,43 @@
 #ifndef __LOCATION_H__
 #define __LOCATION_H__
+
 #include <string>
 #include <iostream> 
 
 using namespace std;
 
-class Location{
-    private:
-        string name;
-        string description;
-        string type;
-        int size;
+class Location {
+private:
+    string name;
+    string description;
+    string type;
+    int size;
 
-    public:
-        Location(const string name, const string description, const string type) : name(name), description(description), type(type){}
+public:
+    Location(const string name, const string description, const string type)
+        : name(name), description(description), type(type) {}
 
-        const string getName(){return name;}
+    virtual ~Location() {}
 
-        const string getType(){return type;}
+    const string getName() { return name; }
 
-        const string getDescription(){return description;}
+    const string getType() { return type; }
 
-        const int getSize(){return size;}
+    const string getDescription() { return description; }
 
-        void setSize(int size){this->size = size;}
+    const int getSize() { return size; }
 
-        void displayLocation(){
-            cout << "You are in the ";
-            cout << getType();
-            cout << ": ";
-            cout << getName();
-            cout << "! ";
-            cout << getDescription();      
-            cout << "." << endl;
-        }
-        
+    void setSize(int size) { this->size = size; }
 
+    void displayLocation() {
+        cout << "You are in the ";
+        cout << getType();
+        cout << ": ";
+        cout << getName();
+        cout << "! ";
+        cout << getDescription();      
+        cout << "." << endl;
+    }
 };
 
-#endif // __PERSON_H__
+#endif // __LOCATION_H__

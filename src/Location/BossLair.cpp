@@ -1,12 +1,12 @@
 
 #include "BossLair.h"
-#include "BossRoom.h"
 #include <string>
 #include <vector>
 using std::string;
 using std::vector;
+class BossRoom;
 
-BossLair::BossLair(const string name, const string description, const int sizeScale) : MapManager(name, description, "Wolves' Den", sizeScale){
+BossLair::BossLair(const string name, const string description, const int sizeScale) : MapManager(name, description, "Boss Lair", sizeScale){
     this->populateMap();
     
 }

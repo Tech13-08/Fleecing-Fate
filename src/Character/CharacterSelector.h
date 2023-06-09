@@ -10,6 +10,7 @@ private:
     Player* playerChar;
 public:
     CharacterSelector(const string&);
+    ~CharacterSelector();
     void getInput(int&);
     Player* getPlayer() const;
 };
