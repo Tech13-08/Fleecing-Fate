@@ -1,5 +1,6 @@
 #include "Rogue.h"
 #include <string>
+#include <iostream>
 using namespace std;
 
 Rogue::Rogue(const string& name, double maxHealth, double strength) :
@@ -28,8 +29,9 @@ int Rogue::specialAttack(Character* target) {
         return dealDamage(target, 10000);
     }
     else if (luck > critChance) {
+        cout << "CRITICAL HIT!" << endl;
         luck = BASELUCK;
-        return dealDamage(target, 3*this->getStrength());
+        return dealDamage(target, 5*this->getStrength());
     }
     else {
         luck += 10;
