@@ -12,15 +12,13 @@ class Battle{
     private:
         Player* player;
         Enemy* enemy;
-        Inventory* inv;
+        Inventory* inventory;
         BattleMenu* battleMenu;
         int battleState = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
         int playerAP = 0;
     public:
         Battle(Player* player, Enemy* enemy, Inventory* inv);
         ~Battle();
-        int calcDamage(int baseDamage);
-        int calcDamageWithCrit(int baseDamage, int critChance);
         void playerAttack();
         void playerStrongAttack();
         void menu();
