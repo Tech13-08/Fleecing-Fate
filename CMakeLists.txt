@@ -46,7 +46,7 @@ set(BATTLE_SOURCE_FILES src/Battle/Battle.cpp src/Battle/BattleMenu.cpp)
 set(INVENTORY_SOURCE_FILES src/Inventory/Inventory.cpp)
 set(ITEMS_SOURCE_FILES src/Items/Item.cpp)
 set(CHARACTER_SOURCE_FILES src/Character/Character.cpp src/Character/Player.cpp src/Character/Enemy.cpp src/Character/Berserker.cpp src/Character/Rogue.cpp src/Character/CharacterSelector.cpp)
-add_executable(main main.cpp game.cpp ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})
+add_executable(main main.cpp game.cpp title.cpp ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})
 
 set(TEST_FILES test/testLocation.cpp test/battleTest.cpp test/characterTest.cpp)
 add_executable(test ${TEST_FILES} ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})
