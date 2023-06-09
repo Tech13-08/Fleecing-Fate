@@ -14,7 +14,7 @@ class MoveSelector {
  public:
     MoveSelector();
     void moveMenu(Player*, Inventory*);
-    void locationEvent(Player*, Inventory*);
+    bool locationEvent(Player*, Inventory*);
 
 };
 

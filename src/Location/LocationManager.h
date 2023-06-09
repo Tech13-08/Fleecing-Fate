@@ -23,6 +23,8 @@ class LocationManager {
     int getX();
     int getY();
     int getSize();
+    bool complete();
+    void completeHandler();
 
 };
 
