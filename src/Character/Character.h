@@ -7,22 +7,22 @@ using std::string;
 class Character {
 private:
     string name;
-    double maxHealth;
-    double currHealth;
-    double strength;
+    int maxHealth;
+    int currHealth;
+    int strength;
     bool isAlive;
 public:
-    Character(const string&, double, double);
+    Character(const string&, int, int);
     // setters and getters
     string getName() const;
-    double getMaxHealth() const;
-    double getCurrHealth() const;
-    double getStrength() const;
+    int getMaxHealth() const;
+    int getCurrHealth() const;
+    int getStrength() const;
     bool getAlive() const;
-    int dealDamage(Character*, double);
-    virtual void takeDamage(double);
-    double getVariance(double);
-    void heal(double);
+    int dealDamage(Character*, int);
+    virtual void takeDamage(int);
+    int getVariance(int);
+    void heal(int);
     void die();
     // combat
     virtual int attack(Character* target);

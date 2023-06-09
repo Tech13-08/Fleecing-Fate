@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-Enemy::Enemy(const string& name, double maxHealth, double strength) :
+Enemy::Enemy(const string& name, int maxHealth, int strength) :
         Character(name, maxHealth, strength) {};
 
-Enemy::Enemy() : Character("Wolf", 80.0, 8.0) {};
+Enemy::Enemy() : Character("Wolf", 80, 8) {};

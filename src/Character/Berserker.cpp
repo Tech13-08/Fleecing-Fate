@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-Berserker::Berserker(const string& name, double maxHealth, double strength) :
+Berserker::Berserker(const string& name, int maxHealth, int strength) :
                 Player(name, maxHealth, strength) {
     setStatType("RAGE");
     setDescription("A short tempered drunkard that converts their anger into raw strength.\nTaking damage from enemies stores RAGE, which can be consumed to amplify attacks");
@@ -30,7 +30,7 @@ void Berserker::reset() {
     setStat(0);
 }
 
-void Berserker::takeDamage(double damageTaken) {
+void Berserker::takeDamage(int damageTaken) {
     this->Character::takeDamage(damageTaken);
     if (rage < MAXRAGE) 
         rage += damageTaken;

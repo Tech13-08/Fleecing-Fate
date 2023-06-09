@@ -2,7 +2,7 @@
 #include <string>
 using std::string;
 
-Player::Player(const string& name, double maxHealth, double strength) :
+Player::Player(const string& name, int maxHealth, int strength) :
                 Character(name, maxHealth, strength){};
 
 int Player::getMaxStat() const {
