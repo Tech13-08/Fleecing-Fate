@@ -2,7 +2,8 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# Narrative-Driven Text-Based Role Playing Game (Tentative)
+# Fleecing Fate: Wooly Retribution
+# A Narrative-Driven Text-Based Role Playing Game 
  
  > Authors: [Falak Tulsi](https://github.com/Tech13-08),[Yat Chun Wong](https://github.com/ywong042),[Andy Jarean](https://github.com/ajarean),[Tingxuan Wu](https://github.com/twu148)
 
@@ -42,11 +43,11 @@
 
 ### Screen Layouts
 ![ScreenDesigns](images/ScreenDesigns.pdf)
-> Our screen layouts [here](images/ScreenDesigns.pdf) illustrate our in-program screens and buttons. When the player starts the game, the very first screen is the Menu screen, which gives the player options to start and to quit. The player receives prompts and selects numerical options using the keyboard input to progress through the game. The combat screens all share the same layout, but have different enemies depending on the location the combat starts in.
+> Our screen layouts [here](images/ScreenDesigns.pdf) illustrate our in-program screens and buttons. When the player starts the game, the very first screen is the Title screen, which gives the player options to read the tutorial or select a character. The player receives prompts and selects numerical options using the keyboard input to progress through the game. When moving through the world, the player is given a coordinate and four directions they can move in. The combat screens all share the same layout, but may have different enemies depending on the stage of the game you are in.
 
 ## Class Diagram
 ![UMLClassDiagram](images/UML_Class_Diagram.png)
-> Our UML class diagram [here](images/UML_Class_Diagram.png) represents the various classes we will implement in our project and how they will fit together. The diagram highlights the relationships between the classes and gives an overall idea of how the game will function. The player and enemies, for example, will both originate from the parent Character class. The Location class divides into the Dungeon, Village, Store, and Dungeon Room classes, which together become the map for the game. The Dungeon Room will have either enemies or items: both of which are classes with their own parameters and functions. The Game class is how we will manage all of these relationships at once to provide smooth game functionality.
+> Our UML class diagram [here](images/UML_Class_Diagram.png) represents the various classes we will implement in our project and how they will fit together. The diagram highlights the relationships between the classes and gives an overall idea of how the game will function. The player and enemy, for example, will both originate from the parent Character class. The Location class divides into the Dungeon, Village, Store, and Dungeon Room classes, which together become the map for the game. The Dungeon Room will have either enemies or items: both of which are classes with their own parameters and functions. The Game class is how we will manage all of these relationships at once to provide smooth game functionality.
  
  > ## Phase III
 > We applied Integration Segregation principle to the Exp variable in the Character class since the subclasses Enemy and Boss do not need to inherit Exp from the character. We applied the principle by removing the Exp variable and the Exp methods in the class and also in its following subclasses in Enemy and Boss Enemy. This change removes unnecessary methods in the sub-classes and also reduces the possibility of those bugs.

@@ -27,7 +27,7 @@ TEST(BattleTests,Constructor){
 //     EXPECT_LE(dmg,60);
 // }
 TEST(BattleTests, WinCondition){
-    Berserker* p1 = new Berserker("Player One", 100, 25);
+    Berserker* p1 = new Berserker("Player One", 100, 25000);
     Enemy* e = new Enemy();
     Inventory* inv1 = new Inventory();
     Battle* battle = new Battle(p1,e, inv1);
@@ -35,7 +35,7 @@ TEST(BattleTests, WinCondition){
     EXPECT_EQ(win,true);
 }
 TEST(BattleTests, LoseCondition){
-    Berserker* p1 = new Berserker("Player One", 100, 25);
+    Berserker* p1 = new Berserker("Player One", 1, 25);
     Enemy* e = new Enemy();
     Inventory* inv1 = new Inventory();
     Battle* battle = new Battle(p1,e, inv1);
