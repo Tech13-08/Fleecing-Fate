@@ -845,6 +845,30 @@ test/testLocation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/testLocation.cpp.s
 .PHONY : test/testLocation.cpp.s
 
+title.o: title.cpp.o
+.PHONY : title.o
+
+# target to build an object file
+title.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/title.cpp.o
+.PHONY : title.cpp.o
+
+title.i: title.cpp.i
+.PHONY : title.i
+
+# target to preprocess a source file
+title.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/title.cpp.i
+.PHONY : title.cpp.i
+
+title.s: title.cpp.s
+.PHONY : title.s
+
+# target to generate assembly for a file
+title.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/title.cpp.s
+.PHONY : title.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -932,6 +956,9 @@ help:
 	@echo "... test/testLocation.o"
 	@echo "... test/testLocation.i"
 	@echo "... test/testLocation.s"
+	@echo "... title.o"
+	@echo "... title.i"
+	@echo "... title.s"
 .PHONY : help
 
 

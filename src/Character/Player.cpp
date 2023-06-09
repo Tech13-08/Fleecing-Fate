@@ -33,7 +33,8 @@ void Player::setPlayerType(const string& pType) {
     playerType = pType;
 }
 
-void Player::rest() {
+string Player::rest() {
     heal(1000);
     reset();
+    return getName() + " falls asleep counting sheep...\nYou wake up with full health";
 }
