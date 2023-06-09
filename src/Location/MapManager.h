@@ -40,7 +40,6 @@ class MapManager : public Location{
 
         virtual void populateMap() = 0;
 
-
 };
 
 #endif // __PERSON_H__

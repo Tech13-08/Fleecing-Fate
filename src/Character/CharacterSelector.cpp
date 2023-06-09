@@ -18,8 +18,7 @@ CharacterSelector::CharacterSelector(const string& name) {
     cout << exampleRogue->getDescription() << endl;
     cout << endl << endl;
     cout << "Please select the character you would like to play (1-2):" << endl;
-    cin >> choice;
-
+    getInput(choice);
     switch (choice) {
         case 1:
             playerChar = exampleBerserker;
@@ -29,6 +28,20 @@ CharacterSelector::CharacterSelector(const string& name) {
             playerChar = exampleRogue;
             delete exampleBerserker;
             break;
+    }
+}
+
+void CharacterSelector::getInput(int& choice) {
+    cin >> choice;
+    while(!cin){
+        cout << "Sorry, that input is incorrect. Please enter a number between 1-2." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin >> choice;
+    }
+    if (choice != 1 && choice != 2) {
+        cout << "Sorry, that input is incorrect. Please enter a number between 1-2." << endl;
+        getInput(choice);
     }
 }
 

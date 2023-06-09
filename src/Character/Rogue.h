@@ -10,7 +10,7 @@ private:
     const int BASELUCK = 20;
     int luck = BASELUCK;;
 public:
-    Rogue(const string&, double, double);
+    Rogue(const string&, int, int);
     int getStat() const override;
     void setStat(int) override;
     void reset() override;

@@ -83,7 +83,7 @@ void Battle::menu(){
                 //take negative damage = heal
                 //todo: display this            
             }
-            else if(currItem->getType()=="damage"){
+            else if(currItem->getType()=="attack"){
                 enemy->takeDamage(currItem->getPower());
                 cout << "Damaged " << currItem->getPower() << endl;
                 //todo: display this
