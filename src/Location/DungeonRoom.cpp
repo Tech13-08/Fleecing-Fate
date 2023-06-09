@@ -27,12 +27,15 @@ void DungeonRoom::battleEnemies(Player* p, Inventory* inv){
         return;
     }
     displayLocation();
+    Battle* battle = nullptr;
     for(int i = 0; i < getSize(); ++i){
-        Battle* battle = new Battle(p, enemies[i], inv);
+        battle = new Battle(p, enemies[i], inv);
         cout << "A wild " << enemies[i]->getName() << " has appeared! (" << (i+1) << " out of " << getSize() <<" enemies)" << endl;
         if(!battle->doBattle()){
+            delete battle;
             return;
         }
+        delete battle;
     }
     defeated = true;
     int reward = getSize()*10;

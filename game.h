@@ -20,6 +20,7 @@ private:
 
 public:
     Game(string);
+    ~Game();
     void runGame();
     void displayMenu();
     void handleInput(int);

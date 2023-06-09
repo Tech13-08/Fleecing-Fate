@@ -12,6 +12,13 @@ Game::Game(string playerName){
     locMove = new LocationMove(p, inv, lm);
 };
 
+Game::~Game(){
+    delete inv;
+    delete charselect;
+    delete lm;
+    delete locMove;
+}
+
 void Game::runGame(){
     int numinput = 0;
     while(p->getAlive() && !lm->bossBeat() && !quit){

@@ -7,7 +7,7 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-BossRoom::BossRoom(const string name, const string description) : Location(name, description, "Wolves' Den"){
+BossRoom::BossRoom(const string name, const string description) : Location(name, description, "BossRoom"){
     srand((unsigned)time(0)); 
     this->setSize(20);
     for (int i = 0; i < getSize(); ++i){
@@ -17,6 +17,7 @@ BossRoom::BossRoom(const string name, const string description) : Location(name,
 
 BossRoom::~BossRoom(){
     for(int i = 0; i < enemies.size(); i++){
+        
         delete enemies.at(i);
     }
 }
@@ -27,10 +28,12 @@ void BossRoom::battleEnemies(Player* p, Inventory* inv){
         return;
     }
     displayLocation();
+    Battle* battle = nullptr;
     for(int i = 0; i < getSize(); ++i){
-        Battle* battle = new Battle(p, enemies[i], inv);
+         battle = new Battle(p, enemies[i], inv);
         cout << "A wild " << enemies[i]->getName() << " has appeared... (" << (i+1) << " out of " << getSize() <<" infants)" << endl;
         if(!battle->doBattle()){
+            delete battle;
             return;
         }
         cout << "------------------------------------------------------------------------" << endl;
@@ -45,6 +48,8 @@ void BossRoom::battleEnemies(Player* p, Inventory* inv){
             cout << "The wolf lets out a soft whimper that fades away into the darkness." << endl;
         }
         cout << "------------------------------------------------------------------------" << endl;
+        delete battle;
+       
     }
     defeated = true;
     int reward = 1000;

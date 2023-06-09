@@ -14,7 +14,7 @@ class Store : public Location{
         vector<Item*> items;
     public:
         Store(const string name, const string description);
-
+        ~Store();
         const vector<Item*> getItems();
         Item* buyItem(int, Inventory* );
         void storeMenu(Inventory*);

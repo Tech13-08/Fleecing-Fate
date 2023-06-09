@@ -4,8 +4,7 @@
 
 BattleMenu::BattleMenu(){
 }
-BattleMenu::~BattleMenu(){
-}
+
 void BattleMenu::showStatus(Player* player, Enemy* enemy, int ap){
     cout << "-----------" << endl;
     cout << player->getInfo() << endl;

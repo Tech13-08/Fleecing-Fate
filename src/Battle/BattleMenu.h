@@ -9,7 +9,6 @@ class BattleMenu{
     private:
     public:
         BattleMenu();
-        ~BattleMenu();
         void showStatus(Player* player, Enemy* enemy, int ap);
         void doNothing();
         void showOutgoingAttack(int dmg);

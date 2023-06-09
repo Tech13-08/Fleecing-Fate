@@ -10,6 +10,12 @@ using namespace std;
       money = 100;
     }
 
+    Inventory::~Inventory(){
+      for(int i = 0; i < inv.size(); i++){
+        delete inv.at(i);
+      }
+    }
+
     void Inventory::add_item(Item* cpy){
       for(int i = 0; i < inv.size(); i++){
         if(cpy->getName() == inv.at(i)->getName()){

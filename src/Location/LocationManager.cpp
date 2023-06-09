@@ -8,12 +8,10 @@ using namespace std;
       currentMap = 0;
       x = 0;
       y = 0;
-      MapManager* DungeonLocation = new Dungeon("Cave of Danger", "This is the Dungeon.", 1);
-      MapManager* VillageLocation = new Village("Town", "Your happy town with sheeps!", 1);
       BossLocation = new BossLair("Wolves' Den", "This must be where all the wolves live", 1);
       
-      maps.push_back(VillageLocation);
-      maps.push_back(DungeonLocation);
+      maps.push_back(new Village("Town", "Your happy town with sheeps!", 1));
+      maps.push_back(new Dungeon("Cave of Danger", "This is the Dungeon.", 1));
     }
 
     LocationManager::~LocationManager(){
