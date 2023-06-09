@@ -14,6 +14,7 @@ class LocationMove {
         LocationManager* lm;
  public:
     LocationMove(Player*, Inventory*, LocationManager*);
+    ~LocationMove();
     void moveMenu();
     bool locationEvent();
 

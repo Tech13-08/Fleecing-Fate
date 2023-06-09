@@ -16,6 +16,7 @@ class LocationManager {
   
  public:
     LocationManager();
+    ~LocationManager();
     bool move(int);
     Location* getLocation() const;
     void setLocation(int);

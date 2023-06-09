@@ -30,7 +30,7 @@ void Game::runGame(){
 }
 
 void Game::displayMenu(){
-    cout << lm->bossBeat() << " " << p->getAlive() << " " << quit << endl;
+    //cout << lm->bossBeat() << " " << p->getAlive() << " " << quit << endl;
     cout << "What would you like to do? (0 to exit game)" << endl;
     cout << "1. Move" << endl;
     cout << "2. View Inventory" << endl;

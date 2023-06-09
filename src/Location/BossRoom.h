@@ -15,6 +15,7 @@ class BossRoom : public Location{
         bool defeated = false;
     public:
         BossRoom(const string name, const string description);
+        ~BossRoom();
 
         void battleEnemies(Player*, Inventory*);
 

@@ -15,6 +15,12 @@ BossRoom::BossRoom(const string name, const string description) : Location(name,
     }
 }
 
+BossRoom::~BossRoom(){
+    for(int i = 0; i < enemies.size(); i++){
+        delete enemies.at(i);
+    }
+}
+
 void BossRoom::battleEnemies(Player* p, Inventory* inv){
     if(isDefeated()){
         cout << "You have finally defeated all the wolves!" << endl;

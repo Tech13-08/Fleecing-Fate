@@ -22,6 +22,6 @@ bool BossLair::isCompleted(){
 
 
 void BossLair::populateMap(){
-    map[2][2] = new BossRoom("Wolves' Den", "This must be where all the wolves live" );
-    places.push_back(map[2][2]);
+    map[0][0] = new BossRoom("Wolves' Den", "This must be where all the wolves live" );
+    places.push_back(map[0][0]);
 }

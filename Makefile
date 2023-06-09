@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_SOURCE_DIR = /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

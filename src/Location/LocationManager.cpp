@@ -16,6 +16,12 @@ using namespace std;
       maps.push_back(DungeonLocation);
     }
 
+    LocationManager::~LocationManager(){
+      for(int i = 0; i < maps.size(); i++){
+        delete maps.at(i);
+      }
+    }
+
     bool LocationManager::move(int direction){
         int size = maps.at(currentMap)->getSize();
         bool moveable = false;

@@ -8,6 +8,10 @@ using namespace std;
     
     LocationMove::LocationMove(Player* p, Inventory* inv, LocationManager* lm) : p(p), inv(inv), lm(lm){}
 
+    LocationMove::~LocationMove(){
+      delete lm;
+    }
+
     void LocationMove::moveMenu(){
         if(!p->getAlive()){
           return;

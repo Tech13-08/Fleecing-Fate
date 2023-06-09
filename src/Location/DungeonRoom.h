@@ -15,6 +15,7 @@ class DungeonRoom : public Location{
         bool defeated = false;
     public:
         DungeonRoom(const string name, const string description);
+        ~DungeonRoom();
 
         void battleEnemies(Player*, Inventory*);
 
