@@ -15,7 +15,7 @@ Battle::Battle(Player* player, Enemy* enemy, Inventory* inv){
     int playerAP = 0;
 }
 Battle::~Battle(){
-    delete BattleMenu();
+    delete this->battleMenu;
 }
 void Battle::playerAttack(){ //replace these later when we actually get characters
     if(playerAP >= 100){
