@@ -92,3 +92,5 @@ using namespace std;
     int LocationManager::getSize(){
       return maps.at(currentMap)->getSize();
     }
+
+    

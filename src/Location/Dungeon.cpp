@@ -12,7 +12,7 @@ Dungeon::Dungeon(const string name, const string description, const int sizeScal
 
 bool Dungeon::isCompleted(){
     for(int i = 0; i < places.size(); ++i){
-        if(((DungeonRoom*)places.at(i))->isDefeated()){
+        if(!((DungeonRoom*)places.at(i))->isDefeated()){
             return false;
         }
     }

@@ -39,7 +39,7 @@ using namespace std;
           moveMenu(p, inv);
           return;
         }   
-          cout << "You are at (" << lm-getX() << ", " << lm->getY() << ") of size " << lm->getSize() << " by " << lm->getSize() << endl;
+          cout << "You are at (" << lm->getX() << ", " << lm->getY() << ") of size " << lm->getSize() << " by " << lm->getSize() << endl;
           locationEvent(p, inv);
           moveMenu(p, inv);
         

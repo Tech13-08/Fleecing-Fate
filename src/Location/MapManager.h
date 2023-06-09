@@ -43,6 +43,10 @@ class MapManager : public Location{
             for(int n = 0; n < this->getSize()/2 + 1; ++n){
                 i = rand()%(this->getSize()-1);
                 j = rand()%(this->getSize()-1);
+                while(map[i][j]){
+                    i = rand()%(this->getSize()-1);
+                    j = rand()%(this->getSize()-1);
+                }
                 if(this->getType() == "Village"){
                     map[i][j] = new Store("Store " + std::to_string(n+1), "It's literally just a store mate");
                 }
