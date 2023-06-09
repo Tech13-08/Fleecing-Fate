@@ -4,6 +4,7 @@
 #include "Location.h"
 #include "Store.h"
 #include "DungeonRoom.h"
+#include "BossRoom.h"
 #include <vector>
 using std::string;
 using std::vector;
@@ -15,6 +16,7 @@ class MapManager : public Location{
     protected:
         vector<vector<Location*>> map;
         vector<Location*> places;
+        
 
     public:
         MapManager(const string name, const string description, const string type, const int sizeScale) : Location(name, description, type){
@@ -36,22 +38,8 @@ class MapManager : public Location{
             return row >= 0 && row < this->getSize() && col >= 0 && col < this->getSize();
         }
 
-        void populateMap(){
-            srand((unsigned)time(0)); 
-            int i = 0;
-            int j = 0;
-            for(int n = 0; n < this->getSize()/2 + 1; ++n){
-                i = rand()%(this->getSize()-1);
-                j = rand()%(this->getSize()-1);
-                if(this->getType() == "Village"){
-                    map[i][j] = new Store("Store " + std::to_string(n+1), "It's literally just a store mate");
-                }
-                if(this->getType() == "Dungeon"){
-                    map[i][j] = new DungeonRoom("DungeonRoom " + std::to_string(n+1), "DUNGEON ROOM JUMPSCARE BOO");
-                }
-                places.push_back(map[i][j]);
-            }
-        }
+        virtual void populateMap() = 0;
+
 
 };
 

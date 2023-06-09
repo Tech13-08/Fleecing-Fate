@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_SOURCE_DIR = /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148
+CMAKE_BINARY_DIR = /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/ftuls001/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/ywong042/final-project-ftuls001-ywong042-ajare002-twu148/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -533,6 +533,60 @@ src/Items/Item.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Items/Item.cpp.s
 .PHONY : src/Items/Item.cpp.s
 
+src/Location/BossLair.o: src/Location/BossLair.cpp.o
+.PHONY : src/Location/BossLair.o
+
+# target to build an object file
+src/Location/BossLair.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/BossLair.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/BossLair.cpp.o
+.PHONY : src/Location/BossLair.cpp.o
+
+src/Location/BossLair.i: src/Location/BossLair.cpp.i
+.PHONY : src/Location/BossLair.i
+
+# target to preprocess a source file
+src/Location/BossLair.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/BossLair.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/BossLair.cpp.i
+.PHONY : src/Location/BossLair.cpp.i
+
+src/Location/BossLair.s: src/Location/BossLair.cpp.s
+.PHONY : src/Location/BossLair.s
+
+# target to generate assembly for a file
+src/Location/BossLair.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/BossLair.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/BossLair.cpp.s
+.PHONY : src/Location/BossLair.cpp.s
+
+src/Location/BossRoom.o: src/Location/BossRoom.cpp.o
+.PHONY : src/Location/BossRoom.o
+
+# target to build an object file
+src/Location/BossRoom.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/BossRoom.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/BossRoom.cpp.o
+.PHONY : src/Location/BossRoom.cpp.o
+
+src/Location/BossRoom.i: src/Location/BossRoom.cpp.i
+.PHONY : src/Location/BossRoom.i
+
+# target to preprocess a source file
+src/Location/BossRoom.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/BossRoom.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/BossRoom.cpp.i
+.PHONY : src/Location/BossRoom.cpp.i
+
+src/Location/BossRoom.s: src/Location/BossRoom.cpp.s
+.PHONY : src/Location/BossRoom.s
+
+# target to generate assembly for a file
+src/Location/BossRoom.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/BossRoom.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/BossRoom.cpp.s
+.PHONY : src/Location/BossRoom.cpp.s
+
 src/Location/Dungeon.o: src/Location/Dungeon.cpp.o
 .PHONY : src/Location/Dungeon.o
 
@@ -818,6 +872,12 @@ help:
 	@echo "... src/Items/Item.o"
 	@echo "... src/Items/Item.i"
 	@echo "... src/Items/Item.s"
+	@echo "... src/Location/BossLair.o"
+	@echo "... src/Location/BossLair.i"
+	@echo "... src/Location/BossLair.s"
+	@echo "... src/Location/BossRoom.o"
+	@echo "... src/Location/BossRoom.i"
+	@echo "... src/Location/BossRoom.s"
 	@echo "... src/Location/Dungeon.o"
 	@echo "... src/Location/Dungeon.i"
 	@echo "... src/Location/Dungeon.s"

@@ -39,13 +39,16 @@ using namespace std;
           moveMenu(p, inv);
           return;
         }   
-          cout << "You are at (" << lm-getX() << ", " << lm->getY() << ") of size " << lm->getSize() << " by " << lm->getSize() << endl;
-          locationEvent(p, inv);
+          cout << "You are at (" << lm->getX() << ", " << lm->getY() << ") of size " << lm->getSize() << " by " << lm->getSize() << endl;
+          bool endgame = locationEvent(p, inv);
+          if(endgame){
+            return;
+          }
           moveMenu(p, inv);
         
     }
 
-    void MoveSelector::locationEvent(Player* p, Inventory* inv){
+    bool MoveSelector::locationEvent(Player* p, Inventory* inv){
       Location* loc = lm->getLocation();
       if(loc){
         string input = "";
@@ -56,8 +59,13 @@ using namespace std;
           }
           if(loc->getType()=="DungeonRoom"){
             ((DungeonRoom*) loc)->battleEnemies(p, inv);
+            lm->completeHandler();
+          }
+          if(loc->getType()=="Wolves' Den"){
+            ((BossRoom*) loc)->battleEnemies(p, inv);
+            return true;
           }
         
       }
-      return;
+      return false;
     }

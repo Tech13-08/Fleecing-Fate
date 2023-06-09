@@ -5,9 +5,12 @@
 using std::string;
 
 class Dungeon : public MapManager{
+    private:
+    
     public:
         Dungeon(const string name, const string description, const int sizeScale);
         bool isCompleted();
+        void populateMap() override;
 
 };
 

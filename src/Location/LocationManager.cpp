@@ -9,7 +9,8 @@ using namespace std;
       x = 0;
       y = 0;
       MapManager* DungeonLocation = new Dungeon("Cave of Danger", "This is the Dungeon.", 2);
-      MapManager* VillageLocation = new Village("Town", "const string description", 1);
+      MapManager* VillageLocation = new Village("Town", "Your happy town with sheeps!", 1);
+      
       maps.push_back(VillageLocation);
       maps.push_back(DungeonLocation);
     }
@@ -92,3 +93,28 @@ using namespace std;
     int LocationManager::getSize(){
       return maps.at(currentMap)->getSize();
     }
+
+    bool LocationManager::complete(){
+      for(int i = 0; i < maps.size(); i++){
+        if((maps.at(i))->getType() == "Dungeon"){
+          if(!(((Dungeon*)maps.at(i))->isCompleted())){
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+
+    void LocationManager::completeHandler(){
+      if(complete()){
+        MapManager* BossLocation = new BossLair("Wolves' Den", "This must be where all the wolves live", 1);
+        cout << "------------------------------------" << endl;
+        cout << "You feel the need to move east..." << endl;
+        cout << "------------------------------------" << endl;
+        maps.push_back(BossLocation);
+      }
+    }
+
+
+
+  

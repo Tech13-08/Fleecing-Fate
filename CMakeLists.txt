@@ -41,7 +41,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif ()
 
 
-set(LOCATION_SOURCE_FILES src/Location/Dungeon.cpp src/Location/DungeonRoom.cpp src/Location/Store.cpp src/Location/Village.cpp src/Location/LocationManager.cpp src/Location/MoveSelector.cpp)
+set(LOCATION_SOURCE_FILES src/Location/Dungeon.cpp src/Location/DungeonRoom.cpp src/Location/Store.cpp src/Location/Village.cpp src/Location/LocationManager.cpp src/Location/MoveSelector.cpp src/Location/BossLair.cpp src/Location/BossRoom.cpp)
 set(BATTLE_SOURCE_FILES src/Battle/Battle.cpp src/Battle/BattleMenu.cpp)
 set(INVENTORY_SOURCE_FILES src/Inventory/Inventory.cpp)
 set(ITEMS_SOURCE_FILES src/Items/Item.cpp)

@@ -4,3 +4,4 @@
 #include "Village.h"
 #include "Store.h"
 #include "DungeonRoom.h"
+#include "BossLair.h"
