@@ -8,11 +8,18 @@ using namespace std;
       currentMap = 0;
       x = 0;
       y = 0;
-      MapManager* DungeonLocation = new Dungeon("Cave of Danger", "This is the Dungeon.", 2);
+      MapManager* DungeonLocation = new Dungeon("Cave of Danger", "This is the Dungeon.", 1);
       MapManager* VillageLocation = new Village("Town", "Your happy town with sheeps!", 1);
+      BossLocation = new BossLair("Wolves' Den", "This must be where all the wolves live", 1);
       
       maps.push_back(VillageLocation);
       maps.push_back(DungeonLocation);
+    }
+
+    LocationManager::~LocationManager(){
+      for(int i = 0; i < maps.size(); i++){
+        delete maps.at(i);
+      }
     }
 
     bool LocationManager::move(int direction){
@@ -107,12 +114,15 @@ using namespace std;
 
     void LocationManager::completeHandler(){
       if(complete()){
-        MapManager* BossLocation = new BossLair("Wolves' Den", "This must be where all the wolves live", 1);
         cout << "------------------------------------" << endl;
         cout << "You feel the need to move east..." << endl;
         cout << "------------------------------------" << endl;
         maps.push_back(BossLocation);
       }
+    }
+
+    bool LocationManager::bossBeat(){
+      return ((BossLair*)BossLocation)->isCompleted();
     }
 
 

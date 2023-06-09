@@ -21,9 +21,20 @@ class MapManager : public Location{
     public:
         MapManager(const string name, const string description, const string type, const int sizeScale) : Location(name, description, type){
             srand((unsigned)time(0)); 
-            this->setSize((rand()%((maxSize+1-minSize)*sizeScale))+(minSize*sizeScale));
-            //this->setSize(3);
+            //this->setSize((rand()%((maxSize+1-minSize)*sizeScale))+(minSize*sizeScale));
+            this->setSize(3);
             map.resize(this->getSize(), vector<Location*>(this->getSize(), nullptr));
+        }
+
+        ~MapManager(){
+            for(int i =  0; i < map.size(); i++){
+                for(int j= 0; j < map[i].size(); j++){
+                    delete map[i][j];
+                }
+            }
+            for(int i =  0; i < places.size(); i++){
+                delete places[i];
+            }
         }
 
         Location* getLocation(int row, int col){

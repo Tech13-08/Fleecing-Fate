@@ -9,12 +9,14 @@ using namespace std;
 class LocationManager {
  private:
   vector<MapManager*> maps;
+  MapManager* BossLocation;
   int currentMap;
   int x;
   int y;
   
  public:
     LocationManager();
+    ~LocationManager();
     bool move(int);
     Location* getLocation() const;
     void setLocation(int);
@@ -25,7 +27,7 @@ class LocationManager {
     int getSize();
     bool complete();
     void completeHandler();
-
+    bool bossBeat();
 };
 
 #endif

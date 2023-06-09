@@ -41,12 +41,12 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif ()
 
 
-set(LOCATION_SOURCE_FILES src/Location/Dungeon.cpp src/Location/DungeonRoom.cpp src/Location/Store.cpp src/Location/Village.cpp src/Location/LocationManager.cpp src/Location/MoveSelector.cpp src/Location/BossLair.cpp src/Location/BossRoom.cpp)
+set(LOCATION_SOURCE_FILES src/Location/Dungeon.cpp src/Location/DungeonRoom.cpp src/Location/Store.cpp src/Location/Village.cpp src/Location/LocationManager.cpp src/Location/LocationMove.cpp src/Location/BossLair.cpp src/Location/BossRoom.cpp)
 set(BATTLE_SOURCE_FILES src/Battle/Battle.cpp src/Battle/BattleMenu.cpp)
 set(INVENTORY_SOURCE_FILES src/Inventory/Inventory.cpp)
 set(ITEMS_SOURCE_FILES src/Items/Item.cpp)
 set(CHARACTER_SOURCE_FILES src/Character/Character.cpp src/Character/Player.cpp src/Character/Enemy.cpp src/Character/Berserker.cpp src/Character/Rogue.cpp src/Character/CharacterSelector.cpp)
-add_executable(main main.cpp ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})
+add_executable(main main.cpp game.cpp ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})
 
 set(TEST_FILES test/testLocation.cpp test/battleTest.cpp test/characterTest.cpp)
 add_executable(test ${TEST_FILES} ${LOCATION_SOURCE_FILES} ${BATTLE_SOURCE_FILES} ${INVENTORY_SOURCE_FILES} ${ITEMS_SOURCE_FILES} ${CHARACTER_SOURCE_FILES})

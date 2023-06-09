@@ -15,6 +15,12 @@ DungeonRoom::DungeonRoom(const string name, const string description) : Location
     }
 }
 
+DungeonRoom::~DungeonRoom(){
+    for(int i = 0; i < enemies.size(); ++i){
+        delete enemies.at(i);
+    }
+}
+
 void DungeonRoom::battleEnemies(Player* p, Inventory* inv){
     if(isDefeated()){
         cout << "You have already defeated this Dungeon Room, try looking for others" << endl;

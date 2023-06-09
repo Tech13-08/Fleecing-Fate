@@ -10,7 +10,6 @@ private:
     string statType;
     string description;
     string playerType;
-    bool won = false;
 public:
     Player(const string&, int, int);
     int getMaxStat() const;
@@ -24,8 +23,6 @@ public:
     void setPlayerType(const string&);
     virtual int specialAttack(Character*) = 0;
     void rest();
-    void wonGame();
-    bool getwonGame() const;
     virtual void reset() = 0;
     virtual string getInfo() = 0;
 };
