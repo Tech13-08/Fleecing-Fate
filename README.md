@@ -7,7 +7,7 @@
  
  > Authors: [Falak Tulsi](https://github.com/Tech13-08),[Yat Chun Wong](https://github.com/ywong042),[Andy Jarean](https://github.com/ajarean),[Tingxuan Wu](https://github.com/twu148)
 
-## Project Description
+## Phase I: Project Description
 > **Game Overview:**
 > This program is a narrative-driven text-based roleplaying game, in which a sheep farmer gets revenge on the wolves that kidnapped all the sheep in their town. At first, the player is prompted with two player options: Berserker and Rogue, who have different attacks and stats. 
 > After the player leaves the village, they must overcome several wolf-infested dungeons while clearing all of the wolves inside. To win the game, the player must avenge the fallen sheep by clearing the very last room at the end. 
@@ -37,7 +37,7 @@
 > The leveling system was cut because the game was too short, and the player would not have adequate time to meaningfully acquire experience.
 > * `Improved Battle System`: Some enemies may have weaknesses which the player can exploit during combat to gain an advantage, such as delaying the enemy's turn or dealing additional damage. This adds an extra tactical layer to combat.
 > This improved battle system was cut because due to the story of the game, we only included one type of enemy, which would have the same weaknesses.
- > ## Phase II
+## Phase II: Design Document
  > We created three Epics that go over the main features and core aspects of our Text-Based Adventure Game. The first Epic goes over the how the Battle System should look like and the second Epic goes over the Character System. The last Epic goes over Locations of the game. 
  > The three Epics were split into six user stories so that we can work on them over the next several weeks and assign to team members during the scrum meeting.
 ## User Interface Specification
@@ -49,11 +49,11 @@
 ### Screen Layouts
 > Our screen layouts [here](images/ScreenDesign.pdf) illustrate our in-program screens and buttons. When the player starts the game, the very first screen is the Title screen, which gives the player options to read the tutorial or select a character. The player receives prompts and selects numerical options using the keyboard input to progress through the game. When moving through the world, the player is given a coordinate and four directions they can move in. The combat screens all share the same layout, but may have different enemies depending on the stage of the game you are in.
 
-## Class Diagram
+### Class Diagram
 ![UMLClassDiagram](images/UML_Class_Diagram.png)
 > Our UML class diagram [here](images/UML_Class_Diagram.png) represents the various classes we will implement in our project and how they will fit together. The diagram highlights the relationships between the classes and gives an overall idea of how the game will function. The player and enemy, for example, will both originate from the parent Character class. The Location class divides into the Dungeon, Village, Store, and Dungeon Room classes, which together become the map for the game. The Dungeon Room will have either enemies or items: both of which are classes with their own parameters and functions. The Game class is how we will manage all of these relationships at once to provide smooth game functionality.
  
- > ## Phase III
+## Phase III: Development
 > We applied Integration Segregation principle to the Exp variable in the Character class since the subclasses Enemy and Boss do not need to inherit Exp from the character. We applied the principle by removing the Exp variable and the Exp methods in the class and also in its following subclasses in Enemy and Boss Enemy. This change removes unnecessary methods in the sub-classes and also reduces the possibility of those bugs.
 
 > We applied Single Responsibility Principle in the Game class since it originally violated the principle by having the Battle System in the same class. We applied the principle by creating a new class to have the Battle System and removed the function in the Game class. This change gives the class only one responsibilities and separates bugs from Battle Systems if it does occurs.
@@ -64,7 +64,7 @@
 
 > We have also used Single Responsibility Principle in the Location class and its subclasses. Every class there has one job only and do not contain behaviors from other classes. This makes it easier to develop Locations since each class does exactly as it is named and does not have any strange behaviors combined with it.
  
- > ## Final deliverable
+ ## Phase 4: Final deliverable
  ### Screenshots
  ![CharacterSelect](images/CharacterSelect.png)
  > The player is greeted by the option to select a character class.
