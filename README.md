@@ -3,11 +3,16 @@
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Fleecing Fate: Wooly Retribution
-# A Narrative-Driven Text-Based Role Playing Game 
+## A Narrative-Driven Text-Based Role Playing Game 
  
  > Authors: [Falak Tulsi](https://github.com/Tech13-08),[Yat Chun Wong](https://github.com/ywong042),[Andy Jarean](https://github.com/ajarean),[Tingxuan Wu](https://github.com/twu148)
 
 ## Project Description
+> **Game Overview:**
+> This program is a narrative-driven text-based roleplaying game, in which a sheep farmer gets revenge on the wolves that kidnapped all the sheep in their town. At first, the player is prompted with two player options: Berserker and Rogue, who have different attacks and stats. 
+> After the player leaves the village, they must overcome several wolf-infested dungeons while clearing all of the wolves inside. To win the game, the player must avenge the fallen sheep by clearing the very last room at the end. 
+> An important aspect of this game is the item and inventory features, which are crucial to beating the game.
+> **Why we chose this:**
 > The reason we chose to make a Text-Based RPG is because the idea allows more room for creativity relative to other ideas for this project. From the characters to the story line, we look forward to making them flow together. 
 >
 > Naturally, an RPG is very open-ended which allows us to write virtually any story we would like to. Additionally, taking the concept of an RPG and limiting it to the terminal environment also piques our interest as developers. 
