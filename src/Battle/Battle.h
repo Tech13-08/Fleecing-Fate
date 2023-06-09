@@ -12,7 +12,7 @@ class Battle{
     private:
         Player* player;
         Enemy* enemy;
-        Inventory* inv;
+        Inventory* inventory;
         BattleMenu* battleMenu;
         int battleState = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
         int playerAP = 0;

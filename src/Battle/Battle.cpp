@@ -6,10 +6,10 @@
 #include "../Inventory/Inventory.h"
 #include "../Items/Item.h"
 using namespace std;
-Battle::Battle(Player* player, Enemy* enemy, Inventory* inv){
+Battle::Battle(Player* player, Enemy* enemy, Inventory* inventory){
     this->player=player;
     this->enemy=enemy;
-    this->inv = inv;
+    this->inventory = inventory;
     this->battleMenu = new BattleMenu(); //make destructor
     int battleState = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
     int playerAP = 0;
@@ -58,7 +58,7 @@ void Battle::menu(){
             playerStrongAttack();
         break;
         case 3:{
-            Item* currItem = inv->selectItem();
+            Item* currItem = inventory->selectItem();
             if(currItem){
             if(currItem->getType()=="heal"){
                 player->takeDamage(0-(currItem->getPower())); 
@@ -117,7 +117,7 @@ bool Battle::doBattle(){
     if(battleState==1){
         int reward = enemy->getStrength();
         cout << "yay you win, here's " << reward << " coins" << endl;
-        inv->add_money(reward);
+        inventory->add_money(reward);
         return true;
     }
     else{
