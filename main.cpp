@@ -20,7 +20,7 @@ int main() {
 
     int numinput = 0;
     while(p->getAlive()){
-        cout << "What would you like to do?" << endl;
+        cout << "What would you like to do? (0 to exit game)" << endl;
         cout << "1. Move" << endl;
         cout << "2. View Inventory" << endl;
         cout << "3. Rest" << endl;
@@ -32,6 +32,8 @@ int main() {
             continue;
         }
         switch(numinput){
+          case 0:
+            return 0;
           case 1:
             ms->moveMenu(p, inv);
                 //ms->locationEvent(p, inv);
