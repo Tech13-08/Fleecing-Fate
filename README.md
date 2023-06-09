@@ -64,7 +64,7 @@
 
 > We have also used Single Responsibility Principle in the Location class and its subclasses. Every class there has one job only and do not contain behaviors from other classes. This makes it easier to develop Locations since each class does exactly as it is named and does not have any strange behaviors combined with it.
  
- ## Phase 4: Final deliverable
+ ## Phase IV: Final deliverable
  ### Screenshots
  ![CharacterSelect](images/CharacterSelect.png)
  > The player is greeted by the option to select a character class.
