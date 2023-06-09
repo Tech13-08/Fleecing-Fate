@@ -239,6 +239,30 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f googletest-build/googletest/CMakeFiles/gtest.dir/build.make googletest-build/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+game.o: game.cpp.o
+.PHONY : game.o
+
+# target to build an object file
+game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/game.cpp.o
+.PHONY : game.cpp.o
+
+game.i: game.cpp.i
+.PHONY : game.i
+
+# target to preprocess a source file
+game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/game.cpp.i
+.PHONY : game.cpp.i
+
+game.s: game.cpp.s
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/game.cpp.s
+.PHONY : game.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -668,32 +692,32 @@ src/Location/LocationManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/LocationManager.cpp.s
 .PHONY : src/Location/LocationManager.cpp.s
 
-src/Location/MoveSelector.o: src/Location/MoveSelector.cpp.o
-.PHONY : src/Location/MoveSelector.o
+src/Location/LocationMove.o: src/Location/LocationMove.cpp.o
+.PHONY : src/Location/LocationMove.o
 
 # target to build an object file
-src/Location/MoveSelector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/MoveSelector.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/MoveSelector.cpp.o
-.PHONY : src/Location/MoveSelector.cpp.o
+src/Location/LocationMove.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/LocationMove.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/LocationMove.cpp.o
+.PHONY : src/Location/LocationMove.cpp.o
 
-src/Location/MoveSelector.i: src/Location/MoveSelector.cpp.i
-.PHONY : src/Location/MoveSelector.i
+src/Location/LocationMove.i: src/Location/LocationMove.cpp.i
+.PHONY : src/Location/LocationMove.i
 
 # target to preprocess a source file
-src/Location/MoveSelector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/MoveSelector.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/MoveSelector.cpp.i
-.PHONY : src/Location/MoveSelector.cpp.i
+src/Location/LocationMove.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/LocationMove.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/LocationMove.cpp.i
+.PHONY : src/Location/LocationMove.cpp.i
 
-src/Location/MoveSelector.s: src/Location/MoveSelector.cpp.s
-.PHONY : src/Location/MoveSelector.s
+src/Location/LocationMove.s: src/Location/LocationMove.cpp.s
+.PHONY : src/Location/LocationMove.s
 
 # target to generate assembly for a file
-src/Location/MoveSelector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/MoveSelector.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/MoveSelector.cpp.s
-.PHONY : src/Location/MoveSelector.cpp.s
+src/Location/LocationMove.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Location/LocationMove.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Location/LocationMove.cpp.s
+.PHONY : src/Location/LocationMove.cpp.s
 
 src/Location/Store.o: src/Location/Store.cpp.o
 .PHONY : src/Location/Store.o
@@ -839,6 +863,9 @@ help:
 	@echo "... gtest_main"
 	@echo "... main"
 	@echo "... test"
+	@echo "... game.o"
+	@echo "... game.i"
+	@echo "... game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -887,9 +914,9 @@ help:
 	@echo "... src/Location/LocationManager.o"
 	@echo "... src/Location/LocationManager.i"
 	@echo "... src/Location/LocationManager.s"
-	@echo "... src/Location/MoveSelector.o"
-	@echo "... src/Location/MoveSelector.i"
-	@echo "... src/Location/MoveSelector.s"
+	@echo "... src/Location/LocationMove.o"
+	@echo "... src/Location/LocationMove.i"
+	@echo "... src/Location/LocationMove.s"
 	@echo "... src/Location/Store.o"
 	@echo "... src/Location/Store.i"
 	@echo "... src/Location/Store.s"

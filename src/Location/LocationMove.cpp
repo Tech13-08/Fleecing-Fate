@@ -1,16 +1,14 @@
 #include <vector>
 #include <string>
 #include "LocationManager.h"
-#include "MoveSelector.h"
+#include "LocationMove.h"
 #include "../Character/AllCharacters.h"
 #include "../Inventory/Inventory.h"
 using namespace std;
     
-    MoveSelector::MoveSelector(){
-      lm = new LocationManager();
-    }
+    LocationMove::LocationMove(Player* p, Inventory* inv, LocationManager* lm) : p(p), inv(inv), lm(lm){}
 
-    void MoveSelector::moveMenu(Player* p, Inventory* inv){
+    void LocationMove::moveMenu(){
         if(!p->getAlive()){
           return;
         }
@@ -26,7 +24,7 @@ using namespace std;
           cout << "Try entering a number for direction" << endl;
           cin.clear();
           cin.ignore(numeric_limits<streamsize>::max(), '\n');
-          moveMenu(p, inv);
+          moveMenu();
           return;
         }
         if(choice == 0){
@@ -36,19 +34,19 @@ using namespace std;
           cout << "You cannot move in that direction, try again" << endl;
           cin.clear();
           cin.ignore(numeric_limits<streamsize>::max(), '\n');
-          moveMenu(p, inv);
+          moveMenu();
           return;
         }   
           cout << "You are at (" << lm->getX() << ", " << lm->getY() << ") of size " << lm->getSize() << " by " << lm->getSize() << endl;
-          bool endgame = locationEvent(p, inv);
+          bool endgame = locationEvent();
           if(endgame){
             return;
           }
-          moveMenu(p, inv);
+          moveMenu();
         
     }
 
-    bool MoveSelector::locationEvent(Player* p, Inventory* inv){
+    bool LocationMove::locationEvent(){
       Location* loc = lm->getLocation();
       if(loc){
         string input = "";
@@ -63,7 +61,6 @@ using namespace std;
           }
           if(loc->getType()=="Wolves' Den"){
             ((BossRoom*) loc)->battleEnemies(p, inv);
-            p->wonGame();
             return true;
           }
         

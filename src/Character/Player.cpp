@@ -37,11 +37,3 @@ void Player::rest() {
     heal(1000);
     reset();
 }
-
-void Player::wonGame() {
-    won = true;
-}
-
-bool Player::getwonGame() const{
-    return won;
-}
