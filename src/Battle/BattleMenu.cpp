@@ -4,6 +4,8 @@
 
 BattleMenu::BattleMenu(){
 }
+BattleMenu::~BattleMenu(){
+}
 void BattleMenu::showStatus(Player* player, Enemy* enemy, int ap){
     cout << "-----------" << endl;
     cout << player->getInfo() << endl;
@@ -20,6 +22,9 @@ void BattleMenu::showOutgoingAttack(int dmg){
 }
 void BattleMenu::showIncomingAttack(int dmg){
     cout << "Enemy attacks you for " << dmg << " damage!" << endl;
+}
+void BattleMenu::showHeal(int heal){
+    cout << "Healed for " << heal << " HP." << endl;
 }
 void BattleMenu::showAPSpent(int ap){
     cout << "You use " << ap << " AP." << endl;

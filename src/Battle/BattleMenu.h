@@ -9,10 +9,12 @@ class BattleMenu{
     private:
     public:
         BattleMenu();
+        ~BattleMenu();
         void showStatus(Player* player, Enemy* enemy, int ap);
         void doNothing();
         void showOutgoingAttack(int dmg);
         void showIncomingAttack(int dmg);
+        void showHeal(int heal);
         void showAPSpent(int ap);
         void showMenu();
 };

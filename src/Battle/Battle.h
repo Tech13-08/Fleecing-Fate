@@ -14,21 +14,18 @@ class Battle{
         Enemy* enemy;
         Inventory* inv;
         BattleMenu* battleMenu;
-        int winloss = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
+        int battleState = 0; //0 for in progress, 1 for win, 2 for loss CHANGE LATER
         int playerAP = 0;
     public:
         Battle(Player* player, Enemy* enemy, Inventory* inv);
-        // int getAP();
-        //void displayStatus();
+        ~Battle();
         int calcDamage(int baseDamage);
         int calcDamageWithCrit(int baseDamage, int critChance);
         void playerAttack();
         void playerStrongAttack();
-        //void doNothing();
         void menu();
         void playerTurn();
         void enemyTurn();
-        //void enemyTakeDamage(int damage); //stub
         bool doBattle(); //returns false for loss, true for win
 };
 #endif
