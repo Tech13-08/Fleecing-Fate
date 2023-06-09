@@ -7,7 +7,7 @@ using namespace std;
 
 class Rogue : public Player {
 private:
-    const int BASELUCK = 10;
+    const int BASELUCK = 20;
     int luck = BASELUCK;;
 public:
     Rogue(const string&, double, double);
