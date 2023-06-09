@@ -57,7 +57,7 @@ void Game::handleInput(int input){
         inv->displayInventory();
         break;
         case 3:
-        p->rest(); //ask ting to create a function to heal player to maxhp
+        cout << p->rest(); //ask ting to create a function to heal player to maxhp
         break;
         case 4: 
         cout << p->getInfo();

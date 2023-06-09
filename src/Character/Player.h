@@ -22,7 +22,7 @@ public:
     void setDescription(const string&);
     void setPlayerType(const string&);
     virtual int specialAttack(Character*) = 0;
-    void rest();
+    string rest();
     virtual void reset() = 0;
     virtual string getInfo() = 0;
 };

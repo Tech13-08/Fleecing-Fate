@@ -24,7 +24,7 @@ public:
     MapManager(const string name, const string description, const string type, const int sizeScale)
         : Location(name, description, type) {
         srand((unsigned)time(0));
-        this->setSize(3); // Temporary size value for testing
+        this->setSize((rand()%((maxSize+1-minSize)*sizeScale))+(minSize*sizeScale));
         map.resize(this->getSize(), vector<Location*>(this->getSize(), nullptr));
     }
 
