@@ -38,9 +38,8 @@ using namespace std;
           cin.ignore(numeric_limits<streamsize>::max(), '\n');
           moveMenu(p, inv);
           return;
-        }     
-        int size = lm->maps.at(lm->currentMap)->getSize();
-          cout << "You are at (" << lm->x << ", " << lm->y << ") of size " << size << " by " << size << endl;
+        }   
+          cout << "You are at (" << lm-getX() << ", " << lm->getY() << ") of size " << lm->getSize() << " by " << lm->getSize() << endl;
           locationEvent(p, inv);
           moveMenu(p, inv);
         

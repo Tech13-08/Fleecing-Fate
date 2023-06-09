@@ -10,3 +10,11 @@ Dungeon::Dungeon(const string name, const string description, const int sizeScal
     this->populateMap();
 }
 
+bool Dungeon::isCompleted(){
+    for(int i = 0; i < places.size(); ++i){
+        if(((DungeonRoom*)places.at(i))->isDefeated()){
+            return false;
+        }
+    }
+    return true;
+}

@@ -14,6 +14,7 @@ class MapManager : public Location{
         const int maxSize = 5;
     protected:
         vector<vector<Location*>> map;
+        vector<Location*> places;
 
     public:
         MapManager(const string name, const string description, const string type, const int sizeScale) : Location(name, description, type){
@@ -48,6 +49,7 @@ class MapManager : public Location{
                 if(this->getType() == "Dungeon"){
                     map[i][j] = new DungeonRoom("DungeonRoom " + std::to_string(n+1), "DUNGEON ROOM JUMPSCARE BOO");
                 }
+                places.push_back(map[i][j]);
             }
         }
 

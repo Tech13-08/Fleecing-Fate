@@ -12,10 +12,13 @@ using std::vector;
 class DungeonRoom : public Location{
     private:
         vector<Enemy*> enemies;
+        bool defeated = false;
     public:
         DungeonRoom(const string name, const string description);
 
         void battleEnemies(Player*, Inventory*);
+
+        bool isDefeated();
 
 };
 

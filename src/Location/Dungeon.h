@@ -7,6 +7,7 @@ using std::string;
 class Dungeon : public MapManager{
     public:
         Dungeon(const string name, const string description, const int sizeScale);
+        bool isCompleted();
 
 };
 
