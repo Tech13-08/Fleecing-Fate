@@ -65,13 +65,7 @@
 > We have also used Single Responsibility Principle in the Location class and its subclasses. Every class there has one job only and do not contain behaviors from other classes. This makes it easier to develop Locations since each class does exactly as it is named and does not have any strange behaviors combined with it.
  
  > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
- ## Screenshots
+ ### Screenshots
  ![CharacterSelect](images/CharacterSelect.png)
  > The player is greeted by the option to select a character class.
  ![Movement](images/Movement.png)
@@ -80,7 +74,7 @@
  > A sample of the store screen
  ![Battle](images/Battle.png)
  > A sample of the battle screen
- ## Installation/Usage
+ ### Installation/Usage
  > Use git to clone the repository, and ensure that you switch into the repository.
  ```
  git clone https://github.com/cs100/final-project-ftuls001-ywong042-ajare002-twu148.git
@@ -97,7 +91,7 @@
  ```
  > Enjoy! 
 
- ## Testing
+ ### Testing
  > For each main branch of the project (battles, movements, characters, etc.), we used Google Tests to run unit tests in order to ensure that each component worked individually before it could be merged. Here is a sample of some of the Google Tests. For the sake of brevity, some of the output (namely, the Battle code outputs responding to user inputs) has been omitted. 
 ```
 [==========] Running 13 tests from 4 test suites.
@@ -144,6 +138,6 @@
 [==========] 13 tests from 4 test suites ran. (26774 ms total)
 [  PASSED  ] 13 tests.
 ```
-## Memcheck
+### Memcheck
  > We used Valgrind to resolve our memory errors. Specifically we ran `$ valgrind --leak-check=full --track-origins=yes ./bin/main` to fully check our memory leaks and track where they originated. Here is a sample of what our Valgrind output looks like:
 ![memcheck](images/memcheck'.png)
