@@ -1,6 +1,7 @@
 #include "title.h"
 #include <string>
 #include <iostream>
+#include <limits>
 using namespace std;
 
 void Title::displayTitle(){

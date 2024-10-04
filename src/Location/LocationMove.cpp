@@ -2,6 +2,7 @@
 #include <string>
 #include "LocationManager.h"
 #include "LocationMove.h"
+#include <limits>
 #include "../Character/AllCharacters.h"
 #include "../Inventory/Inventory.h"
 using namespace std;

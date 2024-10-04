@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <limits>
 using namespace std;
 Store::Store(const string name, const string description) : Location(name, description, "Store"){
     this->setSize(4);

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
+#include <limits>
 #include "Battle.h"
 #include "../Character/AllCharacters.h"
 #include "../Inventory/Inventory.h"
